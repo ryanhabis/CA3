@@ -56,7 +56,8 @@ itself). These tests should be well-structured and confirm that all methods retu
 information AND that the database has been changed (where applicable). They should test multiple cases,
 not just the intended behaviour. You do not need to write isolation (mock) tests, just integration tests.
 
->Note: Generation of test classes without amending the tests to examine the logic of the methods will not
+> [!NOTE]
+> Generation of test classes without amending the tests to examine the logic of the methods will not
 earn any marks.
 
 ## Documentation
@@ -70,7 +71,8 @@ DTOs & JSPs). These comments should include information on return types, paramet
 functionality and the meaning of any potential exceptions that can be thrown (remember, this tag only
 applies to methods that contain the throws keyword)
 
-> Note: Generation of javadoc comments without including programmer-created information will not earn
+> [!NOTE]
+> Generation of javadoc comments without including programmer-created information will not earn
 any marks.
 
 ## Project management:
@@ -87,7 +89,7 @@ and pushed to the shared repository by all team members.
 * Javadocs – 10%
 * Source control – 5%
 
-The link to the PDF CA brief[Redirects you to moodle](https://2324-moodle.dkit.ie/pluginfile.php/1184349/mod_resource/content/0/Web%20Patterns%20-%20CA3%20-%202023.pdf).
+The link to the PDF CA brief [Redirects you to moodle](https://2324-moodle.dkit.ie/pluginfile.php/1184349/mod_resource/content/0/Web%20Patterns%20-%20CA3%20-%202023.pdf).
 
 ### Submission instructions:
 
@@ -95,6 +97,7 @@ Upload a zipped copy of your Netbeans project, database SQL file/file to populat
 and features list text file (and where they can be found in the code) to Moodle, along with a link to your
 github repository.
 
+> [!NOTE]
 > Only one upload per group.
 
 > [!IMPORTANT]
