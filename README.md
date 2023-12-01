@@ -65,7 +65,7 @@ returning of books. The three tiers should be made up of:
 
 
 18. Programmer-defined (Group member C)
-d
+
 
 ## Programmer-Defined Functionality
 
