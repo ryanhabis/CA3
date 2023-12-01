@@ -7,7 +7,11 @@ Develop a web-based three tier library application that can support borrowing (v
 returning of books. The three tiers should be made up of:
 
 1. Front end - JSPs and HTML pages
+
+
 2. Middle tier – Servlet & required classes for functionality
+
+
 3. Back end – MySQL Database OR JPA-supported Entities
    The project is a web application & should be developed fully. This includes a well-constructed backend
    database (taking security considerations into account) as well as validation on server-side AND client-side
@@ -16,21 +20,52 @@ returning of books. The three tiers should be made up of:
    Application Functionality
    The web application you are developing is a library site, which has great scope for functionality. You should
    develop all features in the best way possible, not just get them to function.
+
+
 4. View books
+
+
 5. Search for a book (or books)
+
+
 6. Borrowing a book (or books)
+
+
 7. Returning a book (or books)
+
+
 8. Log in to the system
+
+
 9. Register with the system
+
+
 10. View my (the user’s) profile
+
+
 11. Edit my (the user’s) details
+
+
 12. View my (the user’s) current loans
+
+
 13. View my (the user’s) previous loans
+
+
 14. View my (the user’s) current overdue fees outstanding.
+
+
 15. Pay overdue fees
+
+
 16. Programmer-defined (Group member A)
+
+
 17. Programmer-defined (Group member B)
+
+
 18. Programmer-defined (Group member C)
+
 
 ## Programmer-Defined Functionality
 
