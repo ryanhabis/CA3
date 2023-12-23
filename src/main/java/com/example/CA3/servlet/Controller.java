@@ -1,4 +1,4 @@
-package servlet;
+package com.example.CA3.servlet;
 
 import java.io.*;
 
