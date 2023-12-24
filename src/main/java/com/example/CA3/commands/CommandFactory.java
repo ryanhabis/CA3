@@ -5,19 +5,21 @@ import jakarta.servlet.http.HttpServletResponse;
 
 public class CommandFactory {
 
-    public static Command setCommand (String commandAsString) {
+    public static Command setAsCommand(String commandAsString, HttpServletRequest request, HttpServletResponse response) {
 
         Command command = null;
 
-        switch (commandAsString) {
+        if (commandAsString != null) {
 
-            case "login" :
+            switch (commandAsString) {
 
-                break;
+                case "login":
+                    command = new LoginCommand(request, response);
+                    break;
 
 
+            }
         }
-
 
         return command;
     }
