@@ -1,0 +1,4 @@
+Heidi:
+- Created project file structure
+- Setup controller, CommandFactory, Command Interface, ErrorCommand, LoginCommand, SignupCommand.
+- Created sql file by modifying previous sql file from last project
