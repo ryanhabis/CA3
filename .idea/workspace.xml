@@ -9,9 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="miscellaneous">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CA3/sql/bookRental.sql" afterDir="false" />
+    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Added sql file for book rental system with some modifications since CA1.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CA3/exceptions/DaoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CA3/repositories/BookDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CA3/repositories/BookDaoInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CA3/repositories/Dao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/borrowBook.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CA3/commands/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CA3/commands/CommandFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/browseBooks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/browseBooks.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +27,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -180,7 +186,7 @@
       <workItem from="1703284997475" duration="5512000" />
       <workItem from="1703371673023" duration="7750000" />
       <workItem from="1703538769814" duration="11962000" />
-      <workItem from="1703692651161" duration="1150000" />
+      <workItem from="1703692651161" duration="8827000" />
     </task>
     <task id="LOCAL-00001" summary="Create a new project">
       <option name="closed" value="true" />
@@ -350,7 +356,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703635514472</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Added sql file for book rental system with some modifications since CA1.">
+      <option name="closed" value="true" />
+      <created>1703697296999</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1703697296999</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,6 +402,7 @@
     <MESSAGE value="Created successfulLogin.jsp for context on what to do once succesfully logged in. Display nav if logged in." />
     <MESSAGE value="Created browseBooks.jsp for browsing books. Included form with ideas for filters and a hidden input to set the appropriate default action." />
     <MESSAGE value="miscellaneous" />
-    <option name="LAST_COMMIT_MESSAGE" value="miscellaneous" />
+    <MESSAGE value="Added sql file for book rental system with some modifications since CA1." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added sql file for book rental system with some modifications since CA1." />
   </component>
 </project>
