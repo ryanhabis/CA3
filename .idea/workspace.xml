@@ -9,12 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Created BookDao Interface and class">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CA3/repositories/BookDaoAdmin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CA3/repositories/BookDaoAdminInterface.java" afterDir="false" />
+    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Created BookDaoAdmin and BookDaoAdminInterface">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CA3/commands/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CA3/commands/CommandFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/browseBooks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/browseBooks.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Who did what.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Who did what.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +180,7 @@
       <workItem from="1703284997475" duration="5512000" />
       <workItem from="1703371673023" duration="7750000" />
       <workItem from="1703538769814" duration="11962000" />
-      <workItem from="1703692651161" duration="12296000" />
+      <workItem from="1703692651161" duration="13084000" />
     </task>
     <task id="LOCAL-00001" summary="Create a new project">
       <option name="closed" value="true" />
@@ -409,7 +406,31 @@
       <option name="project" value="LOCAL" />
       <updated>1703708660448</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Altered database used to create bookdao in browseBooks.jsp">
+      <option name="closed" value="true" />
+      <created>1703716526875</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1703716526875</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Commented out error worthy code in CommandFactory">
+      <option name="closed" value="true" />
+      <created>1703716555392</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1703716555392</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Created BookDaoAdmin and BookDaoAdminInterface">
+      <option name="closed" value="true" />
+      <created>1703716582747</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1703716582747</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,9 +448,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updates to the readme file" />
-    <MESSAGE value="Updated pom to include sql connector dependency." />
-    <MESSAGE value="Removed unneccesary methods from HelloServlet and renamed HelloServlet.java to Controller.java. Also renamed directory to servlet." />
     <MESSAGE value="Changed @WebServlet name and value to Controller. Edited doGet and doPost methods in Controller to throw ServletException." />
     <MESSAGE value="Refactored and altered java inner package structure (added new packages too)." />
     <MESSAGE value="Tidied method headers in Controller" />
@@ -452,6 +470,9 @@
     <MESSAGE value="Added dao" />
     <MESSAGE value="Created dao exception in exception package" />
     <MESSAGE value="Created BookDao Interface and class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created BookDao Interface and class" />
+    <MESSAGE value="Altered database used to create bookdao in browseBooks.jsp" />
+    <MESSAGE value="Commented out error worthy code in CommandFactory" />
+    <MESSAGE value="Created BookDaoAdmin and BookDaoAdminInterface" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created BookDaoAdmin and BookDaoAdminInterface" />
   </component>
 </project>

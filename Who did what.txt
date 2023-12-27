@@ -3,5 +3,8 @@ Heidi:
 - Setup controller, CommandFactory, Command Interface, ErrorCommand, LoginCommand, SignupCommand.
 - Created sql file by modifying previous sql file from last project
 - Copied over user, loan and book class from CA1
-- Made Index.jsp
-- Made browseBooks.jsp
+- Made Index.jsp, SuccessfulLogin.jsp
+- Made browseBooks.jsp and borrowBooks.jsp
+- Copied over and altered book dao classes and interfaces
+- added altered sql table creation commands
+- Created exceptions package and DaoException and dao class
