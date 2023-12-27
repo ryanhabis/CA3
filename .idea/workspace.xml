@@ -9,16 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Added text file with explanation of what I have done in this project so far. Will leave space for Evan and Ryan to write to this doc.">
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CA3/rental/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CA3/rental/Loan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CA3/rental/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/browseBooks.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/successfulLogin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="miscellaneous">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Who did what.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Who did what.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +179,7 @@
       <workItem from="1701433221041" duration="2298000" />
       <workItem from="1703284997475" duration="5512000" />
       <workItem from="1703371673023" duration="7750000" />
-      <workItem from="1703538769814" duration="11130000" />
+      <workItem from="1703538769814" duration="11962000" />
     </task>
     <task id="LOCAL-00001" summary="Create a new project">
       <option name="closed" value="true" />
@@ -316,7 +309,47 @@
       <option name="project" value="LOCAL" />
       <updated>1703431637387</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added content to index.jsp to check if user is logged in and then display options to signup or login if not.">
+      <option name="closed" value="true" />
+      <created>1703635248409</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1703635248409</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Added User, Book and Loan classes (copied over straight from previous project CA1).">
+      <option name="closed" value="true" />
+      <created>1703635298567</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1703635298567</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Created successfulLogin.jsp for context on what to do once succesfully logged in. Display nav if logged in.">
+      <option name="closed" value="true" />
+      <created>1703635363432</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1703635363432</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Created browseBooks.jsp for browsing books. Included form with ideas for filters and a hidden input to set the appropriate default action.">
+      <option name="closed" value="true" />
+      <created>1703635458577</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1703635458577</updated>
+    </task>
+    <task id="LOCAL-00021" summary="miscellaneous">
+      <option name="closed" value="true" />
+      <created>1703635514472</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1703635514472</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,6 +382,11 @@
     <MESSAGE value="Added null check in CommandFactory method. Renamed this method to setAsCommand. Took in request and response as parameters in this method." />
     <MESSAGE value="Wrote LoginCommand constructor and execute method." />
     <MESSAGE value="Added text file with explanation of what I have done in this project so far. Will leave space for Evan and Ryan to write to this doc." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added text file with explanation of what I have done in this project so far. Will leave space for Evan and Ryan to write to this doc." />
+    <MESSAGE value="Added content to index.jsp to check if user is logged in and then display options to signup or login if not." />
+    <MESSAGE value="Added User, Book and Loan classes (copied over straight from previous project CA1)." />
+    <MESSAGE value="Created successfulLogin.jsp for context on what to do once succesfully logged in. Display nav if logged in." />
+    <MESSAGE value="Created browseBooks.jsp for browsing books. Included form with ideas for filters and a hidden input to set the appropriate default action." />
+    <MESSAGE value="miscellaneous" />
+    <option name="LAST_COMMIT_MESSAGE" value="miscellaneous" />
   </component>
 </project>

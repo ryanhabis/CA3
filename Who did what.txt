@@ -2,3 +2,6 @@ Heidi:
 - Created project file structure
 - Setup controller, CommandFactory, Command Interface, ErrorCommand, LoginCommand, SignupCommand.
 - Created sql file by modifying previous sql file from last project
+- Copied over user, loan and book class from CA1
+- Made Index.jsp
+- Made browseBooks.jsp
