@@ -3,8 +3,8 @@
  */
 package com.example.CA3.repositories;
 
-import exceptions.DaoException;
-import rental.User;
+import com.example.CA3.exceptions.DaoException;
+import com.example.CA3.rental.User;
 
 
 import java.sql.*;
