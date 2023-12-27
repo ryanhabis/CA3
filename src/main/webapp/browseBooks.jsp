@@ -1,4 +1,6 @@
-<%--
+<%@ page import="com.example.CA3.rental.Book" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.example.CA3.repositories.BookDao" %><%--
   Created by IntelliJ IDEA.
   User: Heidi
   Date: 26/12/2023
@@ -13,12 +15,54 @@
 <body>
 <!-- Make facility for searching and viewing all books
     Call bookdao method for browsing all books automatically? -->
-<form action="controller" method="post"> <!--post this action to the controller -->
+<%--<form action="controller" method="post"> <!--post this action to the controller -->--%>
 
-   <!--
-   make inputs (checkboxes/radio/button) for applying filters e.g. for books in stock, containing keyword, sorting books by genre
-   Include a hidden field to identify what the user wants to do -->
-<input type="hidden" name ="action" value="browseAll" /> <!--browse all by default -->
-</form>
+<%--   <!----%>
+<%--   make inputs (checkboxes/radio/button) for applying filters e.g. for books in stock, containing keyword, sorting books by genre--%>
+<%--   Include a hidden field to identify what the user wants to do -->--%>
+<%--<input type="hidden" name ="action" value="browseAll" /> <!--browse all by default -->--%>
+<%--</form>--%>
+
+
+<%
+    //create the book dao
+    BookDao bookDao = new BookDao("user_database");
+List<Book> allBooks = bookDao.getAllBooks();
+
+    if(!allBooks.isEmpty()){
+    %>
+    <table>
+        <tr><th>Book</th><th>Blurb</th><th>Price €</th></tr>
+        <%
+            for(Book b: allBooks){
+        %>
+        <tr>
+            <td><%=b.getTitle()%></td>
+            <td><%=b.getDescription()%></td>
+            <td><%=b.getBookPrice()%></td>
+        </tr>
+        <%
+            }
+        %>
+    </table>
+        <%
+      }else{
+        %>
+    <div>
+        Error - No books found
+        Please <a href="index.jsp">return to the home page</a> and try again.
+    </div>
+        <%
+      }
+    }else{
+      %>
+    <div>
+        No username supplied for search.<br/>
+        Please <a href="index.jsp">go back</a> and try again.
+    </div>
+        <%
+      }
+  %>
+
 </body>
 </html>
