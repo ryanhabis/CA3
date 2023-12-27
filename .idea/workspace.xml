@@ -9,12 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Added sql file for book rental system with some modifications since CA1.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CA3/exceptions/DaoException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CA3/repositories/BookDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CA3/repositories/BookDaoInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CA3/repositories/Dao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/borrowBook.jsp" afterDir="false" />
+    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Created BookDao Interface and class">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CA3/repositories/BookDaoAdmin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CA3/repositories/BookDaoAdminInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CA3/commands/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CA3/commands/CommandFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/browseBooks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/browseBooks.jsp" afterDir="false" />
@@ -28,8 +25,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -186,7 +183,7 @@
       <workItem from="1703284997475" duration="5512000" />
       <workItem from="1703371673023" duration="7750000" />
       <workItem from="1703538769814" duration="11962000" />
-      <workItem from="1703692651161" duration="8827000" />
+      <workItem from="1703692651161" duration="12296000" />
     </task>
     <task id="LOCAL-00001" summary="Create a new project">
       <option name="closed" value="true" />
@@ -364,7 +361,55 @@
       <option name="project" value="LOCAL" />
       <updated>1703697296999</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Added function for retrieving all books in browseBooks.jsp">
+      <option name="closed" value="true" />
+      <created>1703708266773</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1703708266773</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Created borrow book jsp page for borrowing book functionality">
+      <option name="closed" value="true" />
+      <created>1703708313421</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1703708313421</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Added case for browsing books to controller">
+      <option name="closed" value="true" />
+      <created>1703708352302</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1703708352303</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Added dao">
+      <option name="closed" value="true" />
+      <created>1703708381792</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1703708381792</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Created dao exception in exception package">
+      <option name="closed" value="true" />
+      <created>1703708402411</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1703708402411</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Created BookDao Interface and class">
+      <option name="closed" value="true" />
+      <created>1703708660448</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1703708660448</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,8 +427,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create a new project" />
-    <MESSAGE value="README.md" />
     <MESSAGE value="Updates to the readme file" />
     <MESSAGE value="Updated pom to include sql connector dependency." />
     <MESSAGE value="Removed unneccesary methods from HelloServlet and renamed HelloServlet.java to Controller.java. Also renamed directory to servlet." />
@@ -403,6 +446,12 @@
     <MESSAGE value="Created browseBooks.jsp for browsing books. Included form with ideas for filters and a hidden input to set the appropriate default action." />
     <MESSAGE value="miscellaneous" />
     <MESSAGE value="Added sql file for book rental system with some modifications since CA1." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added sql file for book rental system with some modifications since CA1." />
+    <MESSAGE value="Added function for retrieving all books in browseBooks.jsp" />
+    <MESSAGE value="Created borrow book jsp page for borrowing book functionality" />
+    <MESSAGE value="Added case for browsing books to controller" />
+    <MESSAGE value="Added dao" />
+    <MESSAGE value="Created dao exception in exception package" />
+    <MESSAGE value="Created BookDao Interface and class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created BookDao Interface and class" />
   </component>
 </project>
