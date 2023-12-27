@@ -18,7 +18,7 @@ public class CommandFactory {
                     break;
 
                 case "browseBooks":
-                    command = new BrowseBooksCommand(request, response);
+                 //   command = new BrowseBooksCommand(request, response);
                 break;
 
             }

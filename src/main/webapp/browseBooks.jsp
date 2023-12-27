@@ -26,7 +26,7 @@
 
 <%
     //create the book dao
-    BookDao bookDao = new BookDao("user_database");
+    BookDao bookDao = new BookDao("bookrentalsystem");
 List<Book> allBooks = bookDao.getAllBooks();
 
     if(!allBooks.isEmpty()){
@@ -52,17 +52,8 @@ List<Book> allBooks = bookDao.getAllBooks();
         Error - No books found
         Please <a href="index.jsp">return to the home page</a> and try again.
     </div>
-        <%
-      }
-    }else{
-      %>
-    <div>
-        No username supplied for search.<br/>
-        Please <a href="index.jsp">go back</a> and try again.
-    </div>
-        <%
-      }
-  %>
-
+       <%
+           }
+       %>
 </body>
 </html>
