@@ -10,8 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Created BookDaoAdmin and BookDaoAdminInterface">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CA3/sql/bookRentalData.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Who did what.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Who did what.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,6 +181,7 @@
       <workItem from="1703371673023" duration="7750000" />
       <workItem from="1703538769814" duration="11962000" />
       <workItem from="1703692651161" duration="13084000" />
+      <workItem from="1703777773769" duration="1359000" />
     </task>
     <task id="LOCAL-00001" summary="Create a new project">
       <option name="closed" value="true" />
