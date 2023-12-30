@@ -13,7 +13,7 @@
 <body>
 <%--The following code was taken from Michelle's Github and should be changed--%>
 <p>Registration form</p>
-<form action="controller" method="post">
+<form action="Controller" method="post">
     <table>
         <tr>
             <td> Username : </td><td> <input name="username" size=30 type="text" required /> </td>

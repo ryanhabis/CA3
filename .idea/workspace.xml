@@ -9,10 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Added catch clause for DaoException and SQLException to BookDaoAdmin at Intellij's suggestion.">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
+    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Created login and register jsp files using Michelle's code from github for the form. This will be altered later.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +192,7 @@
       <workItem from="1703692651161" duration="13084000" />
       <workItem from="1703777773769" duration="6171000" />
       <workItem from="1703859091448" duration="2661000" />
-      <workItem from="1703951737900" duration="5129000" />
+      <workItem from="1703951737900" duration="5299000" />
     </task>
     <task id="LOCAL-00001" summary="Create a new project">
       <option name="closed" value="true" />
@@ -474,7 +474,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703954555693</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Created login and register jsp files using Michelle's code from github for the form. This will be altered later.">
+      <option name="closed" value="true" />
+      <created>1703961212129</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1703961212129</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -492,7 +500,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created CommandFactory to get the right command object for rerouting." />
     <MESSAGE value="Created some other command classes we might later" />
     <MESSAGE value="Processed request in doGet and doPost in Controller. Got action from request and subsequently got the corresponding command for redirecting in processRequest method." />
     <MESSAGE value="Added null check in CommandFactory method. Renamed this method to setAsCommand. Took in request and response as parameters in this method." />
@@ -517,6 +524,7 @@
     <MESSAGE value="Created new package CA3.bookRentalSystem and copied over all subdirectories into this package. Fixed imports accordingly and also removed catch clauses for DaoException and placed them where intellij suggested." />
     <MESSAGE value=" Removed more catch clauses for DaoException and placed them where intellij suggested in BookDao and BookDaoAdmin." />
     <MESSAGE value="Added catch clause for DaoException and SQLException to BookDaoAdmin at Intellij's suggestion." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added catch clause for DaoException and SQLException to BookDaoAdmin at Intellij's suggestion." />
+    <MESSAGE value="Created login and register jsp files using Michelle's code from github for the form. This will be altered later." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created login and register jsp files using Michelle's code from github for the form. This will be altered later." />
   </component>
 </project>
