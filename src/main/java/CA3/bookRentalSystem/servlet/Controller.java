@@ -1,12 +1,16 @@
-package com.example.CA3.servlet;
+package CA3.bookRentalSystem.servlet;
 
-import java.io.*;
 
-import com.example.CA3.commands.Command;
-import com.example.CA3.commands.CommandFactory;
+import CA3.bookRentalSystem.commands.Command;
+import CA3.bookRentalSystem.commands.CommandFactory;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+import java.io.IOException;
+
 // new project
 @WebServlet(name = "Controller", value = "/Controller")
 public class Controller extends HttpServlet {

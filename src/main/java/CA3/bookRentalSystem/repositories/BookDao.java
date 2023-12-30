@@ -1,7 +1,7 @@
-package com.example.CA3.repositories;
+package CA3.bookRentalSystem.repositories;
 
-import com.example.CA3.exceptions.DaoException;
-import com.example.CA3.rental.Book;
+import CA3.bookRentalSystem.exceptions.DaoException;
+import CA3.bookRentalSystem.rental.Book;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -88,7 +88,7 @@ public class BookDao extends Dao implements BookDaoInterface {
                     try {
                         freeConnection(conn);
                     } catch (DaoException e) {
-                        System.out.println("Dao exception caught: " + e.getMessage());
+                        throw new RuntimeException(e);
                     }
                 }
             }
@@ -148,11 +148,7 @@ public class BookDao extends Dao implements BookDaoInterface {
                     }
                 }
                 if(conn != null) {
-                    try {
-                        freeConnection(conn);
-                    } catch (DaoException e) {
-                        System.out.println("Dao exception caught: " + e.getMessage());
-                    }
+                    freeConnection(conn);
                 }
             }
 

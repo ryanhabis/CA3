@@ -1,7 +1,7 @@
 /**
  * @Author Ryan
  */
-package com.example.CA3.rental;
+package CA3.bookRentalSystem.rental;
 
 import java.time.LocalDate;
 import java.util.Objects;

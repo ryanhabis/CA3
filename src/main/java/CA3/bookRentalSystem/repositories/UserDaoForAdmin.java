@@ -1,13 +1,16 @@
 /**
  * @Author Ryan
  */
-package com.example.CA3.repositories;
-
-import com.example.CA3.exceptions.DaoException;
-import com.example.CA3.rental.User;
+package CA3.bookRentalSystem.repositories;
 
 
-import java.sql.*;
+import CA3.bookRentalSystem.exceptions.DaoException;
+import CA3.bookRentalSystem.rental.User;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class UserDaoForAdmin extends Dao implements UserDaoInterfaceForAdmin
@@ -105,10 +108,9 @@ public class UserDaoForAdmin extends Dao implements UserDaoInterfaceForAdmin
      * This method removes a user from the databasse when the username is provided.
      * @param username checks to see if the user is located on the database
      * @return the user that was deleted or not
-     * @throws DaoException
      */
     @Override
-    public int removeUser(String username) throws DaoException {
+    public int removeUser(String username) {
         Connection conn = null;
         PreparedStatement ps = null;
         int userDelete = 0;
@@ -131,8 +133,9 @@ public class UserDaoForAdmin extends Dao implements UserDaoInterfaceForAdmin
         catch (SQLException e)
         {
             throw new RuntimeException("Error removing user = " + e.getMessage());
-        }
-        finally
+        } catch (DaoException e) {
+            throw new RuntimeException(e);
+        } finally
         {
             try
             {
@@ -148,6 +151,8 @@ public class UserDaoForAdmin extends Dao implements UserDaoInterfaceForAdmin
             catch (SQLException e)
             {
                 throw new RuntimeException("Error removing user = " + e.getMessage());
+            } catch (DaoException e) {
+                throw new RuntimeException(e);
             }
 
         }

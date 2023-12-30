@@ -1,3 +1,4 @@
+use bookrentalsystem;
 
 SET FOREIGN_KEY_CHECKS = 0;
 -- Author: Ryan and Heidi

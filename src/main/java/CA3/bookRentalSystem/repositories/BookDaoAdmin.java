@@ -1,7 +1,9 @@
-package com.example.CA3.repositories;
+package CA3.bookRentalSystem.repositories;
 
-import com.example.CA3.exceptions.DaoException;
-import com.example.CA3.rental.Book;
+
+
+import CA3.bookRentalSystem.exceptions.DaoException;
+import CA3.bookRentalSystem.rental.Book;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -55,8 +57,6 @@ public class BookDaoAdmin extends Dao implements BookDaoInterface {
                 books.add(b);
             }
 
-        } catch (DaoException e) {
-            System.out.println("Dao exception: " +e.getMessage());
         } catch (SQLException e) {
             System.out.println("SQL exception: " +e.getMessage());
         }
@@ -80,11 +80,7 @@ public class BookDaoAdmin extends Dao implements BookDaoInterface {
                 }
             }
             if(conn != null) {
-                try {
-                    freeConnection(conn);
-                } catch (DaoException e) {
-                    System.out.println("Dao exception caught: " + e.getMessage());
-                }
+                freeConnection(conn);
             }
         }
 
@@ -132,8 +128,6 @@ public class BookDaoAdmin extends Dao implements BookDaoInterface {
 
             return b.getBookId() != -1;
 
-        } catch (DaoException e) {
-            System.out.println("Dao exception: " +e.getMessage());
         } catch (SQLException e) {
             System.out.println("SQL exception: " +e.getMessage());
         }
@@ -157,11 +151,7 @@ public class BookDaoAdmin extends Dao implements BookDaoInterface {
                 }
             }
             if(conn != null) {
-                try {
-                    freeConnection(conn);
-                } catch (DaoException e) {
-                    System.out.println("Dao exception caught: " + e.getMessage());
-                }
+                freeConnection(conn);
             }
         }
 

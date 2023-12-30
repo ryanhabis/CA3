@@ -1,11 +1,10 @@
 /**
  * @Author Ryan
  */
-package com.example.CA3.repositories;
+package CA3.bookRentalSystem.repositories;
 
-import com.example.CA3.exceptions.DaoException;
-import com.example.CA3.rental.User;
-
+import CA3.bookRentalSystem.exceptions.DaoException;
+import CA3.bookRentalSystem.rental.User;
 import java.util.ArrayList;
 
 public interface UserDaoInterfaceForAdmin

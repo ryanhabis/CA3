@@ -1,6 +1,7 @@
-package com.example.CA3.repositories;
+package CA3.bookRentalSystem.repositories;
 
-import com.example.CA3.rental.Book;
+
+import CA3.bookRentalSystem.rental.Book;
 
 public interface BookDaoAdminInterface extends BookDaoInterface {
 

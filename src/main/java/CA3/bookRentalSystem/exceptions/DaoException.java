@@ -1,4 +1,4 @@
-package com.example.CA3.exceptions;
+package CA3.bookRentalSystem.exceptions;
 
 public class DaoException extends Throwable{
 

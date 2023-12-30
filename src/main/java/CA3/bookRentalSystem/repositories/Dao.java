@@ -1,6 +1,7 @@
-package com.example.CA3.repositories;
+package CA3.bookRentalSystem.repositories;
 
-import com.example.CA3.exceptions.DaoException;
+
+import CA3.bookRentalSystem.exceptions.DaoException;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

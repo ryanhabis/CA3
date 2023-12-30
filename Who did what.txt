@@ -6,5 +6,5 @@ Heidi:
 - Made Index.jsp, SuccessfulLogin.jsp
 - Made browseBooks.jsp and borrowBooks.jsp
 - Copied over and altered book dao classes and interfaces
-- added altered sql table creation commands
+- added altered sql table creation commands and data insertion commands accordingly
 - Created exceptions package and DaoException and dao class

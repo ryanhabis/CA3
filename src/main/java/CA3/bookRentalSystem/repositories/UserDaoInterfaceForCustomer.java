@@ -1,9 +1,7 @@
 /**
  * @Author Ryan
  */
-package com.example.CA3.repositories;
-import com.example.CA3.exceptions.DaoException;
-import com.example.CA3.rental.User;
+package CA3.bookRentalSystem.repositories;
 
 public interface UserDaoInterfaceForCustomer
 {

@@ -3,7 +3,7 @@
  * Reference: Michelle's notes
  **/
 
-package com.example.CA3.rental;
+package CA3.bookRentalSystem.rental;
 
 import java.util.Objects;
 

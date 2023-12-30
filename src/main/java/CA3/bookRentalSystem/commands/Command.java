@@ -1,4 +1,4 @@
-package com.example.CA3.commands;
+package CA3.bookRentalSystem.commands;
 
 public interface Command {
 
