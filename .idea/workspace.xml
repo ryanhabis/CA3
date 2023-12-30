@@ -9,31 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Created bookRentalData.sql">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Who did what.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Who did what.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CA3/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CA3/commands/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/CommandFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CA3/commands/ErrorCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/ErrorCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CA3/commands/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/LoginCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CA3/commands/SignupCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/SignupCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CA3/exceptions/DaoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/exceptions/DaoException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CA3/rental/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/rental/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CA3/rental/Loan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/rental/Loan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CA3/rental/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/rental/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CA3/repositories/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CA3/repositories/BookDaoAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDaoAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CA3/repositories/BookDaoAdminInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDaoAdminInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CA3/repositories/BookDaoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDaoInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CA3/repositories/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/Dao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CA3/repositories/UserDaoForAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoForAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CA3/repositories/UserDaoForCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoForCustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CA3/repositories/UserDaoInterfaceForAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoInterfaceForAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CA3/repositories/UserDaoInterfaceForCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoInterfaceForCustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CA3/servlet/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/servlet/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CA3/sql/bookRental.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/sql/bookRental.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CA3/sql/bookRentalData.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/sql/bookRentalData.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Created new package CA3.bookRentalSystem and copied over all subdirectories into this package. Fixed imports accordingly and also removed catch clauses for DaoException and placed them where intellij suggested.">
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDaoAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDaoAdmin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +191,7 @@
       <workItem from="1703692651161" duration="13084000" />
       <workItem from="1703777773769" duration="6171000" />
       <workItem from="1703859091448" duration="2661000" />
-      <workItem from="1703951737900" duration="2146000" />
+      <workItem from="1703951737900" duration="2578000" />
     </task>
     <task id="LOCAL-00001" summary="Create a new project">
       <option name="closed" value="true" />
@@ -471,7 +449,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703801726131</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Created new package CA3.bookRentalSystem and copied over all subdirectories into this package. Fixed imports accordingly and also removed catch clauses for DaoException and placed them where intellij suggested.">
+      <option name="closed" value="true" />
+      <created>1703954362831</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1703954362831</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -489,7 +475,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactored and altered java inner package structure (added new packages too)." />
     <MESSAGE value="Tidied method headers in Controller" />
     <MESSAGE value="Created command interface containing execute method to be overridden in all command classes that implement this interface." />
     <MESSAGE value="Created CommandFactory to get the right command object for rerouting." />
@@ -514,6 +499,7 @@
     <MESSAGE value="Commented out error worthy code in CommandFactory" />
     <MESSAGE value="Created BookDaoAdmin and BookDaoAdminInterface" />
     <MESSAGE value="Created bookRentalData.sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created bookRentalData.sql" />
+    <MESSAGE value="Created new package CA3.bookRentalSystem and copied over all subdirectories into this package. Fixed imports accordingly and also removed catch clauses for DaoException and placed them where intellij suggested." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created new package CA3.bookRentalSystem and copied over all subdirectories into this package. Fixed imports accordingly and also removed catch clauses for DaoException and placed them where intellij suggested." />
   </component>
 </project>

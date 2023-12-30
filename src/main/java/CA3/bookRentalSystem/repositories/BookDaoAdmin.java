@@ -57,7 +57,7 @@ public class BookDaoAdmin extends Dao implements BookDaoInterface {
                 books.add(b);
             }
 
-        } catch (SQLException e) {
+        } catch (SQLException | DaoException e) {
             System.out.println("SQL exception: " +e.getMessage());
         }
 
@@ -80,7 +80,11 @@ public class BookDaoAdmin extends Dao implements BookDaoInterface {
                 }
             }
             if(conn != null) {
-                freeConnection(conn);
+                try {
+                    freeConnection(conn);
+                } catch (DaoException e) {
+                    throw new RuntimeException(e);
+                }
             }
         }
 
@@ -151,7 +155,11 @@ public class BookDaoAdmin extends Dao implements BookDaoInterface {
                 }
             }
             if(conn != null) {
-                freeConnection(conn);
+                try {
+                    freeConnection(conn);
+                } catch (DaoException e) {
+                    throw new RuntimeException(e);
+                }
             }
         }
 

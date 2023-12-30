@@ -148,7 +148,11 @@ public class BookDao extends Dao implements BookDaoInterface {
                     }
                 }
                 if(conn != null) {
-                    freeConnection(conn);
+                    try {
+                        freeConnection(conn);
+                    } catch (DaoException e) {
+                        throw new RuntimeException(e);
+                    }
                 }
             }
 
