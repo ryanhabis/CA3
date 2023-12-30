@@ -132,7 +132,7 @@ public class BookDaoAdmin extends Dao implements BookDaoInterface {
 
             return b.getBookId() != -1;
 
-        } catch (SQLException e) {
+        } catch (SQLException | DaoException e) {
             System.out.println("SQL exception: " +e.getMessage());
         }
 
