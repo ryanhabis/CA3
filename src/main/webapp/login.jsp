@@ -13,7 +13,7 @@
 <body>
 <%--The following was copied from Michelle's Github and needs to be changed please!--%>
 <p>Login Form</p>
-<form action="Controller" method="post">
+<form action="servlet/Controller" method="post">
     <table>
         <tr>
             <td> Username : </td><td> <input name="username" size=30 type="text" required /> </td>
