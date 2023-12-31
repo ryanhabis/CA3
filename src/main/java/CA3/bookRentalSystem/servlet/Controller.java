@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 // new project
-@WebServlet(name = "Controller", value = "/Controller")
+@WebServlet(name = "Controller", value = "/servlet/Controller")
 public class Controller extends HttpServlet {
 
 
@@ -29,12 +29,14 @@ public class Controller extends HttpServlet {
         String continueTo = "index.jsp";
         //get the requested action
         String action = request.getParameter("action");
-        //turn it into a command
-        Command actionCommand = CommandFactory.setAsCommand(action, request, response);
-        //execute the command
-        continueTo = actionCommand.execute();
-        //redirect to the page specified
-        response.sendRedirect(continueTo);
+        if (action != null) {
+            //turn it into a command
+            Command actionCommand = CommandFactory.setAsCommand(action, request, response);
+            //execute the command
+            continueTo = actionCommand.execute();
+            //redirect to the page specified
+            response.sendRedirect(continueTo);
+        }
     }
 
 
