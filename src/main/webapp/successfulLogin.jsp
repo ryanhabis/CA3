@@ -1,4 +1,4 @@
-<%@ page import="com.example.CA3.rental.User" %><%--
+<%@ page import="CA3.bookRentalSystem.rental.User" %><%--
   Created by IntelliJ IDEA.
   User: Heidi
   Date: 26/12/2023
