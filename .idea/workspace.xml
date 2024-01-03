@@ -9,13 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Changed form action to Controller.">
+    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Changed form actions to servlet/Controller in register.jsp and login.jsp">
+      <change afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/RegisterCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/CommandFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/servlet/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/servlet/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/browseBooks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/browseBooks.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/successfulLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/successfulLogin.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -72,24 +72,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Heidi/OneDrive - Dundalk Institute of Technology/Documents/Web Patterns/CA3/src/main/java/CA3/bookRentalSystem/repositories",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Heidi/OneDrive - Dundalk Institute of Technology/Documents/Web Patterns/CA3/src/main/java/CA3/bookRentalSystem/repositories&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Heidi\OneDrive - Dundalk Institute of Technology\Documents\Web Patterns\CA3\src\main\java\CA3\bookRentalSystem\repositories" />
@@ -195,7 +195,8 @@
       <workItem from="1703692651161" duration="13084000" />
       <workItem from="1703777773769" duration="6171000" />
       <workItem from="1703859091448" duration="2661000" />
-      <workItem from="1703951737900" duration="9426000" />
+      <workItem from="1703951737900" duration="9936000" />
+      <workItem from="1704231485209" duration="5724000" />
     </task>
     <task id="LOCAL-00001" summary="Create a new project">
       <option name="closed" value="true" />
@@ -493,7 +494,31 @@
       <option name="project" value="LOCAL" />
       <updated>1703961332877</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Fixed import for User class in successfulLogin.jsp">
+      <option name="closed" value="true" />
+      <created>1703981839431</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1703981839432</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Changed webservlet value to /servlet/Controller in Controller.java">
+      <option name="closed" value="true" />
+      <created>1703981962595</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1703981962595</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Changed form actions to servlet/Controller in register.jsp and login.jsp">
+      <option name="closed" value="true" />
+      <created>1703982026097</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1703982026097</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,9 +536,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Processed request in doGet and doPost in Controller. Got action from request and subsequently got the corresponding command for redirecting in processRequest method." />
-    <MESSAGE value="Added null check in CommandFactory method. Renamed this method to setAsCommand. Took in request and response as parameters in this method." />
-    <MESSAGE value="Wrote LoginCommand constructor and execute method." />
     <MESSAGE value="Added text file with explanation of what I have done in this project so far. Will leave space for Evan and Ryan to write to this doc." />
     <MESSAGE value="Added content to index.jsp to check if user is logged in and then display options to signup or login if not." />
     <MESSAGE value="Added User, Book and Loan classes (copied over straight from previous project CA1)." />
@@ -536,6 +558,9 @@
     <MESSAGE value="Added catch clause for DaoException and SQLException to BookDaoAdmin at Intellij's suggestion." />
     <MESSAGE value="Created login and register jsp files using Michelle's code from github for the form. This will be altered later." />
     <MESSAGE value="Changed form action to Controller." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed form action to Controller." />
+    <MESSAGE value="Fixed import for User class in successfulLogin.jsp" />
+    <MESSAGE value="Changed webservlet value to /servlet/Controller in Controller.java" />
+    <MESSAGE value="Changed form actions to servlet/Controller in register.jsp and login.jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed form actions to servlet/Controller in register.jsp and login.jsp" />
   </component>
 </project>
