@@ -28,7 +28,7 @@
             <td> Last name : </td><td> <input name="lName" size=30 type="text" required /> </td>
         </tr>
     </table>
-    <input type="submit" value="Register" />
+    <input type="submit" value="register" />
     <!-- Include a hidden field to identify what the user wants to do -->
     <input type="hidden" name ="action" value="register" />
 </form>
