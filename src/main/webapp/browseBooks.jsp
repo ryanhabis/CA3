@@ -1,6 +1,8 @@
-<%@ page import="com.example.CA3.rental.Book" %>
+
 <%@ page import="java.util.List" %>
-<%@ page import="com.example.CA3.repositories.BookDao" %><%--
+<%@ page import="CA3.bookRentalSystem.repositories.BookDao" %>
+<%@ page import="CA3.bookRentalSystem.rental.Book" %>
+<%--
   Created by IntelliJ IDEA.
   User: Heidi
   Date: 26/12/2023
