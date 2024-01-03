@@ -17,10 +17,8 @@ public class CommandFactory {
                     command = new LoginCommand(request, response);
                     break;
 
-                case "browseBooks":
-                 //   command = new BrowseBooksCommand(request, response);
-                break;
-
+                case "register" :
+                    command = new RegisterCommand(request, response);
             }
         }
 
