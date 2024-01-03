@@ -10,6 +10,7 @@
 <head>
     <title>Successful Login</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <p>You have reached the successful login page</p>
 
     <%
       User userLoggedIn = (User)session.getAttribute("user");
