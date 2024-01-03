@@ -9,13 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Changed form actions to servlet/Controller in register.jsp and login.jsp">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/RegisterCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/CommandFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/servlet/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/servlet/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/browseBooks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/browseBooks.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
+    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="workspace.xml">
+      <change beforePath="$PROJECT_DIR$/Who did what.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Who did what.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +191,7 @@
       <workItem from="1703777773769" duration="6171000" />
       <workItem from="1703859091448" duration="2661000" />
       <workItem from="1703951737900" duration="9936000" />
-      <workItem from="1704231485209" duration="5724000" />
+      <workItem from="1704231485209" duration="6389000" />
     </task>
     <task id="LOCAL-00001" summary="Create a new project">
       <option name="closed" value="true" />
@@ -518,7 +513,47 @@
       <option name="project" value="LOCAL" />
       <updated>1703982026097</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Added case for Register in CommandFactory - this is why it wouldn't work before doid">
+      <option name="closed" value="true" />
+      <created>1704240482670</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1704240482670</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Changed submit value from Register to register in register.jsp to match case in CommandFactory">
+      <option name="closed" value="true" />
+      <created>1704240616790</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1704240616790</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Created RegisterCommand">
+      <option name="closed" value="true" />
+      <created>1704240714471</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1704240714471</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Fixed imports in browseBooks.jsp">
+      <option name="closed" value="true" />
+      <created>1704240748076</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1704240748076</updated>
+    </task>
+    <task id="LOCAL-00045" summary="workspace.xml">
+      <option name="closed" value="true" />
+      <created>1704240831884</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1704240831884</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -536,11 +571,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added text file with explanation of what I have done in this project so far. Will leave space for Evan and Ryan to write to this doc." />
-    <MESSAGE value="Added content to index.jsp to check if user is logged in and then display options to signup or login if not." />
-    <MESSAGE value="Added User, Book and Loan classes (copied over straight from previous project CA1)." />
-    <MESSAGE value="Created successfulLogin.jsp for context on what to do once succesfully logged in. Display nav if logged in." />
-    <MESSAGE value="Created browseBooks.jsp for browsing books. Included form with ideas for filters and a hidden input to set the appropriate default action." />
     <MESSAGE value="miscellaneous" />
     <MESSAGE value="Added sql file for book rental system with some modifications since CA1." />
     <MESSAGE value="Added function for retrieving all books in browseBooks.jsp" />
@@ -561,6 +591,11 @@
     <MESSAGE value="Fixed import for User class in successfulLogin.jsp" />
     <MESSAGE value="Changed webservlet value to /servlet/Controller in Controller.java" />
     <MESSAGE value="Changed form actions to servlet/Controller in register.jsp and login.jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed form actions to servlet/Controller in register.jsp and login.jsp" />
+    <MESSAGE value="Added case for Register in CommandFactory - this is why it wouldn't work before doid" />
+    <MESSAGE value="Changed submit value from Register to register in register.jsp to match case in CommandFactory" />
+    <MESSAGE value="Created RegisterCommand" />
+    <MESSAGE value="Fixed imports in browseBooks.jsp" />
+    <MESSAGE value="workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml" />
   </component>
 </project>

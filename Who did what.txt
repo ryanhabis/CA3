@@ -8,3 +8,5 @@ Heidi:
 - Copied over and altered book dao classes and interfaces
 - added altered sql table creation commands and data insertion commands accordingly
 - Created exceptions package and DaoException and dao class
+- Register and login functionality from index.jsp to Controller to CommandFactory and then various other pages
+- Made all Commands (Login, Register)
