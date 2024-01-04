@@ -1,5 +1,7 @@
 package CA3.bookRentalSystem.commands;
 
+import CA3.bookRentalSystem.rental.User;
+import CA3.bookRentalSystem.repositories.UserDao;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;

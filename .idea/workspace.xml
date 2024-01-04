@@ -9,14 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Implemented BookDaoAdminInterface in BookDaoAdmin class as I somehow forgot to previously.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Renamed UserDaoForCustomer.java to UserDao and extended and implemented Interfaces to match structure of BookDao classes and interfaces">
       <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/LoginCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDaoAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDaoAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoForAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoForAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoForCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoInterfaceForAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoInterfaceForAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoInterfaceForCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,23 +193,7 @@
       <workItem from="1703951737900" duration="9936000" />
       <workItem from="1704231485209" duration="6416000" />
       <workItem from="1704283696947" duration="2857000" />
-      <workItem from="1704385345002" duration="1586000" />
-    </task>
-    <task id="LOCAL-00001" summary="Create a new project">
-      <option name="closed" value="true" />
-      <created>1701433323909</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1701433323909</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Updates to the readme file">
-      <option name="closed" value="true" />
-      <created>1701435041503</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1701435041503</updated>
+      <workItem from="1704385345002" duration="2401000" />
     </task>
     <task id="LOCAL-00003" summary="Updates to the readme file">
       <option name="closed" value="true" />
@@ -593,7 +571,23 @@
       <option name="project" value="LOCAL" />
       <updated>1704387435647</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Removed actually unnecessary implementation from BookDaoAdmin of BookDaoInterface">
+      <option name="closed" value="true" />
+      <created>1704388159183</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1704388159183</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Renamed UserDaoForCustomer.java to UserDao and extended and implemented Interfaces to match structure of BookDao classes and interfaces">
+      <option name="closed" value="true" />
+      <created>1704388315047</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1704388315047</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -611,8 +605,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added case for browsing books to controller" />
-    <MESSAGE value="Added dao" />
     <MESSAGE value="Created dao exception in exception package" />
     <MESSAGE value="Created BookDao Interface and class" />
     <MESSAGE value="Altered database used to create bookdao in browseBooks.jsp" />
@@ -636,6 +628,8 @@
     <MESSAGE value="Added a line in a paragraph to indicate the right page was reached in successfulLogin.jsp" />
     <MESSAGE value="Added sample login code to LoginCommand from Michelle's solution for login functionality - will be changed slightly later." />
     <MESSAGE value="Implemented BookDaoAdminInterface in BookDaoAdmin class as I somehow forgot to previously." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented BookDaoAdminInterface in BookDaoAdmin class as I somehow forgot to previously." />
+    <MESSAGE value="Removed actually unnecessary implementation from BookDaoAdmin of BookDaoInterface" />
+    <MESSAGE value="Renamed UserDaoForCustomer.java to UserDao and extended and implemented Interfaces to match structure of BookDao classes and interfaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed UserDaoForCustomer.java to UserDao and extended and implemented Interfaces to match structure of BookDao classes and interfaces" />
   </component>
 </project>
