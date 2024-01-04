@@ -11,7 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class BookDaoAdmin extends Dao implements BookDaoInterface, BookDaoAdminInterface {
+public class BookDaoAdmin extends Dao implements BookDaoAdminInterface {
 
     public BookDaoAdmin(Connection conn) {
         super(conn);
