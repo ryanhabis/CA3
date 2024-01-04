@@ -11,7 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class BookDaoAdmin extends Dao implements BookDaoInterface {
+public class BookDaoAdmin extends Dao implements BookDaoInterface, BookDaoAdminInterface {
 
     public BookDaoAdmin(Connection conn) {
         super(conn);
@@ -96,6 +96,31 @@ public class BookDaoAdmin extends Dao implements BookDaoInterface {
         return 0;
     }
 
+
+    @Override
+    public int addBook(int bookId, int genreId, String title, String description, String author, int quantityInstock, double bookPrice) {
+        return 0;
+    }
+
+    @Override
+    public int updateStock(int bookId, int quantityInStock) {
+        return 0;
+    }
+
+    @Override
+    public int checkStock(int bookId) {
+        return 0;
+    }
+
+    @Override
+    public Book getBookByBookId(int bookId) {
+        return null;
+    }
+
+    @Override
+    public Book getBookByBookTitle(String title) {
+        return null;
+    }
 
     // BookDao to reserve a copy (if there are no copies available, return a fail code indicating a loan could not be made)
     public boolean reserveCopy (Book b) {
