@@ -236,7 +236,7 @@ public class UserDaoForAdmin extends Dao implements UserDaoInterfaceForAdmin
 
 
     @Override
-    public boolean logIn(String username, String password) {
+    public boolean login(String username, String password) {
         return false;
     }
 

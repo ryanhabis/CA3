@@ -6,6 +6,7 @@ package CA3.bookRentalSystem.repositories;
 
 
 import CA3.bookRentalSystem.exceptions.DaoException;
+import CA3.bookRentalSystem.rental.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -33,7 +34,7 @@ public class UserDao extends Dao implements UserDaoInterface {
      * @referance https://stackoverflow.com/questions/35083680/check-if-record-exists-in-database-with-resultset
      */
     @Override
-    public boolean logIn(String username, String password)
+    public boolean login(String username, String password)
     {
         if (username == null || password == null)
         {
@@ -129,4 +130,9 @@ public class UserDao extends Dao implements UserDaoInterface {
 
             return status;
         }
+
+    @Override
+    public User findUserByUsernameAndPassword(String username, String password) {
+        return null;
+    }
 }
