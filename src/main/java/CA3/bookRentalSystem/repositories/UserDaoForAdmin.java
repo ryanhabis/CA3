@@ -283,4 +283,9 @@ public class UserDaoForAdmin extends Dao implements UserDaoInterfaceForAdmin
 
           return status;
     }
+
+    @Override
+    public User findUserByUsernameAndPassword(String username, String password) {
+        return null;
+    }
 }
