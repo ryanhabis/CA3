@@ -7,7 +7,7 @@ import CA3.bookRentalSystem.exceptions.DaoException;
 import CA3.bookRentalSystem.rental.User;
 import java.util.ArrayList;
 
-public interface UserDaoInterfaceForAdmin
+public interface UserDaoInterfaceForAdmin extends UserDaoInterface
 {
     // Admin privileges
     public ArrayList<User> getALLUsers();

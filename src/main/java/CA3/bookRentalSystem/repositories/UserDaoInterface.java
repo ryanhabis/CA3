@@ -3,7 +3,7 @@
  */
 package CA3.bookRentalSystem.repositories;
 
-public interface UserDaoInterfaceForCustomer
+public interface UserDaoInterface
 {
     public boolean logIn(String username, String password);
 

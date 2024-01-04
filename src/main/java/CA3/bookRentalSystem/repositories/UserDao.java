@@ -12,14 +12,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UserDaoForCustomer extends Dao implements UserDaoInterfaceForCustomer {
+public class UserDao extends Dao implements UserDaoInterface {
 
 
-    public UserDaoForCustomer(Connection conn) {
+    public UserDao(Connection conn) {
         super(conn);
     }
 
-    public UserDaoForCustomer(String databaseName) {
+    public UserDao(String databaseName) {
         super(databaseName);
     }
 

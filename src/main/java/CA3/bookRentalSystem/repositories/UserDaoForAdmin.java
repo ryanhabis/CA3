@@ -235,6 +235,11 @@ public class UserDaoForAdmin extends Dao implements UserDaoInterfaceForAdmin
     }
 
 
+    @Override
+    public boolean logIn(String username, String password) {
+        return false;
+    }
+
     /**
      * This method will check if the user is either an admin or a customer.
      * @param username of what tyoe of user they are
