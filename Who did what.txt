@@ -10,3 +10,5 @@ Heidi:
 - Created exceptions package and DaoException and dao class
 - Register and login functionality from index.jsp to Controller to CommandFactory and then various other pages
 - Made all Commands (Login, Register)
+- Fixed Dao and Interface structure for Users, Books and Loans
+- Created Dummy methods for login and register until completed by Ryan?
