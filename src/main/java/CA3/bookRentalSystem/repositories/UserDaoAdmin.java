@@ -7,20 +7,18 @@ package CA3.bookRentalSystem.repositories;
 import CA3.bookRentalSystem.exceptions.DaoException;
 import CA3.bookRentalSystem.rental.User;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class UserDaoForAdmin extends Dao implements UserDaoInterfaceForAdmin
+public class UserDaoAdmin extends Dao implements UserDaoInterfaceAdmin
 {
 
-    public UserDaoForAdmin(Connection conn) {
+    public UserDaoAdmin(Connection conn) {
         super(conn);
     }
 
-    public UserDaoForAdmin(String databaseName) {
+    public UserDaoAdmin(String databaseName) {
         super(databaseName);
     }
 
@@ -51,12 +49,12 @@ public class UserDaoForAdmin extends Dao implements UserDaoInterfaceForAdmin
                 u.setUserId(rs.getInt("userId"));
                 u.setFirstName(rs.getString("firstName"));
                 u.setLastName(rs.getString("lastName"));
-                u.setUsersName(rs.getString("username"));
+                u.setUsername(rs.getString("username"));
                 u.setPassword(rs.getString("password"));
                 /* Help form Heidi for the date */
                 u.setDob(rs.getDate("dob").toLocalDate());
 
-                u.setPhoneNumber(rs.getInt("phoneNumber"));
+                u.setPhoneNumber(rs.getString("phoneNumber"));
                 u.setEmail(rs.getString("email"));
                 u.setAddressLine1(rs.getString("addressLine1"));
                 u.setAddressLine2(rs.getString("addressLine2"));
@@ -161,78 +159,6 @@ public class UserDaoForAdmin extends Dao implements UserDaoInterfaceForAdmin
     }
 
 
-    /**
-     * Adds a new user to the database
-     *
-     * @param all of the new user data must be passed through in order to add a new user
-     * @return the new user if there account was made successfully or not
-     * @throws DaoException wil throw a run time exception
-     * @throws SQLException if the user was not added
-     */
-    @Override
-    public int addUser(String firstName, String lastName, String username , String password , String dob, int  phoneNumber, String email, String addressLine1 , String addressLine2, String city, String county, String eircode) throws DaoException
-    {
-      Connection conn = null;
-        PreparedStatement ps = null;
-        int userAdded = 0;
-
-
-        try {
-            conn = getConnection();
-            String query = "insert into users (firstName ,lastName ,username ,password ,dob ,phoneNumber ,email ,addressLine1 ,addressLine2 ,city ,county ,eircode, userType) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-
-            //default
-            String userType = "customer";
-
-            ps = conn.prepareStatement(query);
-            ps.setString(1,firstName);
-            ps.setString(2,lastName);
-            ps.setString(3,username);
-            String hashedPassword = String.valueOf(Math.abs(password.hashCode()%password.length())); //reference: Michelle's notes from 2nd year
-            ps.setString(4,hashedPassword);
-            ps.setString(5,dob);
-            ps.setInt(6,phoneNumber);
-            ps.setString(7,email);
-            ps.setString(8,addressLine1);
-            ps.setString(9,addressLine2);
-            ps.setString(10,city);
-            ps.setString(11,county);
-            ps.setString(12,eircode);
-            ps.setString(13,userType);
-
-            userAdded = ps.executeUpdate();
-
-            if (userAdded == 0)
-            {
-                throw new DaoException("New username was not added");
-
-            }
-
-        }
-        catch (SQLException e)
-        {
-            throw new DaoException("user was not added to the database = " + e.getMessage());
-        }
-        finally
-        {
-            try
-            {
-                if (ps != null)
-                {
-                    ps.close();
-                }
-                if (conn != null)
-                {
-                    freeConnection(conn);
-                }
-            }
-            catch (SQLException | DaoException e)
-            {
-                throw new RuntimeException(e.getMessage());
-            }
-        }
-        return userAdded;
-    }
 
 
     @Override
@@ -284,8 +210,73 @@ public class UserDaoForAdmin extends Dao implements UserDaoInterfaceForAdmin
           return status;
     }
 
+
+
     @Override
     public User findUserByUsernameAndPassword(String username, String password) {
         return null;
     }
+
+    @Override
+    public int signup(String username, String password, String fName, String lName, LocalDate dob, String phoneNumber, String email, String addressLine1, String addressLine2, String city, String county, String eircode) {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        int rowsAdded = -1;
+
+        try {
+            //get connection
+            conn = getConnection();
+            //make query
+            String query = "insert into users values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            //prepare statement
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, 0);
+            ps.setString(2, username);
+            ps.setString(3, password);
+            ps.setString(4, fName);
+            ps.setString(5, lName);
+            ps.setDate(6, Date.valueOf(dob));
+            ps.setString(7, phoneNumber);
+            ps.setString(8, email);
+            ps.setString(9, addressLine1);
+            ps.setString(10, addressLine2);
+            ps.setString(11, city);
+            ps.setString(12, county);
+            ps.setString(13, eircode);
+            ps.setString(14, "enabled");
+            ps.setString(15, "customer");
+            rowsAdded = ps.executeUpdate();
+
+
+        } catch (DaoException e) {
+            System.out.println("Dao exception: " + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("SQL Exception: "  + e.getMessage());
+        }
+
+        //close connections
+        finally {
+
+            if (ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException e) {
+                    System.out.println("Exception message: " + e.getMessage());
+                    System.out.println("Problem occured when closing prepared statement.");
+                }
+            }
+
+            if (conn != null) {
+                try {
+                    freeConnection(conn);
+                } catch (DaoException e) {
+                    System.out.println("Dao exception caught: " + e.getMessage());
+                }
+            }
+        }
+        return rowsAdded;
+    }
+
+
+
 }
