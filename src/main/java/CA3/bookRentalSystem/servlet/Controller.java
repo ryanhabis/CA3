@@ -38,7 +38,4 @@ public class Controller extends HttpServlet {
             response.sendRedirect(continueTo);
         }
     }
-
-
-
 }
