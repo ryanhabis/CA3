@@ -64,7 +64,7 @@ public class RegisterCommand implements Command{
                 session.setAttribute("msg", regSuccess);
             }
         } else {
-          //  continueTo = "error.jsp";
+            continueTo = "error.jsp";
             String error = "Some information was not supplied. Please <a href=\"register.jsp\">try again.</a>";
             session.setAttribute("errorMessage", error);
         }

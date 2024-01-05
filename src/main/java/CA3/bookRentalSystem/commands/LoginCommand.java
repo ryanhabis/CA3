@@ -36,7 +36,7 @@ public class LoginCommand implements Command {
             //retrieve User matching details entered
             User userFound = userDao.findUserByUsernameAndPassword(username, password);
             if (userFound == null) { //if no matching user is found
-             //   continueTo = "error.jsp"; //go to error page
+                continueTo = "error.jsp"; //go to error page
                 String error = "Incorrect credentials supplied. Please <a href=\"login.jsp\">try again.</a>";
                 session.setAttribute("errorMessage", error);
             } else {
@@ -45,7 +45,7 @@ public class LoginCommand implements Command {
                 session.setAttribute("user", userFound); //set the user object to the current session
             }
         } else {
-           // continueTo = "error.jsp"; ////go to error page
+            continueTo = "error.jsp"; //go to error page
             String error = "No username and/or password supplied. Please <a href=\"login.jsp\">try again.</a>";
             session.setAttribute("errorMessage", error);
         }
