@@ -8,20 +8,25 @@ import java.util.Objects;
 
 public class User
 {
-    private int userId;
+    private int userId = 0;
     private String firstName;
     private String lastName;
-    private String usersName;
+    private String username;
     private String password;
     private LocalDate dob;
-    private int phoneNumber;
+    private String phoneNumber;
     private String email;
     private String addressLine1;
     private String addressLine2;
     private String city;
     private String county;
     private String eircode;
+    private Enum accountStatus;
     private Enum userType;
+
+   public enum accountStatus {
+       enabled, disabled
+   }
 
     public enum userType
     {
@@ -30,14 +35,16 @@ public class User
     public User() {
     }
 
-    public User(int userId, String firstName, String lastName, String usersName, String password, LocalDate dob, int phoneNumber, String email, String addressLine1, String addressLine2, String city, String county, String eircode, Enum userType) {
-        this.userId = userId;
+    public User(String firstName, String lastName, String username, String password, LocalDate dob, String phoneNumber, String email, String addressLine1, String addressLine2, String city, String county, String eircode) {
+    //    this.userId = userId;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.usersName = usersName;
+        this.username = username;
         // Hash this password
         this.password = password;
         this.dob = dob;
+       // LocalDate dob1 = LocalDate.of (1945, 12, 22);
+        //this.dob = dob1;
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.addressLine1 = addressLine1;
@@ -45,9 +52,19 @@ public class User
         this.city = city;
         this.county = county;
         this.eircode = eircode;
-        this.userType = userType;
+//        this.accountStatus = accountStatus;
+//        this.userType = userType;
+     //removed userType as database will set it to default enum
     }
 
+//    public User(String firstName, String lastName, String username, String password) {
+//
+//        this.firstName = firstName;
+//        this.lastName = lastName;
+//        this.username = username;
+//        // Hash this password
+//        this.password = password;
+//    }
 
 
     public int getUserId() {
@@ -74,12 +91,12 @@ public class User
         this.lastName = lastName;
     }
 
-    public String getUsersName() {
-        return usersName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUsersName(String usersName) {
-        this.usersName = usersName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -100,11 +117,11 @@ public class User
         this.dob = dob;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -155,7 +172,13 @@ public class User
     public void setEircode(String eircode) {
         this.eircode = eircode;
     }
+    public Enum getAccountStatus() {
+        return accountStatus;
+    }
 
+    public void setAccountStatus(Enum accountStatus) {
+        this.accountStatus = accountStatus;
+    }
     public Enum getUserType() {
         return userType;
     }
@@ -169,7 +192,7 @@ public class User
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User users = (User) o;
-        return userId == users.userId && phoneNumber == users.phoneNumber && Objects.equals(firstName, users.firstName) && Objects.equals(lastName, users.lastName) && Objects.equals(usersName, users.usersName) && Objects.equals(password, users.password) && Objects.equals(dob, users.dob) && Objects.equals(email, users.email) && Objects.equals(addressLine1, users.addressLine1) && Objects.equals(addressLine2, users.addressLine2) && Objects.equals(city, users.city) && Objects.equals(county, users.county) && Objects.equals(eircode, users.eircode) && Objects.equals(userType, users.userType);
+        return userId == users.userId && phoneNumber == users.phoneNumber && Objects.equals(firstName, users.firstName) && Objects.equals(lastName, users.lastName) && Objects.equals(username, users.username) && Objects.equals(password, users.password) && Objects.equals(dob, users.dob) && Objects.equals(email, users.email) && Objects.equals(addressLine1, users.addressLine1) && Objects.equals(addressLine2, users.addressLine2) && Objects.equals(city, users.city) && Objects.equals(county, users.county) && Objects.equals(eircode, users.eircode) && Objects.equals(userType, users.userType);
     }
 
     @Override
@@ -183,7 +206,7 @@ public class User
                 "userId=" + userId +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", usersName='" + usersName + '\'' +
+                ", usersName='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", dob='" + dob + '\'' +
                 ", phoneNumber=" + phoneNumber +
