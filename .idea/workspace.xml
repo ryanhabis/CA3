@@ -9,9 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Updated the bookRental.sql with NOT NULL fields">
+    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Created signup method in userDao">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/error.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/Dao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/ErrorCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/ErrorCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/LoginCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,15 +24,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="EvanM1603 &lt;evanmcdonnell09@gmail.com&gt;" />
         <option value="Ryan Habis &lt;30758550+ryanhabis@users.noreply.github.com&gt;" />
       </list>
     </option>
@@ -196,7 +197,31 @@
       <workItem from="1704231485209" duration="6416000" />
       <workItem from="1704283696947" duration="2857000" />
       <workItem from="1704385345002" duration="13184000" />
-      <workItem from="1704453811037" duration="8895000" />
+      <workItem from="1704453811037" duration="14099000" />
+    </task>
+    <task id="LOCAL-00014" summary="Added null check in CommandFactory method. Renamed this method to setAsCommand. Took in request and response as parameters in this method.">
+      <option name="closed" value="true" />
+      <created>1703431127219</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1703431127219</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Wrote LoginCommand constructor and execute method.">
+      <option name="closed" value="true" />
+      <created>1703431181143</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1703431181143</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added text file with explanation of what I have done in this project so far. Will leave space for Evan and Ryan to write to this doc.">
+      <option name="closed" value="true" />
+      <created>1703431637387</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1703431637387</updated>
     </task>
     <task id="LOCAL-00017" summary="Added content to index.jsp to check if user is logged in and then display options to signup or login if not.">
       <option name="closed" value="true" />
@@ -558,39 +583,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704467052192</updated>
     </task>
-    <task id="LOCAL-00062" summary="Updated the bookRental.sql with NOT NULL fields">
+    <task id="LOCAL-00062" summary="Created signup method in userDao">
       <option name="closed" value="true" />
-      <created>1704469174999</created>
+      <created>1704467267204</created>
       <option name="number" value="00062" />
       <option name="presentableId" value="LOCAL-00062" />
       <option name="project" value="LOCAL" />
-      <updated>1704469174999</updated>
+      <updated>1704467267204</updated>
     </task>
-    <task id="LOCAL-00063" summary="Updated the bookRental.sql with NOT NULL fields">
-      <option name="closed" value="true" />
-      <created>1704469200073</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1704469200074</updated>
-    </task>
-    <task id="LOCAL-00064" summary="Updated the bookRental.sql with NOT NULL fields">
-      <option name="closed" value="true" />
-      <created>1704469205072</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1704469205072</updated>
-    </task>
-    <task id="LOCAL-00065" summary="Updated the bookRental.sql with NOT NULL fields">
-      <option name="closed" value="true" />
-      <created>1704469215385</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1704469215385</updated>
-    </task>
-    <option name="localTasksCounter" value="66" />
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -632,7 +633,7 @@
     <MESSAGE value="Added whole method body for RegisterCommand execute and imports" />
     <MESSAGE value="Fixed typo in username, created accountStatus field (enum) altered constructor to take in only limited amount of fields as parameters. Changed phone number to string" />
     <MESSAGE value="Fixed typo in username, created accountStatus field (enum) in User class, altered constructor to take in only limited amount of fields as parameters. Changed phone number to string" />
-    <MESSAGE value="Updated the bookRental.sql with NOT NULL fields" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated the bookRental.sql with NOT NULL fields" />
+    <MESSAGE value="Created signup method in userDao" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created signup method in userDao" />
   </component>
 </project>
