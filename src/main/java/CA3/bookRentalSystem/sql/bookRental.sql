@@ -25,10 +25,10 @@ drop table if exists users;
 SET FOREIGN_KEY_CHECKS = 0;
 CREATE TABLE users (
                        userId INT AUTO_INCREMENT,
-                       firstName VARCHAR(50),
-                       lastName VARCHAR(50),
                        username VARCHAR(50) UNIQUE,
                        password VARCHAR(255),
+                       firstName VARCHAR(50),
+                       lastName VARCHAR(50),
                        dob DATE,
                        phoneNumber VARCHAR(15),
                        email VARCHAR(100) UNIQUE,

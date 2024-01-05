@@ -16,25 +16,25 @@ INSERT INTO genres VALUES
 
 -- Author: Evan
 INSERT INTO users VALUES
-                      (1, 'John', 'Doe', 'JohnDoe2012', 'JohnTheDoe', '12/08/2004', '086 456 9087','JohnDoe2012@gmail.com',
+                      (1, 'JohnDoe2012', 'JohnTheDoe', 'John', 'Doe', '12/08/2004', '086 456 9087','JohnDoe2012@gmail.com',
                        '11 johnstown estate','Castletown road', 'Dundalk', 'Louth', 'A92 R578', 'enabled', 'Customer'),
-                      (2, 'Jane', 'Doe', 'JaneDoe2009', 'JaneTheDoeess', '17/06/2002', '087 476 9689','JaneDoe2009@gmail.com',
+                      (2, 'JaneDoe2009', 'JaneTheDoeess', 'Jane', 'Doe', '17/06/2002', '087 476 9689','JaneDoe2009@gmail.com',
                        '08 johnstown estate','Castletown road', 'Dundalk', 'Louth', 'A92 R578', 'enabled', 'Customer'),
-                      (3, 'Tony', 'Kane', 'TonyKane2005', 'TonyKaneth', '28/10/1998', '084 479 9264','TonyKane2005@gmail.com',
+                      (3, 'TonyKane2005', 'TonyKaneth', 'Tony', 'Kane', '28/10/1998', '084 479 9264','TonyKane2005@gmail.com',
                        '22 campbell lane','Dublin road', 'Dublin', 'Dublin', 'A91 R678', 'enabled', 'Customer'),
-                      (4, 'Patricia', 'Kane', 'PatriciaKane1990', 'PatriciaKane', '31/02/1978', '082 879 9584','PatriciaKane2007@gmail.com',
+                      (4, 'PatriciaKane1990', 'PatriciaKane', 'Patricia', 'Kane', '31/02/1978', '082 879 9584','PatriciaKane2007@gmail.com',
                        '27 campbell lane','Dublin road', 'Dublin', 'Dublin', 'A91 R678', 'enabled', 'Customer'),
-                      (5, 'Lionel', 'Biden', 'LionelBiden1968', 'LionelBiden', '15/05/1987', '085 790 9054','LionelBiden2007@gmail.com',
+                      (5, 'LionelBiden1968', 'LionelBiden', 'Lionel', 'Biden', '15/05/1987', '085 790 9054','LionelBiden2007@gmail.com',
                        '12 main road','Castletown lane', 'Drogheda', 'Louth', 'A93 R469', 'enabled', 'Admin'),
-                      (6, 'David', 'Castle', 'DavidCastle1985', 'DavidCastle85', '23/06/1985', '083 294 7584','DavidCastle85@gmail.com',
+                      (6, 'DavidCastle1985', 'DavidCastle85', 'David', 'Castle', '23/06/1985', '083 294 7584','DavidCastle85@gmail.com',
                        '01 main road','Sheppards lane', 'Drogheda', 'Louth', 'A97 R371', 'enabled', 'Customer'),
-                      (7, 'Alex', 'Mac Allister', 'MacAlexster', 'AlliAlex', '03/09/2004', '081 454 7674','AlexMacAllister@gmail.com',
+                      (7, 'MacAlexster', 'AlliAlex', 'Alex', 'Mac Allister', '03/09/2004', '081 454 7674','AlexMacAllister@gmail.com',
                        '08 leopards lane','Cork Road', 'Cork', 'Cork', 'A96 R421', 'enabled', 'Customer'),
-                      (8, 'Catherine', 'Donally', 'Cathy123', '4312Cathy123', '12/11/1998', '089 285 0604','CatherineDonally@gmail.com',
+                      (8, 'Cathy123', '4312Cathy123', 'Catherine', 'Donally','12/11/1998', '089 285 0604','CatherineDonally@gmail.com',
                        '03 evergreen','Grange gardens', 'Johnstown', 'Limerick', 'A92 R167', 'enabled', 'Customer'),
-                      (9, 'Reece', 'Dane', 'ReDane67', 'DaneReece1421', '19/10/1989', '085 359 8401','DaneReece@gmail.com',
+                      (9, 'ReDane67', 'DaneReece1421', 'Reece', 'Dane', '19/10/1989', '085 359 8401','DaneReece@gmail.com',
                        '05 grangebellew','Malten gardens', 'Johnstown', 'Limerick', 'A94 R177', 'enabled', 'Customer'),
-                      (10, 'Grace', 'Tori', 'ToriGrace', 'Gracie5312', '26/07/1975', '082 146 4602','ToriGrace@gmail.com',
+                      (10, 'ToriGrace', 'Gracie5312', 'Grace', 'Tori', '26/07/1975', '082 146 4602','ToriGrace@gmail.com',
                        '09 dromiskin estate','Dromin road', 'Dundalk', 'Louth', 'A96 R421', 'enabled', 'Admin');
 
 
