@@ -199,14 +199,14 @@ public class UserDaoAdmin extends Dao implements UserDaoInterfaceAdmin
             throw new RuntimeException(e);
         }
 
-        if (conn != null) {
-            try {
-                conn.close();
-            } catch (SQLException e) {
-                System.out.println("Exception message: " + e.getMessage());
-                System.out.println("Problem occured when closing connection statement.");
-            }
-        }
+//        if (conn != null) {
+//            try {
+//                conn.close();
+//            } catch (SQLException e) {
+//                System.out.println("Exception message: " + e.getMessage());
+//                System.out.println("Problem occured when closing connection statement.");
+//            }
+//        }
 
           return status;
     }
@@ -248,31 +248,31 @@ public class UserDaoAdmin extends Dao implements UserDaoInterfaceAdmin
         }
 
         //Closing Connection
-        finally {
-            if(rs != null) {
-                try {
-                    rs.close();
-                } catch (SQLException e) {
-                    System.out.println("Exception message: " + e.getMessage());
-                    System.out.println("Issue when closing result set: ");
-                }
-            }
-            if(ps != null) {
-                try {
-                    ps.close();
-                } catch (SQLException e) {
-                    System.out.println("Exception message: " + e.getMessage());
-                    System.out.println("Issue when closing prepared statement: ");
-                }
-            }
-            if(conn != null) {
-                try {
-                    freeConnection(conn);
-                } catch (DaoException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        }
+//        finally {
+//            if(rs != null) {
+//                try {
+//                    rs.close();
+//                } catch (SQLException e) {
+//                    System.out.println("Exception message: " + e.getMessage());
+//                    System.out.println("Issue when closing result set: ");
+//                }
+//            }
+//            if(ps != null) {
+//                try {
+//                    ps.close();
+//                } catch (SQLException e) {
+//                    System.out.println("Exception message: " + e.getMessage());
+//                    System.out.println("Issue when closing prepared statement: ");
+//                }
+//            }
+//            if(conn != null) {
+//                try {
+//                    freeConnection(conn);
+//                } catch (DaoException e) {
+//                    throw new RuntimeException(e);
+//                }
+//            }
+//        }
 
         return userFound;
     }

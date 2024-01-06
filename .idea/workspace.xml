@@ -9,17 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Added method body to userdao for findUserByUsernameAndPassword method">
+    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Debugging use of user object in RegisterCommand (in object construction)">
+      <change afterPath="$PROJECT_DIR$/references.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/BorrowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/BorrowCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/LoginCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/RegisterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/RegisterCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/rental/Loan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/rental/Loan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/rental/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/rental/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoAdminInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoAdminInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoInterfaceAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoInterfaceAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/borrowBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/borrowBook.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/successfulLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/successfulLogin.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,63 +202,7 @@
       <workItem from="1704283696947" duration="2857000" />
       <workItem from="1704385345002" duration="13184000" />
       <workItem from="1704453811037" duration="23660000" />
-      <workItem from="1704531694212" duration="12722000" />
-    </task>
-    <task id="LOCAL-00033" summary="Created new package CA3.bookRentalSystem and copied over all subdirectories into this package. Fixed imports accordingly and also removed catch clauses for DaoException and placed them where intellij suggested.">
-      <option name="closed" value="true" />
-      <created>1703954362831</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1703954362831</updated>
-    </task>
-    <task id="LOCAL-00034" summary=" Removed more catch clauses for DaoException and placed them where intellij suggested in BookDao and BookDaoAdmin.">
-      <option name="closed" value="true" />
-      <created>1703954489153</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1703954489153</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Added catch clause for DaoException and SQLException to BookDaoAdmin at Intellij's suggestion.">
-      <option name="closed" value="true" />
-      <created>1703954555693</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1703954555693</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Created login and register jsp files using Michelle's code from github for the form. This will be altered later.">
-      <option name="closed" value="true" />
-      <created>1703961212129</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1703961212129</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Changed form action to Controller.">
-      <option name="closed" value="true" />
-      <created>1703961332877</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1703961332877</updated>
-    </task>
-    <task id="LOCAL-00038" summary="Fixed import for User class in successfulLogin.jsp">
-      <option name="closed" value="true" />
-      <created>1703981839431</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1703981839432</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Changed webservlet value to /servlet/Controller in Controller.java">
-      <option name="closed" value="true" />
-      <created>1703981962595</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1703981962595</updated>
+      <workItem from="1704531694212" duration="17188000" />
     </task>
     <task id="LOCAL-00040" summary="Changed form actions to servlet/Controller in register.jsp and login.jsp">
       <option name="closed" value="true" />
@@ -598,7 +540,63 @@
       <option name="project" value="LOCAL" />
       <updated>1704542012326</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Added end bracket to else in borrowBook.jsp">
+      <option name="closed" value="true" />
+      <created>1704551152383</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1704551152383</updated>
+    </task>
+    <task id="LOCAL-00083" summary="Altered BorrowCommand to optimize performance">
+      <option name="closed" value="true" />
+      <created>1704551579958</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1704551579958</updated>
+    </task>
+    <task id="LOCAL-00084" summary="Changed customerUsername field in Loan class to userId.">
+      <option name="closed" value="true" />
+      <created>1704551621151</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1704551621151</updated>
+    </task>
+    <task id="LOCAL-00085" summary="Altered getActiveLoanByBookIdAndUsername in LoanDaoAdmin to match accordingly">
+      <option name="closed" value="true" />
+      <created>1704551678211</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1704551678211</updated>
+    </task>
+    <task id="LOCAL-00086" summary="Included accountStatus and userType in constructor again in User class while debugging in BorrowCommand">
+      <option name="closed" value="true" />
+      <created>1704551753552</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1704551753552</updated>
+    </task>
+    <task id="LOCAL-00087" summary="Changed checkAccountEnabled method in UserDaoAdmin and its interface to use userId instead of username">
+      <option name="closed" value="true" />
+      <created>1704551802928</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1704551802928</updated>
+    </task>
+    <task id="LOCAL-00088" summary="Debugging use of user object in RegisterCommand (in object construction)">
+      <option name="closed" value="true" />
+      <created>1704551852913</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1704551852913</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -616,13 +614,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactored variables in LoginCommand execute method and added comments explaining what is going on. Rerouted to loginSuccessful.jsp page if successful. Changed database used to create dao to bookrentalsystem." />
-    <MESSAGE value="Added added more important user information as inputs in signup form in register.jsp. Added hidden inputs to set default values for accountStatus, userId and userType for use in session. Changed phoneNum to read in string so 0's aren't ommitted." />
-    <MESSAGE value="Added whole method body for RegisterCommand execute and imports" />
-    <MESSAGE value="Fixed typo in username, created accountStatus field (enum) altered constructor to take in only limited amount of fields as parameters. Changed phone number to string" />
-    <MESSAGE value="Fixed typo in username, created accountStatus field (enum) in User class, altered constructor to take in only limited amount of fields as parameters. Changed phone number to string" />
-    <MESSAGE value="Created signup method in userDao" />
-    <MESSAGE value="Used UserDaoInterfaceAdmin to create userDao instead of UserDao. Moved session in code" />
     <MESSAGE value="Added display to error.jsp (sample code taken from Michelle's solution to be changed)." />
     <MESSAGE value="set continueTo string in ErrorCommand to redirect to error.jsp" />
     <MESSAGE value="Uncommented redirects to error.jsp in LoginCommand and RegisterCommand." />
@@ -641,6 +632,13 @@
     <MESSAGE value="Added checkAccountEnabled method to UserDaoAdmin and interface" />
     <MESSAGE value="Added imports that I had accidentally removed before to bookdao" />
     <MESSAGE value="Added method body to userdao for findUserByUsernameAndPassword method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added method body to userdao for findUserByUsernameAndPassword method" />
+    <MESSAGE value="Added end bracket to else in borrowBook.jsp" />
+    <MESSAGE value="Altered BorrowCommand to optimize performance" />
+    <MESSAGE value="Changed customerUsername field in Loan class to userId." />
+    <MESSAGE value="Altered getActiveLoanByBookIdAndUsername in LoanDaoAdmin to match accordingly" />
+    <MESSAGE value="Included accountStatus and userType in constructor again in User class while debugging in BorrowCommand" />
+    <MESSAGE value="Changed checkAccountEnabled method in UserDaoAdmin and its interface to use userId instead of username" />
+    <MESSAGE value="Debugging use of user object in RegisterCommand (in object construction)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Debugging use of user object in RegisterCommand (in object construction)" />
   </component>
 </project>
