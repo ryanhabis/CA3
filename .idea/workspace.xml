@@ -9,17 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Uncommented redirects to error.jsp in LoginCommand and RegisterCommand.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/BorrowCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/successfulBorrow.jsp" afterDir="false" />
+    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Made temporary alternative nav display for admin users in successfulLogin.jsp. Will be fixed later.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoAdmin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoAdminInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/LoginCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/RegisterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/RegisterCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDaoAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDaoAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDaoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDaoInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/borrowBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/borrowBook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/browseBooks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/browseBooks.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/successfulLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/successfulLogin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users and passwords.txt" beforeDir="false" afterPath="$PROJECT_DIR$/users and passwords.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoInterfaceAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoInterfaceAdmin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +29,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -203,79 +203,8 @@
       <workItem from="1704231485209" duration="6416000" />
       <workItem from="1704283696947" duration="2857000" />
       <workItem from="1704385345002" duration="13184000" />
-      <workItem from="1704453811037" duration="23098000" />
-    </task>
-    <task id="LOCAL-00018" summary="Added User, Book and Loan classes (copied over straight from previous project CA1).">
-      <option name="closed" value="true" />
-      <created>1703635298567</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1703635298567</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Created successfulLogin.jsp for context on what to do once succesfully logged in. Display nav if logged in.">
-      <option name="closed" value="true" />
-      <created>1703635363432</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1703635363432</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Created browseBooks.jsp for browsing books. Included form with ideas for filters and a hidden input to set the appropriate default action.">
-      <option name="closed" value="true" />
-      <created>1703635458577</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1703635458577</updated>
-    </task>
-    <task id="LOCAL-00021" summary="miscellaneous">
-      <option name="closed" value="true" />
-      <created>1703635514472</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1703635514472</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Added sql file for book rental system with some modifications since CA1.">
-      <option name="closed" value="true" />
-      <created>1703697296999</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1703697296999</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Added function for retrieving all books in browseBooks.jsp">
-      <option name="closed" value="true" />
-      <created>1703708266773</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1703708266773</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Created borrow book jsp page for borrowing book functionality">
-      <option name="closed" value="true" />
-      <created>1703708313421</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1703708313421</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Added case for browsing books to controller">
-      <option name="closed" value="true" />
-      <created>1703708352302</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1703708352303</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Added dao">
-      <option name="closed" value="true" />
-      <created>1703708381792</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1703708381792</updated>
+      <workItem from="1704453811037" duration="23660000" />
+      <workItem from="1704531694212" duration="6527000" />
     </task>
     <task id="LOCAL-00027" summary="Created dao exception in exception package">
       <option name="closed" value="true" />
@@ -597,7 +526,79 @@
       <option name="project" value="LOCAL" />
       <updated>1704493365207</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Rerouted to correct pages for success and error in LoginCommand">
+      <option name="closed" value="true" />
+      <created>1704505217474</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1704505217474</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Rerouted to correct pages for error in LoginCommand">
+      <option name="closed" value="true" />
+      <created>1704505265811</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1704505265811</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Rerouted to correct home page in browseBooks.jsp and allowed user to select book in browseBooks.jsp">
+      <option name="closed" value="true" />
+      <created>1704505338748</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1704505338748</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Made method body for findUserByUsernameAndPassword method in UserDaoAdmin">
+      <option name="closed" value="true" />
+      <created>1704505388818</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1704505388818</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Updated user and passwords text file to correct password for Oscar">
+      <option name="closed" value="true" />
+      <created>1704505425359</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1704505425359</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Displayed book details of book selected in borrowBook.jsp">
+      <option name="closed" value="true" />
+      <created>1704505494352</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1704505494352</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Made BorrowCommand and added some temporary body for execute method - to be fixed later">
+      <option name="closed" value="true" />
+      <created>1704505549600</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1704505549601</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Made successfulBorrow.jsp to redirect to and indicate book was borrowed successfully">
+      <option name="closed" value="true" />
+      <created>1704505594107</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1704505594107</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Made temporary alternative nav display for admin users in successfulLogin.jsp. Will be fixed later.">
+      <option name="closed" value="true" />
+      <created>1704505646092</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1704505646092</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -615,15 +616,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changed submit value from Register to register in register.jsp to match case in CommandFactory" />
-    <MESSAGE value="Created RegisterCommand" />
-    <MESSAGE value="Fixed imports in browseBooks.jsp" />
-    <MESSAGE value="workspace.xml" />
-    <MESSAGE value="Added ot who did what text file" />
-    <MESSAGE value="Added a line in a paragraph to indicate the right page was reached in successfulLogin.jsp" />
-    <MESSAGE value="Added sample login code to LoginCommand from Michelle's solution for login functionality - will be changed slightly later." />
-    <MESSAGE value="Implemented BookDaoAdminInterface in BookDaoAdmin class as I somehow forgot to previously." />
-    <MESSAGE value="Removed actually unnecessary implementation from BookDaoAdmin of BookDaoInterface" />
     <MESSAGE value="Renamed UserDaoForCustomer.java to UserDao and extended and implemented Interfaces to match structure of BookDao classes and interfaces" />
     <MESSAGE value="Added imports for User class and UserDao to LoginCommand" />
     <MESSAGE value="Added imports for User class to UserDao and renamed logIn method to login. Added findUserByUsernameAndPassword method to UserDaoInterface and UserDao." />
@@ -640,6 +632,15 @@
     <MESSAGE value="Added display to error.jsp (sample code taken from Michelle's solution to be changed)." />
     <MESSAGE value="set continueTo string in ErrorCommand to redirect to error.jsp" />
     <MESSAGE value="Uncommented redirects to error.jsp in LoginCommand and RegisterCommand." />
-    <option name="LAST_COMMIT_MESSAGE" value="Uncommented redirects to error.jsp in LoginCommand and RegisterCommand." />
+    <MESSAGE value="Rerouted to correct pages for success and error in LoginCommand" />
+    <MESSAGE value="Rerouted to correct pages for error in LoginCommand" />
+    <MESSAGE value="Rerouted to correct home page in browseBooks.jsp and allowed user to select book in browseBooks.jsp" />
+    <MESSAGE value="Made method body for findUserByUsernameAndPassword method in UserDaoAdmin" />
+    <MESSAGE value="Updated user and passwords text file to correct password for Oscar" />
+    <MESSAGE value="Displayed book details of book selected in borrowBook.jsp" />
+    <MESSAGE value="Made BorrowCommand and added some temporary body for execute method - to be fixed later" />
+    <MESSAGE value="Made successfulBorrow.jsp to redirect to and indicate book was borrowed successfully" />
+    <MESSAGE value="Made temporary alternative nav display for admin users in successfulLogin.jsp. Will be fixed later." />
+    <option name="LAST_COMMIT_MESSAGE" value="Made temporary alternative nav display for admin users in successfulLogin.jsp. Will be fixed later." />
   </component>
 </project>
