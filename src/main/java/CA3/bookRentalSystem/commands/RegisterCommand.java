@@ -46,6 +46,7 @@ public class RegisterCommand implements Command{
         String userType = request.getParameter("userType");
 
 
+
         if (currentUsername != null && currentPassword != null && !currentUsername.isEmpty() && !currentPassword.isEmpty() && userFirstName != null && !userFirstName.isEmpty() && userLastName != null && !userLastName.isEmpty()) {
             UserDaoInterfaceAdmin userDao = new UserDaoAdmin("bookrentalsystem");
 
