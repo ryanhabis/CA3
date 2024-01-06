@@ -1,4 +1,6 @@
-<%@ page import="CA3.bookRentalSystem.rental.User" %><%--
+<%@ page import="CA3.bookRentalSystem.rental.User" %>
+<%@ page import="CA3.bookRentalSystem.repositories.UserDaoInterfaceAdmin" %>
+<%@ page import="CA3.bookRentalSystem.repositories.UserDaoAdmin" %><%--
   Created by IntelliJ IDEA.
   User: Heidi
   Date: 26/12/2023
@@ -13,10 +15,21 @@
     <p>You have reached the successful login page</p>
 
     <%
-      User userLoggedIn = (User)session.getAttribute("user");
-        User.UserType currentUserType = User.UserType.valueOf(request.getParameter("userType"));
 
-    if(userLoggedIn != null && currentUserType.equals(User.UserType.Customer)){
+
+        User userLoggedIn = (User)session.getAttribute("user");
+        UserDaoInterfaceAdmin userDao = new UserDaoAdmin("bookrentalsystem");
+        String username = String.valueOf(request.getAttribute("username"));
+
+       String daoUserType = userDao.getUserType(username);
+     //   String currentUserType = (String) userLoggedIn.getUserType().name();
+     //   User.UserType currentUserType = (User.UserType) User.UserType.valueOf(String.valueOf(request.getAttribute("userType")));
+        String currentUserType = (String) request.getAttribute("userType");
+        String u = "CUSTOMER";
+    //    User.UserType ut = null;
+
+//        userLoggedIn.setUserType(currentUserType);
+  //  if(userLoggedIn != null && username != null && currentUserType != null && currentUserType.equalsIgnoreCase("Customer")){
         //then display the basic nav
      %>
             <nav>
@@ -27,7 +40,7 @@
 
             </nav>
     <%
-    } else if(userLoggedIn != null && currentUserType.equals(User.UserType.Admin)){
+  //  } else if(userLoggedIn != null && currentUserType != null && currentUserType.equals("Admin")){
 %>
     <nav>
         //list all options available to that user type
@@ -38,7 +51,8 @@
         Other Admin stuff...<br/>
     </nav>
 <%
-        }
+    //    }
+    currentUserType.toString();
     %>
 </head>
 <body>
