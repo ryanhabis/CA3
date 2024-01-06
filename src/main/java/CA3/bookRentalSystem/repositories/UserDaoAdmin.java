@@ -339,7 +339,7 @@ public class UserDaoAdmin extends Dao implements UserDaoInterfaceAdmin
 
 
     @Override
-    public boolean checkAccountEnabled(String username) {
+    public boolean checkAccountEnabled(int userId) {
         return true;
     }
 

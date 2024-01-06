@@ -9,8 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Added imports that I had accidentally removed before to bookdao">
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDao.java" afterDir="false" />
+    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Added method body to userdao for findUserByUsernameAndPassword method">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/BorrowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/BorrowCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/RegisterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/RegisterCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/rental/Loan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/rental/Loan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/rental/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/rental/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoAdminInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoAdminInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoInterfaceAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoInterfaceAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/borrowBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/borrowBook.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,15 +204,7 @@
       <workItem from="1704283696947" duration="2857000" />
       <workItem from="1704385345002" duration="13184000" />
       <workItem from="1704453811037" duration="23660000" />
-      <workItem from="1704531694212" duration="7070000" />
-    </task>
-    <task id="LOCAL-00032" summary="Created bookRentalData.sql">
-      <option name="closed" value="true" />
-      <created>1703801726131</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1703801726131</updated>
+      <workItem from="1704531694212" duration="12722000" />
     </task>
     <task id="LOCAL-00033" summary="Created new package CA3.bookRentalSystem and copied over all subdirectories into this package. Fixed imports accordingly and also removed catch clauses for DaoException and placed them where intellij suggested.">
       <option name="closed" value="true" />
@@ -589,7 +590,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704541871998</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="Added method body to userdao for findUserByUsernameAndPassword method">
+      <option name="closed" value="true" />
+      <created>1704542012326</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1704542012326</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -607,7 +616,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated user table in bookRentalData.sql and bookRental.sql to include accountStatus" />
     <MESSAGE value="Refactored variables in LoginCommand execute method and added comments explaining what is going on. Rerouted to loginSuccessful.jsp page if successful. Changed database used to create dao to bookrentalsystem." />
     <MESSAGE value="Added added more important user information as inputs in signup form in register.jsp. Added hidden inputs to set default values for accountStatus, userId and userType for use in session. Changed phoneNum to read in string so 0's aren't ommitted." />
     <MESSAGE value="Added whole method body for RegisterCommand execute and imports" />
@@ -632,6 +640,7 @@
     <MESSAGE value="Created loan daos and interfaces and added createLoan method as well as getActiveLoansByBookIdAndUser method" />
     <MESSAGE value="Added checkAccountEnabled method to UserDaoAdmin and interface" />
     <MESSAGE value="Added imports that I had accidentally removed before to bookdao" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added imports that I had accidentally removed before to bookdao" />
+    <MESSAGE value="Added method body to userdao for findUserByUsernameAndPassword method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added method body to userdao for findUserByUsernameAndPassword method" />
   </component>
 </project>
