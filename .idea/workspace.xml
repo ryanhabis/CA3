@@ -9,10 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="set continueTo string in ErrorCommand to redirect to error.jsp">
+    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Uncommented redirects to error.jsp in LoginCommand and RegisterCommand.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/BorrowCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/successfulBorrow.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/LoginCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/RegisterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/RegisterCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/borrowBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/borrowBook.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/browseBooks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/browseBooks.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/successfulLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/successfulLogin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users and passwords.txt" beforeDir="false" afterPath="$PROJECT_DIR$/users and passwords.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,15 +203,7 @@
       <workItem from="1704231485209" duration="6416000" />
       <workItem from="1704283696947" duration="2857000" />
       <workItem from="1704385345002" duration="13184000" />
-      <workItem from="1704453811037" duration="15653000" />
-    </task>
-    <task id="LOCAL-00017" summary="Added content to index.jsp to check if user is logged in and then display options to signup or login if not.">
-      <option name="closed" value="true" />
-      <created>1703635248409</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1703635248409</updated>
+      <workItem from="1704453811037" duration="23098000" />
     </task>
     <task id="LOCAL-00018" summary="Added User, Book and Loan classes (copied over straight from previous project CA1).">
       <option name="closed" value="true" />
@@ -590,7 +589,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704488511223</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Uncommented redirects to error.jsp in LoginCommand and RegisterCommand.">
+      <option name="closed" value="true" />
+      <created>1704493365207</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1704493365207</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -608,7 +615,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added case for Register in CommandFactory - this is why it wouldn't work before doid" />
     <MESSAGE value="Changed submit value from Register to register in register.jsp to match case in CommandFactory" />
     <MESSAGE value="Created RegisterCommand" />
     <MESSAGE value="Fixed imports in browseBooks.jsp" />
@@ -633,6 +639,7 @@
     <MESSAGE value="Used UserDaoInterfaceAdmin to create userDao instead of UserDao. Moved session in code" />
     <MESSAGE value="Added display to error.jsp (sample code taken from Michelle's solution to be changed)." />
     <MESSAGE value="set continueTo string in ErrorCommand to redirect to error.jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="set continueTo string in ErrorCommand to redirect to error.jsp" />
+    <MESSAGE value="Uncommented redirects to error.jsp in LoginCommand and RegisterCommand." />
+    <option name="LAST_COMMIT_MESSAGE" value="Uncommented redirects to error.jsp in LoginCommand and RegisterCommand." />
   </component>
 </project>

@@ -15,7 +15,7 @@
     <%
       User userLoggedIn = (User)session.getAttribute("user");
 
-    if(userLoggedIn != null){
+    if(userLoggedIn != null && userLoggedIn.getUserType().equals("customer")){
         //then display the basic nav
      %>
             <nav>
@@ -26,9 +26,19 @@
 
             </nav>
     <%
-    }
+    } else if(userLoggedIn != null && userLoggedIn.getUserType().equals("admin")){
 %>
-
+    <nav>
+        //list all options available to that user type
+        <a href="borrowBook.jsp">Borrow Book</a><br/>
+        <a href="returnBook.jsp">Return Book</a><br/>
+        <a href="browseBooks.jsp">Browse Books</a><br/>
+        REmove User<br/>
+        Other Admin stuff...<br/>
+    </nav>
+<%
+        }
+    %>
 </head>
 <body>
 
