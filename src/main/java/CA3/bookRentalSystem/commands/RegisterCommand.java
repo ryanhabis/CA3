@@ -42,9 +42,13 @@ public class RegisterCommand implements Command{
         String city = request.getParameter("city");
         String county = request.getParameter("county");
         String eircode = request.getParameter("eircode");
-        String accountStatus = request.getParameter("accountStatus");
-        String userType = request.getParameter("userType");
+//        String accountStatusString = request.getParameter("accountStatus");
+//        String userTypeString = request.getParameter("userType");
 
+//        User.AccountStatus accountStatus = User.AccountStatus.valueOf(accountStatusString);
+//        User.UserType userType = User.UserType.valueOf(userTypeString);
+        User.AccountStatus accountStatus = User.AccountStatus.enabled;
+        User.UserType userType = User.UserType.Customer;
 
 
         if (currentUsername != null && currentPassword != null && !currentUsername.isEmpty() && !currentPassword.isEmpty() && userFirstName != null && !userFirstName.isEmpty() && userLastName != null && !userLastName.isEmpty()) {
@@ -59,7 +63,7 @@ public class RegisterCommand implements Command{
             else {
                 continueTo = "../login.jsp"; //redirect to login page
                 session.setAttribute("username", currentUsername); //set username in session
-                User newUser = new User(userFirstName, userLastName, currentUsername, currentPassword, dob, phoneNum, email, addressLine1, addressLine2, city, county, eircode);
+                User newUser = new User(userFirstName, userLastName, currentUsername, currentPassword, dob, phoneNum, email, addressLine1, addressLine2, city, county, eircode, accountStatus, userType);
                 session.setAttribute("user", newUser);
                 String regSuccess = "Congratulations! You have successfully registered!";
                 session.setAttribute("msg", regSuccess);
