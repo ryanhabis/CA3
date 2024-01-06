@@ -22,7 +22,7 @@ public class User
     private String county;
     private String eircode;
     private Enum accountStatus;
-    private Enum userType;
+    private String userType;
 
 
 
@@ -30,44 +30,28 @@ public class User
        enabled, disabled
    }
 
-    public enum UserType
-    {
-
-        Admin("Admin"), Customer("Customer");
-
-        private String name;
-
-        UserType(String name) {
-            this.name = name;
-        }
-
-        public String getUserTypeName() {
-            return name;
-        }
-    }
+//    public enum UserType
+//    {
+//
+//        ADMIN("ADMIN"), CUSTOMER("CUSTOMER");
+//
+//        private String name;
+//
+//        UserType(String name) {
+//            this.name = name;
+//        }
+//
+//        public String getUserTypeName() {
+//            return name;
+//        }
+//    }
 
     public User() {
     }
 
-    public User(int userId, String firstName, String lastName, String username, String password, LocalDate dob, String phoneNumber, String email, String addressLine1, String addressLine2, String city, String county, String eircode, Enum userType)
-    {
-        this.userId = userId;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.username = username;
-        this.password = password;
-        this.dob = dob;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
-        this.addressLine1 = addressLine1;
-        this.addressLine2 = addressLine2;
-        this.city = city;
-        this.county = county;
-        this.eircode = eircode;
-        this.userType = userType;
-    }
 
-    public User(String firstName, String lastName, String username, String password, LocalDate dob, String phoneNumber, String email, String addressLine1, String addressLine2, String city, String county, String eircode, Enum accountStatus, Enum userType) {
+
+    public User(String firstName, String lastName, String username, String password, LocalDate dob, String phoneNumber, String email, String addressLine1, String addressLine2, String city, String county, String eircode, Enum accountStatus, String userType) {
     //    this.userId = userId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -211,11 +195,11 @@ public class User
     public void setAccountStatus(Enum accountStatus) {
         this.accountStatus = accountStatus;
     }
-    public Enum getUserType() {
+    public String getUserType() {
         return userType;
     }
 
-    public void setUserType(Enum userType) {
+    public void setUserType(String userType) {
         this.userType = userType;
     }
 
