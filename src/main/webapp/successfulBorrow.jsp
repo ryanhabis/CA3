@@ -8,9 +8,20 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <link rel="stylesheet" href="css/styles.css">
+
     <title>Successful Borrow</title>
 </head>
 <body>
-You have successfully borrowed this book - Congrats dude!
+<header>
+    <h1>
+        <%= "Book Rental System" %>
+    </h1>
+</header>
+<p>You have successfully borrowed this book - Congrats dude!</p>
+
+<footer>
+    &copy; 2024 Book Rental. All rights reserved.
+</footer>
 </body>
 </html>
