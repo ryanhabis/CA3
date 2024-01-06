@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/7056959/convert-string-to-equivalent-enum-value
+for converting string parameter to enum type
