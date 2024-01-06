@@ -4,6 +4,6 @@ import CA3.bookRentalSystem.rental.Loan;
 
 public interface LoanDaoAdminInterface extends LoanDaoInterface {
 
-    public Loan getActiveLoanByBookIdAndUsername (String username, int bookId);
+    public Loan getActiveLoanByBookIdAndUserId (int userId, int bookId);
 
 }

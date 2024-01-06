@@ -16,7 +16,7 @@ public class LoanDaoAdmin extends Dao implements LoanDaoAdminInterface{
     }
 
     @Override
-    public Loan getActiveLoanByBookIdAndUsername(String username, int bookId) {
+    public Loan getActiveLoanByBookIdAndUserId(int userId, int bookId) {
         //find the currently active loan for that user and book
         Connection conn = null;
         PreparedStatement ps = null;
@@ -27,12 +27,11 @@ public class LoanDaoAdmin extends Dao implements LoanDaoAdminInterface{
             //get connection
             conn = getConnection();
             //make query
-            String query = "select * from loans where customerUsername = ? and dateReturned is ? and bookId = ?";
+            String query = "select * from loans where userId = ? and bookId = ? and dateReturned is null";
             //prepare statement
             ps = conn.prepareStatement(query);
-            ps.setString(1, username);
-            ps.setString(2, null);
-            ps.setInt(3, bookId);
+            ps.setInt(1, userId);
+            ps.setInt(2, bookId);
             rs = ps.executeQuery();
 
             while (rs.next()) {
@@ -40,7 +39,7 @@ public class LoanDaoAdmin extends Dao implements LoanDaoAdminInterface{
 
                 loanForBook.setLoanId(rs.getInt("loanId"));
                 loanForBook.setBookId(rs.getInt("bookId"));
-                loanForBook.setCustomerUsername(rs.getString("customerUsername"));
+                loanForBook.setUserId(rs.getInt("userId"));
                 loanForBook.setLoanStartDate(rs.getDate("loanStartDate"));
                 loanForBook.setLoanDueDate(rs.getDate("loanDueDate"));
                 loanForBook.setOverdueFee(rs.getDouble("overdueFee"));
