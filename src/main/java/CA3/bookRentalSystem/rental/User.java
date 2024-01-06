@@ -26,14 +26,26 @@ public class User
 
 
 
-    public enum accountStatus {
+    public enum AccountStatus {
        enabled, disabled
    }
 
-    public enum userType
+    public enum UserType
     {
-        Admin,Customer
+
+        Admin("Admin"), Customer("Customer");
+
+        private String name;
+
+        UserType(String name) {
+            this.name = name;
+        }
+
+        public String getUserTypeName() {
+            return name;
+        }
     }
+
     public User() {
     }
 
