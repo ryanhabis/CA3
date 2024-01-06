@@ -16,7 +16,7 @@ public interface UserDaoInterfaceAdmin extends UserDaoInterface
 
     public String getUserType(String username);
 
-
+    public boolean checkAccountEnabled(String username);
     public int removeUser(String username) throws DaoException;
 
 }

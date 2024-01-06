@@ -3,6 +3,7 @@ package CA3.bookRentalSystem.repositories;
 import CA3.bookRentalSystem.exceptions.DaoException;
 import CA3.bookRentalSystem.rental.Book;
 
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -158,4 +159,5 @@ public class BookDao extends Dao implements BookDaoInterface {
 
             return bookId;
         }
-    }
+
+}
