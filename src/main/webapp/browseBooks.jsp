@@ -39,7 +39,7 @@ List<Book> allBooks = bookDao.getAllBooks();
             for(Book b: allBooks){
         %>
         <tr>
-            <td><%=b.getTitle()%></td>
+            <td><a href="borrowBook.jsp?bookId=<%=b.getBookId()%>"><%=b.getTitle()%></a></td> <!-- Set the book Id as a parameter -->
             <td><%=b.getDescription()%></td>
             <td><%=b.getBookPrice()%></td>
         </tr>
@@ -52,7 +52,7 @@ List<Book> allBooks = bookDao.getAllBooks();
         %>
     <div>
         Error - No books found
-        Please <a href="index.jsp">return to the home page</a> and try again.
+        Please <a href="../index.jsp">return to the home page</a> and try again.
     </div>
        <%
            }
