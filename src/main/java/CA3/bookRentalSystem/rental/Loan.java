@@ -12,7 +12,7 @@ public class Loan {
 
     private int loanId;
     private int bookId;
-    private String customerUsername;
+    private int userId;
     private Date loanStartDate;
     private Date loanDueDate;
     private double overdueFee;
@@ -21,10 +21,10 @@ public class Loan {
     public Loan() {
     }
 
-    public Loan(int loanId, int bookId, String customerUsername, Date loanStartDate, Date loanDueDate, double overdueFee, Date dateReturned) {
+    public Loan(int loanId, int bookId, int userId, Date loanStartDate, Date loanDueDate, double overdueFee, Date dateReturned) {
         this.loanId = loanId;
         this.bookId = bookId;
-        this.customerUsername = customerUsername;
+        this.userId = userId;
         this.loanStartDate = loanStartDate;
         this.loanDueDate = loanDueDate;
         this.overdueFee = overdueFee;
@@ -39,8 +39,8 @@ public class Loan {
         return bookId;
     }
 
-    public String getCustomerUsername() {
-        return customerUsername;
+    public int getUserId() {
+        return userId;
     }
 
     public Date getLoanStartDate() {
@@ -67,8 +67,8 @@ public class Loan {
         this.bookId = bookId;
     }
 
-    public void setCustomerUsername(String customerUsername) {
-        this.customerUsername = customerUsername;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public void setLoanStartDate(Date loanStartDate) {
@@ -105,7 +105,7 @@ public class Loan {
         return "Loan{" +
                 "loanId=" + loanId +
                 ", bookId=" + bookId +
-                ", customerUsername='" + customerUsername + '\'' +
+                ", userId='" + userId + '\'' +
                 ", loanStartDate=" + loanStartDate +
                 ", loanDueDate=" + loanDueDate +
                 ", overdueFee=" + overdueFee +
