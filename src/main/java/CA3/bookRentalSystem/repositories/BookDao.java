@@ -61,10 +61,10 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
                     books.add(b);
                 }
 
-            } catch (DaoException e) {
-                System.out.println("Dao exception: " +e.getMessage());
             } catch (SQLException e) {
                 System.out.println("SQL exception: " +e.getMessage());
+            } catch (DaoException e) {
+                System.out.println("Dao exception: " +e.getMessage());
             }
 
             //Closing Connection
@@ -124,10 +124,10 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
                     bookId = rs.getInt("bookId");
                 }
 
-            } catch (DaoException e) {
-                System.out.println("Dao exception: " +e.getMessage());
             } catch (SQLException e) {
                 System.out.println("SQL exception: " +e.getMessage());
+            } catch (DaoException e) {
+                System.out.println("Dao exception: " +e.getMessage());
             }
 
             //Closing Connection
@@ -187,10 +187,10 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
             ps.setDouble(7, bookPrice);
             rowsadded = ps.executeUpdate();
 
-        } catch (DaoException e) {
-            System.out.println("Dao exception: " +e.getMessage());
         } catch (SQLException e) {
             System.out.println("SQL exception: " +e.getMessage());
+        } catch (DaoException e) {
+            System.out.println("Dao exception: " +e.getMessage());
         }
 
         //Closing Connection
@@ -238,10 +238,10 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
 
             rowsadded = ps.executeUpdate();
 
-        } catch (DaoException e) {
-            System.out.println("Dao exception: " +e.getMessage());
         } catch (SQLException e) {
             System.out.println("SQL exception: " +e.getMessage());
+        } catch (DaoException e) {
+            System.out.println("Dao exception: " +e.getMessage());
         }
 
         //Closing Connection
@@ -300,10 +300,10 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
                 stock = rs.getInt("quantityInStock");
             }
 
-        } catch (DaoException e) {
-            System.out.println("Dao exception: " +e.getMessage());
         } catch (SQLException e) {
             System.out.println("SQL exception: " +e.getMessage());
+        } catch (DaoException e) {
+            System.out.println("Dao exception: " +e.getMessage());
         }
 
         //Closing Connection
@@ -372,10 +372,10 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
 
             }
 
-        } catch (DaoException e) {
-            System.out.println("Dao exception: " +e.getMessage());
         } catch (SQLException e) {
             System.out.println("SQL exception: " +e.getMessage());
+        } catch (DaoException e) {
+            System.out.println("Dao exception: " +e.getMessage());
         }
 
         //Closing Connection
@@ -444,10 +444,10 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
 
             }
 
-        } catch (DaoException e) {
-            System.out.println("Dao exception: " +e.getMessage());
         } catch (SQLException e) {
             System.out.println("SQL exception: " +e.getMessage());
+        } catch (DaoException e) {
+            System.out.println("Dao exception: " +e.getMessage());
         }
 
         //Closing Connection
@@ -512,8 +512,10 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
 
             }
 
-        } catch (SQLException | DaoException e) {
+        } catch (SQLException e) {
             System.out.println("SQL exception: " +e.getMessage());
+        } catch (DaoException e) {
+            System.out.println("Dao exception: " +e.getMessage());
         }
 
         //Closing Connection
