@@ -131,7 +131,65 @@ public class UserDao extends Dao implements UserDaoInterface {
 
     @Override
     public User findUserByUsernameAndPassword(String username, String password) {
-        return null;
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        User userFound = new User();
+
+
+        try {
+            //Getting connection
+            conn = getConnection();
+            //Creating query
+            String query = "select * from users where username = ? and password = ?";
+            //Prepare & execute query
+            ps = conn.prepareStatement(query);
+            ps.setString(1, username);
+            ps.setString(2, password);
+            rs = ps.executeQuery();
+
+
+            while(rs.next()) {
+
+                //Setting values to correct columns
+                userFound.setUsername(rs.getString("username"));
+                userFound.setPassword(rs.getString("password"));
+
+            }
+
+        } catch (SQLException | DaoException e) {
+            System.out.println("SQL exception: " +e.getMessage());
+        }
+
+        //Closing Connection
+        finally {
+            if(rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException e) {
+                    System.out.println("Exception message: " + e.getMessage());
+                    System.out.println("Issue when closing result set: ");
+                }
+            }
+            if(ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException e) {
+                    System.out.println("Exception message: " + e.getMessage());
+                    System.out.println("Issue when closing prepared statement: ");
+                }
+            }
+            if(conn != null) {
+                try {
+                    freeConnection(conn);
+                } catch (DaoException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }
+
+        return userFound;
     }
 
     /**
