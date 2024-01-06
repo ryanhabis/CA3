@@ -48,8 +48,8 @@ public class RegisterCommand implements Command{
 //        User.AccountStatus accountStatus = User.AccountStatus.valueOf(accountStatusString);
 //        User.UserType userType = User.UserType.valueOf(userTypeString);
         User.AccountStatus accountStatus = User.AccountStatus.enabled;
-        User.UserType userType = User.UserType.Customer;
-
+       // User.UserType userType = User.UserType.CUSTOMER;
+String userType = "Customer";
 
         if (currentUsername != null && currentPassword != null && !currentUsername.isEmpty() && !currentPassword.isEmpty() && userFirstName != null && !userFirstName.isEmpty() && userLastName != null && !userLastName.isEmpty()) {
             UserDaoInterfaceAdmin userDao = new UserDaoAdmin("bookrentalsystem");
