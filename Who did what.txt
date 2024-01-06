@@ -12,3 +12,10 @@ Heidi:
 - Made all Commands (Login, Register)
 - Fixed Dao and Interface structure for Users, Books and Loans
 - Created Dummy methods for login and register until completed by Ryan?
+
+Ryan:
+- Created the GitHub source control and added everyone to it.
+- Created css for the webpages
+- Created the UserDao, UserDaoAdmin (Heidi helped)
+- Created UserDaoInterface and UserDaoInterfaceAdmin
+- Created User class
