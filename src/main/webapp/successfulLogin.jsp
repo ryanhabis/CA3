@@ -14,8 +14,9 @@
 
     <%
       User userLoggedIn = (User)session.getAttribute("user");
+        User.UserType currentUserType = User.UserType.valueOf(request.getParameter("userType"));
 
-    if(userLoggedIn != null && userLoggedIn.getUserType().equals("customer")){
+    if(userLoggedIn != null && currentUserType.equals(User.UserType.Customer)){
         //then display the basic nav
      %>
             <nav>
@@ -26,7 +27,7 @@
 
             </nav>
     <%
-    } else if(userLoggedIn != null && userLoggedIn.getUserType().equals("admin")){
+    } else if(userLoggedIn != null && currentUserType.equals(User.UserType.Admin)){
 %>
     <nav>
         //list all options available to that user type
