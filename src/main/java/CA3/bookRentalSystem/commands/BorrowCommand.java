@@ -2,10 +2,7 @@ package CA3.bookRentalSystem.commands;
 
 import CA3.bookRentalSystem.rental.Book;
 import CA3.bookRentalSystem.rental.User;
-import CA3.bookRentalSystem.repositories.BookDaoAdmin;
-import CA3.bookRentalSystem.repositories.BookDaoAdminInterface;
-import CA3.bookRentalSystem.repositories.UserDaoAdmin;
-import CA3.bookRentalSystem.repositories.UserDaoInterfaceAdmin;
+import CA3.bookRentalSystem.repositories.*;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
@@ -26,18 +23,22 @@ public class BorrowCommand implements Command{
         //create session to execute borrow
         HttpSession session = request.getSession(true);
 
-        int quantityInStock = Integer.parseInt(request.getParameter("quantityInStock"));
+        //get book from session
+        Book bookToBorrow = (Book) request.getAttribute("book");
+        int quantityInStock = bookToBorrow.getQuantityInStock();
+        //int quantityInStock = Integer.parseInt(request.getParameter("quantityInStock"));
         //if book has sufficient stock
-        if (quantityInStock > 0) {
+        if (bookToBorrow != null) {
             //make all relevant daos to borrow book
             UserDaoInterfaceAdmin userDao = new UserDaoAdmin("bookrentalsystem");
             BookDaoAdminInterface bookDao = new BookDaoAdmin("bookrentalsystem");
-            //get book
-//            Book bookToBorrow = request.getParameter("book");
-//
-            int bookId = Integer.parseInt(request.getParameter("bookId"));
-            //get book object for ID
+            LoanDaoAdminInterface loanDao = new LoanDaoAdmin("bookrentalsystem");
 
+       //     int bookId = Integer.parseInt(request.getParameter("bookId"));
+            int bookId = bookToBorrow.getBookId();
+            User currentUser = (User)request.getAttribute("user");
+        //    int userId = Integer.parseInt(request.getParameter("userId"));
+            int userId = currentUser.getUserId();
             if (bookId == -1) { //if no matching user is found
                 continueTo = "../error.jsp"; //go to error page
                 String error = "Incorrect credentials supplied. Please <a href=\"login.jsp\">try again.</a>";
@@ -45,12 +46,14 @@ public class BorrowCommand implements Command{
             } else {
                 continueTo = "../successfulBorrow.jsp"; //otherwise, continue to the loginSuccessful page
                 //get book object for ID
-                Book bookToBorrow = bookDao.getBookByBookId(bookId);
+            //    Book bookToBorrow = bookDao.getBookByBookId(bookId);
                 //borrow book
-                bookDao.reserveCopy(bookToBorrow); //reserve copy
+                if (bookDao.reserveCopy(bookToBorrow) && userDao.checkAccountEnabled(userId) && loanDao.getActiveLoanByBookIdAndUserId(userId, bookId) == null) {
+                    //then create loan and decrease stock in books
+                    bookDao.updateStock(bookId, bookToBorrow.getQuantityInStock()-1);
+                }
 
-//                session.setAttribute("username", username); //set the username variable to the current session
-//                session.setAttribute("user", userFound); //set the user object to the current session
+//
             }
         } else {
             continueTo = "../error.jsp"; //go to error page
