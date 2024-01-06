@@ -55,7 +55,7 @@ public class User
         this.userType = userType;
     }
 
-    public User(String firstName, String lastName, String username, String password, LocalDate dob, String phoneNumber, String email, String addressLine1, String addressLine2, String city, String county, String eircode) {
+    public User(String firstName, String lastName, String username, String password, LocalDate dob, String phoneNumber, String email, String addressLine1, String addressLine2, String city, String county, String eircode, Enum accountStatus, Enum userType) {
     //    this.userId = userId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -72,9 +72,9 @@ public class User
         this.city = city;
         this.county = county;
         this.eircode = eircode;
-//        this.accountStatus = accountStatus;
-//        this.userType = userType;
-     //removed userType as database will set it to default enum
+        this.accountStatus = accountStatus;
+        this.userType = userType;
+
     }
 
 //    public User(String firstName, String lastName, String username, String password) {
