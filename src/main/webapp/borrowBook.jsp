@@ -51,6 +51,8 @@ Hello there, yes you would like to borrow a book eh?
     Error - No books found
     Please <a href="index.jsp">return to the home page</a> and try again.
 </div>
+<%
+}
 %>
     </body>
 </html>
