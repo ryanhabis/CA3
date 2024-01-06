@@ -160,29 +160,323 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
             return bookId;
         }
 
+    /**
+     *  The method to add a book with properties for a book
+     * @return the number of rows added
+     */
     @Override
     public int addBook(int bookId, int genreId, String title, String description, String author, int quantityInstock, double bookPrice) {
-        return 0;
+
+        int rowsadded = 0;
+        Connection conn = null;
+        PreparedStatement ps = null;
+
+        try {
+            //Getting connection
+            conn = getConnection();
+            //Creating query
+            String query = "insert into books values(?, ?, ?, ?, ?, ?, ?)";
+            //Prepare & execute query
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, bookId);
+            ps.setInt(2, genreId);
+            ps.setString(3, title);
+            ps.setString(4, description);
+            ps.setString(5, author);
+            ps.setInt(6, quantityInstock);
+            ps.setDouble(7, bookPrice);
+            rowsadded = ps.executeUpdate();
+
+        } catch (DaoException e) {
+            System.out.println("Dao exception: " +e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("SQL exception: " +e.getMessage());
+        }
+
+        //Closing Connection
+        finally {
+            if(ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException e) {
+                    System.out.println("Exception message: " + e.getMessage());
+                    System.out.println("Issue when closing prepared statement: ");
+                }
+            }
+            if(conn != null) {
+                try {
+                    freeConnection(conn);
+                } catch (DaoException e) {
+                    System.out.println("Dao exception caught: " + e.getMessage());
+                }
+            }
+        }
+        return rowsadded;
     }
 
+    /**
+     *  The method to update the stock of a book using bookId
+     * @return the number of rows added
+     */
     @Override
     public int updateStock(int bookId, int quantityInStock) {
-        return 0;
+
+        int rowsadded = 0;
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        try {
+            //Getting connection
+            conn = getConnection();
+            //Creating query
+            String query = "update books set quantityInStock = ? where bookId = ?";
+            //Prepare & execute query
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, quantityInStock);
+            ps.setInt(2, bookId);
+
+            rowsadded = ps.executeUpdate();
+
+        } catch (DaoException e) {
+            System.out.println("Dao exception: " +e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("SQL exception: " +e.getMessage());
+        }
+
+        //Closing Connection
+        finally {
+            if(rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException e) {
+                    System.out.println("Exception message: " + e.getMessage());
+                    System.out.println("Issue when closing result set: ");
+                }
+            }
+            if(ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException e) {
+                    System.out.println("Exception message: " + e.getMessage());
+                    System.out.println("Issue when closing prepared statement: ");
+                }
+            }
+            if(conn != null) {
+                try {
+                    freeConnection(conn);
+                } catch (DaoException e) {
+                    System.out.println("Dao exception caught: " + e.getMessage());
+                }
+            }
+        }
+        return rowsadded;
     }
 
+    /**
+     *  The method to check the stock by the bookId
+     * @return the quantityInStock from the database
+     */
     @Override
     public int checkStock(int bookId) {
-        return 0;
+
+        //Will return -1 if a book is not found
+        int stock = -1;
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        try {
+            //Getting connection
+            conn = getConnection();
+            //Creating query
+            String query = "select quantityInStock from books where bookId = ?";
+            //Prepare & execute query
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, bookId);
+            rs = ps.executeQuery();
+
+            if (rs.next()) {
+                stock = rs.getInt("quantityInStock");
+            }
+
+        } catch (DaoException e) {
+            System.out.println("Dao exception: " +e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("SQL exception: " +e.getMessage());
+        }
+
+        //Closing Connection
+        finally {
+            if(rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException e) {
+                    System.out.println("Exception message: " + e.getMessage());
+                    System.out.println("Issue when closing result set: ");
+                }
+            }
+            if(ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException e) {
+                    System.out.println("Exception message: " + e.getMessage());
+                    System.out.println("Issue when closing prepared statement: ");
+                }
+            }
+            if(conn != null) {
+                try {
+                    freeConnection(conn);
+                } catch (DaoException e) {
+                    System.out.println("Dao exception caught: " + e.getMessage());
+                }
+            }
+        }
+        return stock;
     }
 
+    /**
+     *  The method to get a book by the book id from the database
+     * @return the corresponding book
+     */
     @Override
     public Book getBookByBookId(int bookId) {
-        return null;
+
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        //Creating book
+        Book b = new Book();
+
+        try {
+            //Getting connection
+            conn = getConnection();
+            //Creating query
+            String query = "select * from books where bookId = ?";
+            //Prepare & execute query
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, bookId);
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+
+                //Setting values to correct columns
+                b.setBookId(rs.getInt("bookId"));
+                b.setGenreId(rs.getInt("genreId"));
+                b.setTitle(rs.getString("title"));
+                b.setDescription(rs.getString("description"));
+                b.setAuthor(rs.getString("author"));
+                b.setQuantityInStock(rs.getInt("quantityInStock"));
+                b.setBookPrice(rs.getDouble("bookPrice"));
+
+            }
+
+        } catch (DaoException e) {
+            System.out.println("Dao exception: " +e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("SQL exception: " +e.getMessage());
+        }
+
+        //Closing Connection
+        finally {
+            if(rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException e) {
+                    System.out.println("Exception message: " + e.getMessage());
+                    System.out.println("Issue when closing result set: ");
+                }
+            }
+            if(ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException e) {
+                    System.out.println("Exception message: " + e.getMessage());
+                    System.out.println("Issue when closing prepared statement: ");
+                }
+            }
+            if(conn != null) {
+                try {
+                    freeConnection(conn);
+                } catch (DaoException e) {
+                    System.out.println("Dao exception caught: " + e.getMessage());
+                }
+            }
+        }
+        return b;
     }
 
+    /**
+     *  The method to get a book by the book title from the database
+     * @return the corresponding book
+     */
     @Override
     public Book getBookByBookTitle(String title) {
-        return null;
+
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        //Creating book
+        Book b = new Book();
+
+        try {
+            //Getting connection
+            conn = getConnection();
+            //Creating query
+            String query = "select * from books where title = ?";
+            //Prepare & execute query
+            ps = conn.prepareStatement(query);
+            ps.setString(1, title);
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+
+                //Setting values to correct columns
+                b.setBookId(rs.getInt("bookId"));
+                b.setGenreId(rs.getInt("genreId"));
+                b.setTitle(rs.getString("title"));
+                b.setDescription(rs.getString("description"));
+                b.setAuthor(rs.getString("author"));
+                b.setQuantityInStock(rs.getInt("quantityInStock"));
+                b.setBookPrice(rs.getDouble("bookPrice"));
+
+            }
+
+        } catch (DaoException e) {
+            System.out.println("Dao exception: " +e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("SQL exception: " +e.getMessage());
+        }
+
+        //Closing Connection
+        finally {
+            if(rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException e) {
+                    System.out.println("Exception message: " + e.getMessage());
+                    System.out.println("Issue when closing result set: ");
+                }
+            }
+            if(ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException e) {
+                    System.out.println("Exception message: " + e.getMessage());
+                    System.out.println("Issue when closing prepared statement: ");
+                }
+            }
+            if(conn != null) {
+                try {
+                    freeConnection(conn);
+                } catch (DaoException e) {
+                    System.out.println("Dao exception caught: " + e.getMessage());
+                }
+            }
+        }
+        return b;
     }
 
     // BookDao to reserve a copy (if there are no copies available, return a fail code indicating a loan could not be made)

@@ -9,9 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Debugging use of user object in RegisterCommand (in object construction)">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_01_2024_20_12__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_01_2024_20_12__Changes_.xml" afterDir="false" />
+    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Combined the BookDao.java and BookDaoAdmin.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDao.java" afterDir="false" />
     </list>
@@ -208,22 +206,6 @@
       <workItem from="1704385345002" duration="13184000" />
       <workItem from="1704453811037" duration="23660000" />
       <workItem from="1704531694212" duration="17188000" />
-    </task>
-    <task id="LOCAL-00040" summary="Changed form actions to servlet/Controller in register.jsp and login.jsp">
-      <option name="closed" value="true" />
-      <created>1703982026097</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1703982026097</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Added case for Register in CommandFactory - this is why it wouldn't work before doid">
-      <option name="closed" value="true" />
-      <created>1704240482670</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1704240482670</updated>
     </task>
     <task id="LOCAL-00042" summary="Changed submit value from Register to register in register.jsp to match case in CommandFactory">
       <option name="closed" value="true" />
@@ -601,7 +583,23 @@
       <option name="project" value="LOCAL" />
       <updated>1704551852913</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="Combined the BookDao.java and BookDaoAdmin.java">
+      <option name="closed" value="true" />
+      <created>1704583258811</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1704583258811</updated>
+    </task>
+    <task id="LOCAL-00090" summary="Combined the BookDao.java and BookDaoAdmin.java">
+      <option name="closed" value="true" />
+      <created>1704583268537</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1704583268537</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -619,7 +617,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added display to error.jsp (sample code taken from Michelle's solution to be changed)." />
     <MESSAGE value="set continueTo string in ErrorCommand to redirect to error.jsp" />
     <MESSAGE value="Uncommented redirects to error.jsp in LoginCommand and RegisterCommand." />
     <MESSAGE value="Rerouted to correct pages for success and error in LoginCommand" />
@@ -644,6 +641,7 @@
     <MESSAGE value="Included accountStatus and userType in constructor again in User class while debugging in BorrowCommand" />
     <MESSAGE value="Changed checkAccountEnabled method in UserDaoAdmin and its interface to use userId instead of username" />
     <MESSAGE value="Debugging use of user object in RegisterCommand (in object construction)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Debugging use of user object in RegisterCommand (in object construction)" />
+    <MESSAGE value="Combined the BookDao.java and BookDaoAdmin.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Combined the BookDao.java and BookDaoAdmin.java" />
   </component>
 </project>
