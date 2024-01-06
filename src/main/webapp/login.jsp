@@ -8,10 +8,24 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <link rel="stylesheet" href="css/styles.css">
+
     <title>Login Page</title>
 </head>
 <body>
+<header>
+    <h1>
+        <%= "Book Rental System" %>
+    </h1>
+</header>
+
+<nav>
+    <a href="index.jsp">Home</a>
+    <a href="login.jsp">Login</a>
+    <a href="register.jsp">Register</a>
+</nav>
 <%--The following was copied from Michelle's Github and needs to be changed please!--%>
+<main>
 <p>Login Form</p>
 <form action="servlet/Controller" method="post">
     <table>
@@ -26,5 +40,10 @@
     <!-- Include a hidden field to identify what the user wants to do -->
     <input type="hidden" name ="action" value="login" />
 </form>
+
+</main>
+<footer>
+    &copy; 2024 Book Rental. All rights reserved.
+</footer>
 </body>
 </html>

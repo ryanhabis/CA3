@@ -8,9 +8,22 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <link rel="stylesheet" href="css/styles.css">
+
     <title>Sign Up Page</title>
 </head>
 <body>
+<header>
+    <h1>
+        <%= "Book Rental System" %>
+    </h1>
+</header>
+
+<nav>
+    <a href="index.jsp">Home</a>
+    <a href="login.jsp">Login</a>
+    <a href="register.jsp">Register</a>
+</nav>
 
 <p>Sign-up</p>
 <form action="servlet/Controller" method="post">
@@ -59,5 +72,8 @@
     <!-- Include a hidden field to identify what the user wants to do -->
     <input type="hidden" name ="action" value="register" />
 </form>
+<footer>
+    &copy; 2024 Book Rental. All rights reserved.
+</footer>
 </body>
 </html>
