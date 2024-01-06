@@ -24,7 +24,9 @@ public class User
     private Enum accountStatus;
     private Enum userType;
 
-   public enum accountStatus {
+
+
+    public enum accountStatus {
        enabled, disabled
    }
 
@@ -33,6 +35,24 @@ public class User
         Admin,Customer
     }
     public User() {
+    }
+
+    public User(int userId, String firstName, String lastName, String username, String password, LocalDate dob, String phoneNumber, String email, String addressLine1, String addressLine2, String city, String county, String eircode, Enum userType)
+    {
+        this.userId = userId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.username = username;
+        this.password = password;
+        this.dob = dob;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.addressLine1 = addressLine1;
+        this.addressLine2 = addressLine2;
+        this.city = city;
+        this.county = county;
+        this.eircode = eircode;
+        this.userType = userType;
     }
 
     public User(String firstName, String lastName, String username, String password, LocalDate dob, String phoneNumber, String email, String addressLine1, String addressLine2, String city, String county, String eircode) {
