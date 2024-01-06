@@ -9,18 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Made temporary alternative nav display for admin users in successfulLogin.jsp. Will be fixed later.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoAdmin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoAdminInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDaoAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDaoAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDaoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDaoInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoInterfaceAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoInterfaceAdmin.java" afterDir="false" />
-    </list>
+    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Added checkAccountEnabled method to UserDaoAdmin and interface" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -204,39 +193,7 @@
       <workItem from="1704283696947" duration="2857000" />
       <workItem from="1704385345002" duration="13184000" />
       <workItem from="1704453811037" duration="23660000" />
-      <workItem from="1704531694212" duration="6527000" />
-    </task>
-    <task id="LOCAL-00027" summary="Created dao exception in exception package">
-      <option name="closed" value="true" />
-      <created>1703708402411</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1703708402411</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Created BookDao Interface and class">
-      <option name="closed" value="true" />
-      <created>1703708660448</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1703708660448</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Altered database used to create bookdao in browseBooks.jsp">
-      <option name="closed" value="true" />
-      <created>1703716526875</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1703716526875</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Commented out error worthy code in CommandFactory">
-      <option name="closed" value="true" />
-      <created>1703716555392</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1703716555392</updated>
+      <workItem from="1704531694212" duration="6845000" />
     </task>
     <task id="LOCAL-00031" summary="Created BookDaoAdmin and BookDaoAdminInterface">
       <option name="closed" value="true" />
@@ -598,7 +555,39 @@
       <option name="project" value="LOCAL" />
       <updated>1704505646092</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="Moved position of return value in reserveCopy method in BookDaoAdmin">
+      <option name="closed" value="true" />
+      <created>1704541484381</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1704541484381</updated>
+    </task>
+    <task id="LOCAL-00077" summary="removed unused imports in bookdao">
+      <option name="closed" value="true" />
+      <created>1704541512719</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1704541512719</updated>
+    </task>
+    <task id="LOCAL-00078" summary="Created loan daos and interfaces and added createLoan method as well as getActiveLoansByBookIdAndUser method">
+      <option name="closed" value="true" />
+      <created>1704541607516</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1704541607516</updated>
+    </task>
+    <task id="LOCAL-00079" summary="Added checkAccountEnabled method to UserDaoAdmin and interface">
+      <option name="closed" value="true" />
+      <created>1704541657087</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1704541657087</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -616,10 +605,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Renamed UserDaoForCustomer.java to UserDao and extended and implemented Interfaces to match structure of BookDao classes and interfaces" />
-    <MESSAGE value="Added imports for User class and UserDao to LoginCommand" />
-    <MESSAGE value="Added imports for User class to UserDao and renamed logIn method to login. Added findUserByUsernameAndPassword method to UserDaoInterface and UserDao." />
-    <MESSAGE value="Implemented login method added in UserDaoForAdmin" />
     <MESSAGE value="Updated who did what text file" />
     <MESSAGE value="Updated user table in bookRentalData.sql and bookRental.sql to include accountStatus" />
     <MESSAGE value="Refactored variables in LoginCommand execute method and added comments explaining what is going on. Rerouted to loginSuccessful.jsp page if successful. Changed database used to create dao to bookrentalsystem." />
@@ -641,6 +626,10 @@
     <MESSAGE value="Made BorrowCommand and added some temporary body for execute method - to be fixed later" />
     <MESSAGE value="Made successfulBorrow.jsp to redirect to and indicate book was borrowed successfully" />
     <MESSAGE value="Made temporary alternative nav display for admin users in successfulLogin.jsp. Will be fixed later." />
-    <option name="LAST_COMMIT_MESSAGE" value="Made temporary alternative nav display for admin users in successfulLogin.jsp. Will be fixed later." />
+    <MESSAGE value="Moved position of return value in reserveCopy method in BookDaoAdmin" />
+    <MESSAGE value="removed unused imports in bookdao" />
+    <MESSAGE value="Created loan daos and interfaces and added createLoan method as well as getActiveLoansByBookIdAndUser method" />
+    <MESSAGE value="Added checkAccountEnabled method to UserDaoAdmin and interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added checkAccountEnabled method to UserDaoAdmin and interface" />
   </component>
 </project>

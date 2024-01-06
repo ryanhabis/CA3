@@ -4,6 +4,10 @@ import CA3.bookRentalSystem.exceptions.DaoException;
 import CA3.bookRentalSystem.rental.Book;
 
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 
