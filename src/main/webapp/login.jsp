@@ -40,8 +40,8 @@
     <!-- Include a hidden field to identify what the user wants to do -->
     <input type="hidden" name ="action" value="login" />
 </form>
-
 </main>
+
 <footer>
     &copy; 2024 Book Rental. All rights reserved.
 </footer>

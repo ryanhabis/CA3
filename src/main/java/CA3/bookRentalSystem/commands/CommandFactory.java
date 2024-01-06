@@ -19,6 +19,8 @@ public class CommandFactory {
 
                 case "register" :
                     command = new RegisterCommand(request, response);
+                    break;
+
             }
         }
 
