@@ -176,15 +176,17 @@ public class UserDaoAdmin extends Dao implements UserDaoInterfaceAdmin
     @Override
     public String getUserType(String username){
         Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
         String status = null;
         try
         {
             conn = getConnection();
             String query = "select userType from users where username = ?";
 
-            PreparedStatement ps = conn.prepareStatement(query);
+            ps = conn.prepareStatement(query);
             ps.setString(1,username);
-            ResultSet rs = ps.executeQuery();
+            rs = ps.executeQuery();
 
             if (rs.next())
             {
@@ -199,14 +201,14 @@ public class UserDaoAdmin extends Dao implements UserDaoInterfaceAdmin
             throw new RuntimeException(e);
         }
 
-//        if (conn != null) {
-//            try {
-//                conn.close();
-//            } catch (SQLException e) {
-//                System.out.println("Exception message: " + e.getMessage());
-//                System.out.println("Problem occured when closing connection statement.");
-//            }
-//        }
+        if (conn != null) {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                System.out.println("Exception message: " + e.getMessage());
+                System.out.println("Problem occured when closing connection statement.");
+            }
+        }
 
           return status;
     }

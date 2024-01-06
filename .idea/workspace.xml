@@ -9,9 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Combined the BookDao.java and BookDaoAdmin.java">
+    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Commented out closing of connection in UserDaoAdmin methods to debug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/LoginCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/RegisterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/RegisterCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/rental/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/rental/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/successfulLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/successfulLogin.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,26 +73,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Heidi/OneDrive - Dundalk Institute of Technology/Documents/Web Patterns/CA3/src/main/java/CA3/bookRentalSystem/repositories",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Heidi/OneDrive - Dundalk Institute of Technology/Documents/Web Patterns/CA3/src/main/java/CA3/bookRentalSystem/repositories&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Heidi\OneDrive - Dundalk Institute of Technology\Documents\Web Patterns\CA3\src\main\java\CA3\bookRentalSystem\repositories" />
@@ -178,13 +181,6 @@
       </method>
     </configuration>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-20.0.2-corretto-20.0.2.1-f644763e9732-27d99999" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -206,38 +202,8 @@
       <workItem from="1704385345002" duration="13184000" />
       <workItem from="1704453811037" duration="23660000" />
       <workItem from="1704531694212" duration="17188000" />
-    </task>
-    <task id="LOCAL-00042" summary="Changed submit value from Register to register in register.jsp to match case in CommandFactory">
-      <option name="closed" value="true" />
-      <created>1704240616790</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1704240616790</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Created RegisterCommand">
-      <option name="closed" value="true" />
-      <created>1704240714471</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1704240714471</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Fixed imports in browseBooks.jsp">
-      <option name="closed" value="true" />
-      <created>1704240748076</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1704240748076</updated>
-    </task>
-    <task id="LOCAL-00045" summary="workspace.xml">
-      <option name="closed" value="true" />
-      <created>1704240831884</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1704240831884</updated>
+      <workItem from="1704555537379" duration="964000" />
+      <workItem from="1704567190856" duration="14004000" />
     </task>
     <task id="LOCAL-00046" summary="Added ot who did what text file">
       <option name="closed" value="true" />
@@ -583,23 +549,55 @@
       <option name="project" value="LOCAL" />
       <updated>1704551852913</updated>
     </task>
-    <task id="LOCAL-00089" summary="Combined the BookDao.java and BookDaoAdmin.java">
+    <task id="LOCAL-00089" summary="Set usertype to session in LoginCommand">
       <option name="closed" value="true" />
-      <created>1704583258811</created>
+      <created>1704556027359</created>
       <option name="number" value="00089" />
       <option name="presentableId" value="LOCAL-00089" />
       <option name="project" value="LOCAL" />
-      <updated>1704583258811</updated>
+      <updated>1704556027359</updated>
     </task>
-    <task id="LOCAL-00090" summary="Combined the BookDao.java and BookDaoAdmin.java">
+    <task id="LOCAL-00090" summary="Set usertype and accountStatus fields in user creation in RegisterCommand">
       <option name="closed" value="true" />
-      <created>1704583268537</created>
+      <created>1704556300486</created>
       <option name="number" value="00090" />
       <option name="presentableId" value="LOCAL-00090" />
       <option name="project" value="LOCAL" />
-      <updated>1704583268537</updated>
+      <updated>1704556300486</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="Attempted to retrieve usertype from session and do checks on it in successfulLogin.jsp but currently not working">
+      <option name="closed" value="true" />
+      <created>1704556384745</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1704556384745</updated>
+    </task>
+    <task id="LOCAL-00092" summary="Added references.txt">
+      <option name="closed" value="true" />
+      <created>1704556404804</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1704556404804</updated>
+    </task>
+    <task id="LOCAL-00093" summary="Made changes to User class for usertype enum constructor inner name field and tostring method">
+      <option name="closed" value="true" />
+      <created>1704556463211</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1704556463211</updated>
+    </task>
+    <task id="LOCAL-00094" summary="Commented out closing of connection in UserDaoAdmin methods to debug">
+      <option name="closed" value="true" />
+      <created>1704556503226</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1704556503226</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -617,11 +615,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="set continueTo string in ErrorCommand to redirect to error.jsp" />
-    <MESSAGE value="Uncommented redirects to error.jsp in LoginCommand and RegisterCommand." />
-    <MESSAGE value="Rerouted to correct pages for success and error in LoginCommand" />
-    <MESSAGE value="Rerouted to correct pages for error in LoginCommand" />
-    <MESSAGE value="Rerouted to correct home page in browseBooks.jsp and allowed user to select book in browseBooks.jsp" />
     <MESSAGE value="Made method body for findUserByUsernameAndPassword method in UserDaoAdmin" />
     <MESSAGE value="Updated user and passwords text file to correct password for Oscar" />
     <MESSAGE value="Displayed book details of book selected in borrowBook.jsp" />
@@ -641,7 +634,12 @@
     <MESSAGE value="Included accountStatus and userType in constructor again in User class while debugging in BorrowCommand" />
     <MESSAGE value="Changed checkAccountEnabled method in UserDaoAdmin and its interface to use userId instead of username" />
     <MESSAGE value="Debugging use of user object in RegisterCommand (in object construction)" />
-    <MESSAGE value="Combined the BookDao.java and BookDaoAdmin.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Combined the BookDao.java and BookDaoAdmin.java" />
+    <MESSAGE value="Set usertype to session in LoginCommand" />
+    <MESSAGE value="Set usertype and accountStatus fields in user creation in RegisterCommand" />
+    <MESSAGE value="Attempted to retrieve usertype from session and do checks on it in successfulLogin.jsp but currently not working" />
+    <MESSAGE value="Added references.txt" />
+    <MESSAGE value="Made changes to User class for usertype enum constructor inner name field and tostring method" />
+    <MESSAGE value="Commented out closing of connection in UserDaoAdmin methods to debug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commented out closing of connection in UserDaoAdmin methods to debug" />
   </component>
 </project>

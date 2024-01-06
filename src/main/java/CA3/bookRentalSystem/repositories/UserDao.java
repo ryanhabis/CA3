@@ -94,15 +94,18 @@ public class UserDao extends Dao implements UserDaoInterface {
         @Override
         public String getUserType(String username)  {
             Connection conn = null;
+            PreparedStatement ps = null;
+            ResultSet rs = null;
+
             String status = null;
             try
             {
                 conn = getConnection();
                 String query = "select userType from users where username = ?";
 
-                PreparedStatement ps = conn.prepareStatement(query);
+                ps = conn.prepareStatement(query);
                 ps.setString(1,username);
-                ResultSet rs = ps.executeQuery();
+                rs = ps.executeQuery();
 
                 if (rs.next())
                 {
