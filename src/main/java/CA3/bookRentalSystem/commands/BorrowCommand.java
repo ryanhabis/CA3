@@ -1,7 +1,6 @@
 package CA3.bookRentalSystem.commands;
 /**
  * @author: Heidi
- * @author: Evan
  * Reference: Michelle's notes
  **/
 

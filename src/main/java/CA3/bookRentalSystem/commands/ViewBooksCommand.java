@@ -34,7 +34,9 @@ public class ViewBooksCommand implements Command {
         BookDaoInterface bookDao = new BookDao("bookrentalsystem");
         ArrayList<Book> books = bookDao.getAllBooks();
 
+        //Checking if books not null and not empty
         if(books != null && !books.isEmpty()) {
+            //Storing the books
             session.setAttribute("books",books);
         } else {
             continueTo = "../error.jsp"; //go to error page
