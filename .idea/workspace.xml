@@ -9,12 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment=" added many method headers to LoanDaoAdminInterface and LoanDaoInterface">
+    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Added method header to LoanDaoAdminInterface for getAllOverdueLoans method">
+      <change afterPath="$PROJECT_DIR$/src/test/java/CA3/bookRentalSystem/repositories/LoanDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Who did what.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Who did what.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoAdminInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoAdminInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/ReturnCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/ReturnCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +25,7 @@
         <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -72,24 +71,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Heidi/OneDrive - Dundalk Institute of Technology/Documents/Web Patterns/CA3/src/main/java/CA3/bookRentalSystem/repositories&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Heidi/OneDrive - Dundalk Institute of Technology/Documents/Web Patterns/CA3/src/main/java/CA3/bookRentalSystem/repositories",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Heidi\OneDrive - Dundalk Institute of Technology\Documents\Web Patterns\CA3\src\main\java\CA3\bookRentalSystem\repositories" />
@@ -101,12 +102,18 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Heidi\OneDrive - Dundalk Institute of Technology\Documents\Web Patterns\CA3\src\main\webapp" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="CA3.bookRentalSystem.repositories" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="CA3.bookRentalSystem.servlet" />
       <recent name="CA3.bookRentalSystem.exceptions" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="GlassFish Server.GlassFish 7.0.10">
     <configuration name="GlassFish 7.0.10" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 7.0.10" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -179,6 +186,27 @@
         </option>
       </method>
     </configuration>
+    <configuration name="LoanDaoTest.createLoan" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CA3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CA3.bookRentalSystem.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="CA3.bookRentalSystem.repositories" />
+      <option name="MAIN_CLASS_NAME" value="CA3.bookRentalSystem.repositories.LoanDaoTest" />
+      <option name="METHOD_NAME" value="createLoan" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.LoanDaoTest.createLoan" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -203,30 +231,6 @@
       <workItem from="1704531694212" duration="17188000" />
       <workItem from="1704555537379" duration="964000" />
       <workItem from="1704567190856" duration="23840000" />
-    </task>
-    <task id="LOCAL-00059" summary="Added whole method body for RegisterCommand execute and imports">
-      <option name="closed" value="true" />
-      <created>1704466886490</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1704466886490</updated>
-    </task>
-    <task id="LOCAL-00060" summary="Fixed typo in username, created accountStatus field (enum) altered constructor to take in only limited amount of fields as parameters. Changed phone number to string">
-      <option name="closed" value="true" />
-      <created>1704467020763</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1704467020763</updated>
-    </task>
-    <task id="LOCAL-00061" summary="Fixed typo in username, created accountStatus field (enum) in User class, altered constructor to take in only limited amount of fields as parameters. Changed phone number to string">
-      <option name="closed" value="true" />
-      <created>1704467052191</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1704467052192</updated>
     </task>
     <task id="LOCAL-00062" summary="Created signup method in userDao">
       <option name="closed" value="true" />
@@ -596,7 +600,31 @@
       <option name="project" value="LOCAL" />
       <updated>1704648694973</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="Added javadocs to methods in loandao">
+      <option name="closed" value="true" />
+      <created>1704663351401</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1704663351401</updated>
+    </task>
+    <task id="LOCAL-00109" summary="Added line to who did what text file">
+      <option name="closed" value="true" />
+      <created>1704663388248</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1704663388248</updated>
+    </task>
+    <task id="LOCAL-00110" summary="Added method header to LoanDaoAdminInterface for getAllOverdueLoans method">
+      <option name="closed" value="true" />
+      <created>1704663423064</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1704663423064</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -614,9 +642,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changed customerUsername field in Loan class to userId." />
-    <MESSAGE value="Altered getActiveLoanByBookIdAndUsername in LoanDaoAdmin to match accordingly" />
-    <MESSAGE value="Included accountStatus and userType in constructor again in User class while debugging in BorrowCommand" />
     <MESSAGE value="Changed checkAccountEnabled method in UserDaoAdmin and its interface to use userId instead of username" />
     <MESSAGE value="Debugging use of user object in RegisterCommand (in object construction)" />
     <MESSAGE value="Set usertype to session in LoginCommand" />
@@ -639,6 +664,9 @@
     <MESSAGE value="Removed the LoanDaoAdmin class" />
     <MESSAGE value="Implemented LoanDaoInterface in loandao class and added many method bodies matching the method headers added to LoanDaoAdminInterface and LoanDaoInterface" />
     <MESSAGE value=" added many method headers to LoanDaoAdminInterface and LoanDaoInterface" />
-    <option name="LAST_COMMIT_MESSAGE" value=" added many method headers to LoanDaoAdminInterface and LoanDaoInterface" />
+    <MESSAGE value="Added javadocs to methods in loandao" />
+    <MESSAGE value="Added line to who did what text file" />
+    <MESSAGE value="Added method header to LoanDaoAdminInterface for getAllOverdueLoans method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added method header to LoanDaoAdminInterface for getAllOverdueLoans method" />
   </component>
 </project>
