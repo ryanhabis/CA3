@@ -9,12 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Cast user type attribute to string in successfulLogin.jsp">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment=" added many method headers to LoanDaoAdminInterface and LoanDaoInterface">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/BorrowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/BorrowCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Who did what.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Who did what.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoAdmin.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoAdminInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoAdminInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoInterface.java" afterDir="false" />
     </list>
@@ -205,38 +203,6 @@
       <workItem from="1704531694212" duration="17188000" />
       <workItem from="1704555537379" duration="964000" />
       <workItem from="1704567190856" duration="23840000" />
-    </task>
-    <task id="LOCAL-00055" summary="Updated who did what text file">
-      <option name="closed" value="true" />
-      <created>1704389607150</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1704389607150</updated>
-    </task>
-    <task id="LOCAL-00056" summary="Updated user table in bookRentalData.sql and bookRental.sql to include accountStatus">
-      <option name="closed" value="true" />
-      <created>1704466547176</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1704466547177</updated>
-    </task>
-    <task id="LOCAL-00057" summary="Refactored variables in LoginCommand execute method and added comments explaining what is going on. Rerouted to loginSuccessful.jsp page if successful. Changed database used to create dao to bookrentalsystem.">
-      <option name="closed" value="true" />
-      <created>1704466660557</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1704466660557</updated>
-    </task>
-    <task id="LOCAL-00058" summary="Added added more important user information as inputs in signup form in register.jsp. Added hidden inputs to set default values for accountStatus, userId and userType for use in session. Changed phoneNum to read in string so 0's aren't ommitted.">
-      <option name="closed" value="true" />
-      <created>1704466797995</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1704466797995</updated>
     </task>
     <task id="LOCAL-00059" summary="Added whole method body for RegisterCommand execute and imports">
       <option name="closed" value="true" />
@@ -598,7 +564,39 @@
       <option name="project" value="LOCAL" />
       <updated>1704627683360</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="Changed LoanDaoAdmin instantiation to LoanDao instead in BorrowCommand after removing the LoanDaoAdmin class">
+      <option name="closed" value="true" />
+      <created>1704648528027</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1704648528027</updated>
+    </task>
+    <task id="LOCAL-00105" summary="Removed the LoanDaoAdmin class">
+      <option name="closed" value="true" />
+      <created>1704648569530</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1704648569530</updated>
+    </task>
+    <task id="LOCAL-00106" summary="Implemented LoanDaoInterface in loandao class and added many method bodies matching the method headers added to LoanDaoAdminInterface and LoanDaoInterface">
+      <option name="closed" value="true" />
+      <created>1704648641741</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1704648641741</updated>
+    </task>
+    <task id="LOCAL-00107" summary=" added many method headers to LoanDaoAdminInterface and LoanDaoInterface">
+      <option name="closed" value="true" />
+      <created>1704648694973</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1704648694973</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -616,10 +614,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added imports that I had accidentally removed before to bookdao" />
-    <MESSAGE value="Added method body to userdao for findUserByUsernameAndPassword method" />
-    <MESSAGE value="Added end bracket to else in borrowBook.jsp" />
-    <MESSAGE value="Altered BorrowCommand to optimize performance" />
     <MESSAGE value="Changed customerUsername field in Loan class to userId." />
     <MESSAGE value="Altered getActiveLoanByBookIdAndUsername in LoanDaoAdmin to match accordingly" />
     <MESSAGE value="Included accountStatus and userType in constructor again in User class while debugging in BorrowCommand" />
@@ -641,6 +635,10 @@
     <MESSAGE value="Cast user type attribute to string in successfulLogin.jsp" />
     <MESSAGE value="Updated ErrorCommand.java" />
     <MESSAGE value="removed closing of connections in userdao methods again" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed closing of connections in userdao methods again" />
+    <MESSAGE value="Changed LoanDaoAdmin instantiation to LoanDao instead in BorrowCommand after removing the LoanDaoAdmin class" />
+    <MESSAGE value="Removed the LoanDaoAdmin class" />
+    <MESSAGE value="Implemented LoanDaoInterface in loandao class and added many method bodies matching the method headers added to LoanDaoAdminInterface and LoanDaoInterface" />
+    <MESSAGE value=" added many method headers to LoanDaoAdminInterface and LoanDaoInterface" />
+    <option name="LAST_COMMIT_MESSAGE" value=" added many method headers to LoanDaoAdminInterface and LoanDaoInterface" />
   </component>
 </project>
