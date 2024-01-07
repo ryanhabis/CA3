@@ -7,7 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-public class ReturnCommand {
+public class ReturnCommand implements Command{
     private HttpServletRequest request;
     private HttpServletResponse response;
 
