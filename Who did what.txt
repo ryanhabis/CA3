@@ -24,12 +24,13 @@ Ryan:
 - Created UserDaoInterface and UserDaoInterfaceAdmin
 - Created User class
 - Fixed UserDao and removed adminDao so the admin interface will use userDao
-- Created the readme file
+- Created the readme file for github with the ca spec
 - Made the edit.jsp
 - Added to the commandFactory
 - Made viewUserProfile.jsp
 - Made ViewUserProfile command
 - Made EditProfile command
+- Created javadocs for
 
 Evan:
 - Updated database to have not null consideration

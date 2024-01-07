@@ -19,6 +19,11 @@ public class ViewUserProfileCommand implements Command
         this.response = response;
     }
 
+    /**
+     * This method executes the logic for the user to be able to view there profile details
+     * @return the URL once the method is executed by default it will direct the user to the ../viewUserProfile.jsp but
+     * if there is an issue it will redirct the user the the ../error.jsp
+     */
     @Override
     public String execute() {
         String continueTo = "../viewUserProfile.jsp";

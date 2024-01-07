@@ -22,6 +22,11 @@ public class EditProfileCommand implements Command
         this.response = response;
     }
 
+    /**
+     * This method executes the logic for the user to be able to update there profile details
+     * @return the URL once the method is executed by default it will direct the user to the ../edit.jsp but
+     * if there is an issue it will redirct the user the ../error.jsp
+     */
     @Override
     public String execute() {
 
@@ -31,6 +36,7 @@ public class EditProfileCommand implements Command
 
         try {
             // userId, firstName, username, lastName, password, dob, phoneNumber, email, addressLine1, addressLine2, city, county, userType
+            //Retrieves all the users details
             int userId = Integer.parseInt(request.getParameter("userId"));
             String firstName = request.getParameter("firstName");
             String username = request.getParameter("username");
@@ -45,6 +51,7 @@ public class EditProfileCommand implements Command
             String county = request.getParameter("county");
             String userType = request.getParameter("userType");
 
+            // updates the users information
             UserDao userDao = new UserDao("library");
 
             User updatedUser = new User();
