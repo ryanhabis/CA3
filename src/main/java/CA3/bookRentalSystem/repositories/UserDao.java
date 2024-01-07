@@ -459,7 +459,7 @@ public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAd
      * @param username The username of the user whose profile is to be viewed.
      * @return A User object containing the user information if found, otherwise an empty User object.
      * @throws RuntimeException If there is an issue closing the database resources.
-     * @throws DaoException     If a SQL or DaoException occurs during the database operations.
+     * @throws DaoException If a SQL or DaoException occurs during the database operations.
      */
     public User viewUserProfile(String username) {
         Connection conn = null;
@@ -524,7 +524,65 @@ public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAd
         return u;
     }
 
-    // edit user profile
+    /**
+     * Edit the user profile based on the provided User object.
+     *
+     * @param updatedUser The User object containing the updated user information.
+     * @return The number of rows affected in the database.
+     * @throws RuntimeException If there is an error updating the user profile or closing resources.
+     * @throws DaoException If a SQL or DaoException occurs during the database operations.
+     */
+    public int editUserProfile(User updatedUser) {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        int rowsUpdated = -1;
+
+        try {
+            conn = getConnection();
+            String query = "update users set firstName=?, lastName=?, dob=?, phoneNumber=?, " +
+                    "email=?, addressLine1=?, addressLine2=?, city=?, county=?, eircode=? " +
+                    "where userId=?";
+            ps = conn.prepareStatement(query);
+            ps.setString(1, updatedUser.getFirstName());
+            ps.setString(2, updatedUser.getLastName());
+            ps.setDate(3, Date.valueOf(updatedUser.getDob()));
+            ps.setString(4, updatedUser.getPhoneNumber());
+            ps.setString(5, updatedUser.getEmail());
+            ps.setString(6, updatedUser.getAddressLine1());
+            ps.setString(7, updatedUser.getAddressLine2());
+            ps.setString(8, updatedUser.getCity());
+            ps.setString(9, updatedUser.getCounty());
+            ps.setString(10, updatedUser.getEircode());
+            ps.setInt(11, updatedUser.getUserId());
+
+            rowsUpdated = ps.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println("SQL Exception: " + e.getMessage());
+        } catch (DaoException e) {
+            System.out.println("Dao exception: " + e.getMessage());
+        } finally {
+            // Closing connections
+            if (ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException e) {
+                    System.out.println("Exception message: " + e.getMessage());
+                    System.out.println("Problem occurred when closing prepared statement.");
+                }
+            }
+
+            if (conn != null) {
+                try {
+                    freeConnection(conn);
+                } catch (DaoException e) {
+                    System.out.println("Dao exception caught: " + e.getMessage());
+                }
+            }
+        }
+
+        return rowsUpdated;
+    }
 
 
 }
