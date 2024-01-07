@@ -1,3 +1,8 @@
+<%@ page import="CA3.bookRentalSystem.rental.User" %>
+<%@ page import="CA3.bookRentalSystem.repositories.BookDao" %>
+<%@ page import="CA3.bookRentalSystem.rental.Book" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
 <%--
   Created by IntelliJ IDEA.
   User: Evan
@@ -6,17 +11,20 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="CA3.bookRentalSystem.repositories.BookDao" %>
-<%@ page import="CA3.bookRentalSystem.rental.Book" %>
-<%@ page import="java.util.List" %>
-<%@ page import="java.util.ArrayList" %>
 <html>
 <head>
+    <link rel="stylesheet" href="css/styles.css">
     <title>Search Books</title>
 </head>
 <body>
-    <h1>Search for a Book</h1>
+<nav>
+    <a href="index.jsp">Home</a>
+    <a href="login.jsp">Login</a>
+    <a href="register.jsp">Register</a>
+</nav>
 
+<main>
+    <h1>Search for a Book</h1>
     <%
         //Stores which type of radio value is currently entered
         String type = request.getParameter("type");
@@ -27,38 +35,45 @@
         List<Book> result = null;
 
         //Checking if the type is title
-        if("title".equals(type)) {
+        if ("title".equals(type)) {
             //Setting result
             result = bookDao.getBooksByTitle(query);
             //Checking if the type is ID
-        } else if("id".equals(type)) {
+        } else if ("id".equals(type)) {
             int bookId = Integer.parseInt(query);
             //Getting book ID
             Book book = bookDao.getBookByBookId(bookId);
             //Creating result
             result = new ArrayList<>();
             //Checking for null
-            if(book != null) {
+            if (book != null) {
                 //Adding book to result
                 result.add(book);
             }
         }
 
         //Checking result for null
-        if(result != null && !result.isEmpty()) {
+        if (result != null && !result.isEmpty()) {
     %>
 
     <form action="servlet/Controller" method="post">
         <table>
-            <tr><th>Book</th><th>Blurb</th><th>Price €</th></tr>
+            <tr>
+                <th>Book</th>
+                <th>Blurb</th>
+                <th>Price €</th>
+            </tr>
             <%
-                for(Book b: result){
+                for (Book b : result) {
             %>
             <tr>
                 <!-- Set the book Id as a parameter -->
-                <td><a href="borrow.jsp?bookId=<%=b.getBookId()%>"><%=b.getTitle()%></a></td>
-                <td><%=b.getDescription()%></td>
-                <td><%=b.getBookPrice()%></td>
+                <td><a href="borrow.jsp?bookId=<%=b.getBookId()%>"><%=b.getTitle()%>
+                </a></td>
+                <td><%=b.getDescription()%>
+                </td>
+                <td><%=b.getBookPrice()%>
+                </td>
             </tr>
             <%
                 }
@@ -76,16 +91,14 @@
     </form>
 
     <a href="servlet/Controller?action=search">Search</a>
-    <button name="s">search</button><%
-        } else {
-    %>
-    <div>
-        Error - No books found
-        Please <a href="index.jsp">return to the home page</a> and try again.
-    </div>
+    <button name="s">search</button>
     <%
         }
     %>
+</main>
 
+<footer>
+    &copy; 2024 Book Rental. All rights reserved.
+</footer>
 </body>
 </html>
