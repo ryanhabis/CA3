@@ -20,3 +20,5 @@ Ryan:
 - Created UserDaoInterface and UserDaoInterfaceAdmin
 - Created User class
 - Fixed UserDao and removed adminDao so the admin interface will use userDao
+- Created the readme file
+-
