@@ -457,12 +457,12 @@ public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAd
     /**
      * View the user profile based on the provided username.
      *
-     * @param username The username of the user whose profile is to be viewed.
+     * @param userId The username of the user whose profile is to be viewed.
      * @return A User object containing the user information if found, otherwise an empty User object.
      * @throws RuntimeException If there is an issue closing the database resources.
      * @throws DaoException If a SQL or DaoException occurs during the database operations.
      */
-    public User viewUserProfile(String username) {
+    public User viewUserProfile(int userId) {
         Connection conn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -471,16 +471,16 @@ public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAd
 
         try {
             conn = getConnection();
-            String query = "select * from users where username = ?";
+            String query = "select * from users where userId = ?";
             ps = conn.prepareStatement(query);
-            ps.setString(1, username);
+            ps.setInt(1, userId);
             rs = ps.executeQuery();
 
             if (rs.next()) {
                 u.setUserId(rs.getInt("userId"));
                 u.setFirstName(rs.getString("firstName"));
-                u.setLastName(rs.getString("lastName"));
                 u.setUsername(rs.getString("username"));
+                u.setLastName(rs.getString("lastName"));
                 u.setPassword(rs.getString("password"));
                 u.setDob(rs.getDate("dob").toLocalDate());
                 u.setPhoneNumber(rs.getString("phoneNumber"));
@@ -539,20 +539,23 @@ public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAd
         int rowsUpdated = -1;
 
         try {
+
+            // userId, firstName, username, lastName, password, dob, phoneNumber, email, addressLine1, addressLine2, city, county, eircode, userType
             conn = getConnection();
-            String query = "update users set firstName=?, lastName=?, dob=?, phoneNumber=?, email=?, addressLine1=?, addressLine2=?, city=?, county=?, eircode=? where userId=?";
+            String query = "update users set firstName=?, username=?, lastName=?, dob=?, phoneNumber=?, email=?, addressLine1=?, addressLine2=?, city=?, county=?, eircode=?, userType=? where userId=?";
             ps = conn.prepareStatement(query);
             ps.setString(1, updatedUser.getFirstName());
-            ps.setString(2, updatedUser.getLastName());
-            ps.setDate(3, Date.valueOf(updatedUser.getDob()));
-            ps.setString(4, updatedUser.getPhoneNumber());
-            ps.setString(5, updatedUser.getEmail());
-            ps.setString(6, updatedUser.getAddressLine1());
-            ps.setString(7, updatedUser.getAddressLine2());
-            ps.setString(8, updatedUser.getCity());
-            ps.setString(9, updatedUser.getCounty());
-            ps.setString(10, updatedUser.getEircode());
-            ps.setInt(11, updatedUser.getUserId());
+            ps.setString(2, updatedUser.getUsername());
+            ps.setString(3, updatedUser.getLastName());
+            ps.setDate(4, Date.valueOf(updatedUser.getDob()));
+            ps.setString(5, updatedUser.getPhoneNumber());
+            ps.setString(6, updatedUser.getEmail());
+            ps.setString(7, updatedUser.getAddressLine1());
+            ps.setString(8, updatedUser.getAddressLine2());
+            ps.setString(9, updatedUser.getCity());
+            ps.setString(10, updatedUser.getCounty());
+            ps.setString(11, updatedUser.getEircode());
+            ps.setInt(12, updatedUser.getUserId());
 
             rowsUpdated = ps.executeUpdate();
 

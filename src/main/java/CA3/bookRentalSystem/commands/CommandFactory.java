@@ -37,6 +37,10 @@ public class CommandFactory {
                     command = new RegisterCommand(request, response);
                     break;
 
+                case "editProfile":
+                    command = new EditProfileCommand(request, response);
+                    break;
+
                 default:
                     String errorMessage = "No action provided by this controller. ";
                     command = new ErrorCommand(request, response, errorMessage);
