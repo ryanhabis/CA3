@@ -21,6 +21,10 @@ public class CommandFactory {
                     command = new RegisterCommand(request, response);
                     break;
 
+                case "view":
+                    command = new ViewBooksCommand(request, response);
+                    break;
+
                 case "borrow":
                     command = new BorrowCommand(request, response);
                     break;

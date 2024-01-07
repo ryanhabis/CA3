@@ -38,7 +38,7 @@
                 //list all options available to that user type
                  <a href="borrow.jsp">Borrow Book</a><br/>
                 <a href="returnBook.jsp">Return Book</a><br/>
-                <a href="browseBooks.jsp">Browse Books</a><br/>
+                <a href="viewBooks.jsp">Browse Books</a><br/>
 
             </nav>
     <%
@@ -48,7 +48,7 @@
         //list all options available to that user type
         <a href="borrow.jsp">Borrow Book</a><br/>
         <a href="returnBook.jsp">Return Book</a><br/>
-        <a href="browseBooks.jsp">Browse Books</a><br/>
+        <a href="viewBooks.jsp">Browse Books</a><br/>
         REmove User<br/>
         Other Admin stuff...<br/>
     </nav>

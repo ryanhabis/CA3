@@ -29,7 +29,7 @@
 <%
     //create the book dao
     BookDao bookDao = new BookDao("bookrentalsystem");
-List<Book> allBooks = bookDao.getAllBooks();
+    List<Book> allBooks = bookDao.getAllBooks();
 
     if(!allBooks.isEmpty()){
     %>
