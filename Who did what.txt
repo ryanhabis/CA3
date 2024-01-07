@@ -16,7 +16,8 @@ Heidi:
 Ryan:
 - Created the GitHub source control and added everyone to it.
 - Created css for the webpages
-- Created the UserDao, removed UserDaoAdmin
+- Created the UserDao
+- Removed UserDaoAdmin
 - Created UserDaoInterface and UserDaoInterfaceAdmin
 - Created User class
 - Fixed UserDao and removed adminDao so the admin interface will use userDao
@@ -25,6 +26,7 @@ Ryan:
 - Added to the commandFactory
 - Made viewUserProfile.jsp
 - Made ViewUserProfile command
+- Made EditProfile command
 
 Evan:
 - Updated database to have not null consideration
