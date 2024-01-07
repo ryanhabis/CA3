@@ -25,10 +25,10 @@ public class Controller extends HttpServlet {
     /**
      * Handles the Post request
      *
-     * @param request
-     * @param response
-     * @throws ServletException
-     * @throws IOException
+     * @param request This is the HttpServletRequest object
+     * @param response This is the HttpServletResponse Object
+     * @throws ServletException If an unknown error happens
+     * @throws IOException If the input or output error
      */
     public void doPost(HttpServletRequest request, HttpServletResponse response)  throws ServletException, IOException {
         processRequest(request, response);
