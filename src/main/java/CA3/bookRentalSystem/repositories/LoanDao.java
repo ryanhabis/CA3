@@ -1,4 +1,7 @@
 package CA3.bookRentalSystem.repositories;
+/**
+ * author: Heidi
+ */
 
 import CA3.bookRentalSystem.exceptions.DaoException;
 import CA3.bookRentalSystem.rental.Book;
