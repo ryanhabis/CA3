@@ -24,6 +24,7 @@
         String username = String.valueOf(request.getAttribute("username"));
 
        String daoUserType = userDao.getUserType(username);
+       String currentUserType = request.getParameter("userType");
      //   String currentUserType = (String) userLoggedIn.getUserType().name();
      //   User.UserType currentUserType = (User.UserType) User.UserType.valueOf(String.valueOf(request.getAttribute("userType")));
        // String currentUserType = request.getAttribute("userType").toString();
@@ -31,8 +32,8 @@
     //    User.UserType ut = null;
 
 //        userLoggedIn.setUserType(currentUserType);
-  //  if(userLoggedIn != null && username != null && currentUserType != null && currentUserType.equalsIgnoreCase("Customer")){
-        //then display the basic nav
+//    if(userLoggedIn != null && username != null && currentUserType != null && currentUserType.equalsIgnoreCase("Customer")){
+//        //then display the basic nav
      %>
             <nav>
 
