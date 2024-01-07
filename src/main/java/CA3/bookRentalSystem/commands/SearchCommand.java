@@ -1,5 +1,7 @@
 package CA3.bookRentalSystem.commands;
 /**
+ * Command to search database
+ * Allows searches based on ID or title
  * @author: Evan
  * Reference: Michelle's notes
  **/
