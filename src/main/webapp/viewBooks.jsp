@@ -4,7 +4,8 @@
 <%@ page import="CA3.bookRentalSystem.rental.Book" %>
 <%--
   Created by IntelliJ IDEA.
-  User: Heidi
+  Author: Heidi
+  Author: Evan
   Date: 26/12/2023
   Time: 23:15
   To change this template use File | Settings | File Templates.

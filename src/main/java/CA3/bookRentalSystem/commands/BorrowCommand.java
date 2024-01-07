@@ -1,4 +1,9 @@
 package CA3.bookRentalSystem.commands;
+/**
+ * @author: Heidi
+ * @author: Evan
+ * Reference: Michelle's notes
+ **/
 
 import CA3.bookRentalSystem.rental.Book;
 import CA3.bookRentalSystem.rental.User;

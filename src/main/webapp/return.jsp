@@ -1,7 +1,7 @@
 <%@ page import="CA3.bookRentalSystem.rental.User" %>
 <%--
   Created by IntelliJ IDEA.
-  User: Evan Mc Donnell
+  Author: Evan Mc Donnell
   Date: 07/01/2024
   Time: 15:29
   To change this template use File | Settings | File Templates.

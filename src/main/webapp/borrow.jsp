@@ -4,7 +4,8 @@
 <%@ page import="CA3.bookRentalSystem.repositories.BookDaoAdminInterface" %>
 <%--
   Created by IntelliJ IDEA.
-  User: Heidi
+  Author: Heidi
+  Author: Evan
   Date: 27/12/2023
   Time: 17:25
   To change this template use File | Settings | File Templates.

@@ -1,9 +1,11 @@
 package CA3.bookRentalSystem.repositories;
-
-
+/**
+ * @author: Evan
+ * @author: Heidi
+ * Reference: Michelle's notes
+ **/
 
 import CA3.bookRentalSystem.rental.Book;
-
 import java.util.ArrayList;
 
 public interface BookDaoInterface {
