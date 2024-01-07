@@ -16,11 +16,21 @@ public class SearchCommand implements Command {
     private HttpServletRequest request;
     private HttpServletResponse response;
 
+    /**
+     * Constructor for SearchCommand
+     * @param request ServLet Request
+     * @param response ServerLet Response
+     */
     public SearchCommand(HttpServletRequest request, HttpServletResponse response) {
         this.request = request;
         this.response = response;
     }
 
+    /**
+     * Executes Search command
+     * Processes the search and queries the database to find the appropriate title or ID
+     * @return String with the viewBooks.jsp if successful or the error.jsp if not
+     */
     @Override
     public String execute() {
 

@@ -1,5 +1,8 @@
 package CA3.bookRentalSystem.commands;
 /**
+ * The command to view all books in the database.
+ * Retrieves the books from the database and stores them in the session
+ * Goes to error page if none are found
  * @author: Heidi
  * @author: Evan
  * Reference: Michelle's notes
@@ -19,11 +22,22 @@ public class ViewBooksCommand implements Command {
     private HttpServletRequest request;
     private HttpServletResponse response;
 
+    /**
+     * Constructor for ViewBooksCommand
+     * @param request ServLet Request
+     * @param response ServerLet Response
+     */
     public ViewBooksCommand(HttpServletRequest request, HttpServletResponse response) {
         this.request = request;
         this.response = response;
     }
 
+    /**
+     * Executes view books command
+     * Gets list of books from database and stores them in session
+     * Goes to error page if none found
+     * @return String indicating next page
+     */
     @Override
     public String execute() {
 

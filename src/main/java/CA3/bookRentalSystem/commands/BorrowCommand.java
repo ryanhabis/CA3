@@ -1,6 +1,10 @@
 package CA3.bookRentalSystem.commands;
 /**
+ * Command to borrow a book from the database
+ * Checks if books available, if user is signed up
+ * Creates a new loan if they're eligible
  * @author: Heidi
+ * @author: Evan
  * Reference: Michelle's notes
  **/
 
@@ -15,11 +19,23 @@ public class BorrowCommand implements Command{
     private HttpServletRequest request;
     private HttpServletResponse response;
 
+    /**
+     * Constructor for BorrowCommand
+     * @param request ServLet Request
+     * @param response ServerLet Response
+     */
     public BorrowCommand (HttpServletRequest request, HttpServletResponse response) {
 
         this.request = request;
         this.response = response;
     }
+
+    /**
+     * Executes borrow command
+     * Checks the stock and user account then creates loan
+     * Redirects pages based on success or failure
+     * @return String indicating next page
+     */
     @Override
     public String execute() {
         //set the string value to be returned

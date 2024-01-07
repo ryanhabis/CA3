@@ -1,5 +1,7 @@
 package CA3.bookRentalSystem.commands;
 /**
+ * Command to return a book
+ * Updates the book and loan in database based on user returning book
  * @author: Evan
  * Reference: Michelle's notes
  **/
@@ -14,11 +16,23 @@ public class ReturnCommand implements Command {
     private HttpServletRequest request;
     private HttpServletResponse response;
 
+    /**
+     * Constructor for ReturnCommand
+     * @param request ServLet Request
+     * @param response ServerLet Response
+     */
     public ReturnCommand(HttpServletRequest request, HttpServletResponse response) {
         this.request = request;
         this.response = response;
     }
 
+    /**
+     * Executes command to return book
+     * Gets information from session
+     * Updates the loan and book tables in the database
+     * Redirects based on the outcome, login if user is not logged in or there's no loanId
+     * @return String going to login page if not sucessful, it goes to returnSuccessful.jsp if its successful
+     */
     @Override
     public String execute() {
 
