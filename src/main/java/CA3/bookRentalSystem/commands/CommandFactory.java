@@ -1,4 +1,10 @@
 package CA3.bookRentalSystem.commands;
+/**
+ * @author: Heidi
+ * @author: Evan
+ * @author: Ryan
+ * Reference: Michelle's notes
+ **/
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -40,9 +46,11 @@ public class CommandFactory {
                 case "editProfile":
                     command = new EditProfileCommand(request, response);
                     break;
+
                 case "viewUserProfile":
                     command = new ViewUserProfileCommand(request, response);
                     break;
+
                 default:
                     String errorMessage = "No action provided by this controller. ";
                     command = new ErrorCommand(request, response, errorMessage);

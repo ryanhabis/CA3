@@ -6,6 +6,10 @@ import CA3.bookRentalSystem.repositories.*;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+/**
+ * @author: Evan
+ * Reference: Michelle's notes
+ **/
 
 import java.util.List;
 public class SearchCommand implements Command {

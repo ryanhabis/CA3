@@ -1,15 +1,16 @@
 package CA3.bookRentalSystem.repositories;
+/**
+ * @author: Evan
+ * Reference: Michelle's notes
+ **/
 
 import CA3.bookRentalSystem.exceptions.DaoException;
 import CA3.bookRentalSystem.rental.Book;
-
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-
 
 public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterface {
 
@@ -494,6 +495,7 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
 
     /**
      * Reserves the book if it's in stock
+     * @author: Heidi
      * @param b The book to reserve
      * @return true if successful, false if not
      */
