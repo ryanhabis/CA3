@@ -24,7 +24,7 @@
        String daoUserType = userDao.getUserType(username);
      //   String currentUserType = (String) userLoggedIn.getUserType().name();
      //   User.UserType currentUserType = (User.UserType) User.UserType.valueOf(String.valueOf(request.getAttribute("userType")));
-        String currentUserType = (String) request.getAttribute("userType");
+       // String currentUserType = request.getAttribute("userType").toString();
         String u = "CUSTOMER";
     //    User.UserType ut = null;
 
@@ -34,7 +34,7 @@
      %>
             <nav>
                 //list all options available to that user type
-                 <a href="borrowBook.jsp">Borrow Book</a><br/>
+                 <a href="borrow.jsp">Borrow Book</a><br/>
                 <a href="returnBook.jsp">Return Book</a><br/>
                 <a href="browseBooks.jsp">Browse Books</a><br/>
 
@@ -44,7 +44,7 @@
 %>
     <nav>
         //list all options available to that user type
-        <a href="borrowBook.jsp">Borrow Book</a><br/>
+        <a href="borrow.jsp">Borrow Book</a><br/>
         <a href="returnBook.jsp">Return Book</a><br/>
         <a href="browseBooks.jsp">Browse Books</a><br/>
         REmove User<br/>
@@ -52,7 +52,7 @@
     </nav>
 <%
     //    }
-    currentUserType.toString();
+
     %>
 </head>
 <body>
