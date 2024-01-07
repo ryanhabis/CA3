@@ -41,14 +41,14 @@ public interface UserDaoInterfaceAdmin extends UserDaoInterface
 
 
     /**
-     * View the user profile based on the provided username.
+     * View the user profile based on the provided userId.
      *
-     * @param username The username of the user whose profile is to be viewed.
+     * @param userId The userId of the user whose profile is to be viewed.
      * @return A User object containing the user information if found, otherwise an empty User object.
      * @throws RuntimeException If there is an issue closing the database resources.
      * @throws DaoException If a SQL or DaoException occurs during the database operations.
      */
-    public User viewUserProfile(String username);
+    public User viewUserProfile(int userId);
 
     /**
      * Edit the user profile based on the provided User object.
