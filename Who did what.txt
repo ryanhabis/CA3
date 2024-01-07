@@ -9,9 +9,11 @@ Heidi:
 - added altered sql table creation commands and data insertion commands accordingly
 - Created exceptions package and DaoException and dao class
 - Register and login functionality from index.jsp to Controller to CommandFactory and then various other pages
-- Made all Commands (Login, Register)
+- Made Commands Login, Register, Borrow
 - Fixed Dao and Interface structure for Users, Books and Loans
-- Created Dummy methods for login and register until completed by Ryan?
+- made login and register functions in userdao
+- made search.jsp, register.jsp, login.jsp, error.jsp, successfulBorrow.jsp, borrow.jsp
+- made test file for loandao
 - Made Individual function for Admin: getAllOverdueLoans
 
 Ryan:
