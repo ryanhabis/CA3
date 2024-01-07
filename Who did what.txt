@@ -12,6 +12,7 @@ Heidi:
 - Made all Commands (Login, Register)
 - Fixed Dao and Interface structure for Users, Books and Loans
 - Created Dummy methods for login and register until completed by Ryan?
+- Made Individual function for Admin: getAllOverdueLoans
 
 Ryan:
 - Created the GitHub source control and added everyone to it.
