@@ -1,7 +1,9 @@
 <%@ page import="CA3.bookRentalSystem.rental.User" %>
 
 <%--<%@ page import="com.example.CA3.rental.User" %>--%>
-
+<%--/**--%>
+<%--* author: Heidi--%>
+<%--*/--%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>

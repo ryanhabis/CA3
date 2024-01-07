@@ -9,10 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="set more attributes to the session in borrow.jsp">
+    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="tried to get usertype parameter from session in successfulLogin.jsp">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/BorrowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/BorrowCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/successfulLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/successfulLogin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/exceptions/DaoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/exceptions/DaoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoAdminInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoAdminInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/servlet/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/servlet/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,22 +236,6 @@
       <workItem from="1704531694212" duration="17188000" />
       <workItem from="1704555537379" duration="964000" />
       <workItem from="1704567190856" duration="23840000" />
-    </task>
-    <task id="LOCAL-00067" summary="Rerouted to correct pages for success and error in LoginCommand">
-      <option name="closed" value="true" />
-      <created>1704505217474</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1704505217474</updated>
-    </task>
-    <task id="LOCAL-00068" summary="Rerouted to correct pages for error in LoginCommand">
-      <option name="closed" value="true" />
-      <created>1704505265811</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1704505265811</updated>
     </task>
     <task id="LOCAL-00069" summary="Rerouted to correct home page in browseBooks.jsp and allowed user to select book in browseBooks.jsp">
       <option name="closed" value="true" />
@@ -624,7 +613,23 @@
       <option name="project" value="LOCAL" />
       <updated>1704668485520</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="tried to get bookid as session parameter in BorrowCommand">
+      <option name="closed" value="true" />
+      <created>1704668635075</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1704668635075</updated>
+    </task>
+    <task id="LOCAL-00117" summary="tried to get usertype parameter from session in successfulLogin.jsp">
+      <option name="closed" value="true" />
+      <created>1704668748843</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1704668748843</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -642,8 +647,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added references.txt" />
-    <MESSAGE value="Made changes to User class for usertype enum constructor inner name field and tostring method" />
     <MESSAGE value="Commented out closing of connection in UserDaoAdmin methods to debug" />
     <MESSAGE value="played with setting usertype to session in LoginCommand" />
     <MESSAGE value="played with setting usertype to session in RegisterCommand" />
@@ -667,6 +670,8 @@
     <MESSAGE value="Set bookId to session in borrow.jsp" />
     <MESSAGE value="Removed excess code and comments from successfulLogin.jsp" />
     <MESSAGE value="set more attributes to the session in borrow.jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="set more attributes to the session in borrow.jsp" />
+    <MESSAGE value="tried to get bookid as session parameter in BorrowCommand" />
+    <MESSAGE value="tried to get usertype parameter from session in successfulLogin.jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="tried to get usertype parameter from session in successfulLogin.jsp" />
   </component>
 </project>

@@ -1,7 +1,9 @@
 package CA3.bookRentalSystem.repositories;
 
 import CA3.bookRentalSystem.rental.Loan;
-
+/**
+ * author: Heidi
+ */
 import java.util.ArrayList;
 
 public interface LoanDaoAdminInterface extends LoanDaoInterface {

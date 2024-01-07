@@ -1,5 +1,7 @@
 package CA3.bookRentalSystem.exceptions;
-
+/**
+ * author: Heidi
+ */
 public class DaoException extends Throwable{
 
     public DaoException() {
