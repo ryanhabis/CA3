@@ -262,13 +262,13 @@ public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAd
                 }
             }
 
-            if (conn != null) {
-                try {
-                    freeConnection(conn);
-                } catch (DaoException e) {
-                    System.out.println("Dao exception caught: " + e.getMessage());
-                }
-            }
+//            if (conn != null) {
+//                try {
+//                    freeConnection(conn);
+//                } catch (DaoException e) {
+//                    System.out.println("Dao exception caught: " + e.getMessage());
+//                }
+//            }
         }
         return rowsAdded;
     }
@@ -343,14 +343,14 @@ public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAd
                 }
             }
 
-            if (conn != null) {
-                try {
-                    conn.close();
-                } catch (SQLException e) {
-                    System.out.println("Exception message: " + e.getMessage());
-                    System.out.println("Problem occured when closing connection statement.");
-                }
-            }
+//            if (conn != null) {
+//                try {
+//                    conn.close();
+//                } catch (SQLException e) {
+//                    System.out.println("Exception message: " + e.getMessage());
+//                    System.out.println("Problem occured when closing connection statement.");
+//                }
+//            }
         }
         return users;
     }
@@ -395,17 +395,18 @@ public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAd
                 {
                     ps.close();
                 }
-                if (conn != null)
-                {
-                    freeConnection(conn);
-                }
+//                if (conn != null)
+//                {
+//                    freeConnection(conn);
+//                }
             }
             catch (SQLException e)
             {
                 throw new RuntimeException("Error removing user = " + e.getMessage());
-            } catch (DaoException e) {
-                throw new RuntimeException(e);
             }
+//            catch (DaoException e) {
+//                throw new RuntimeException(e);
+//            }
 
         }
 
@@ -445,10 +446,10 @@ public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAd
                 if (ps != null) {
                     ps.close();
                 }
-                if (conn != null) {
-                    freeConnection(conn);
-                }
-            } catch (SQLException | DaoException e) {
+//                if (conn != null) {
+//                    freeConnection(conn);
+//                }
+            } catch (SQLException e) {
                 throw new RuntimeException("Error closing resources: " + e.getMessage());
             }
         }
@@ -513,13 +514,13 @@ public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAd
                     System.out.println("Issue when closing prepared statement.");
                 }
             }
-            if (conn != null) {
-                try {
-                    freeConnection(conn);
-                } catch (DaoException e) {
-                    throw new RuntimeException(e);
-                }
-            }
+//            if (conn != null) {
+//                try {
+//                    freeConnection(conn);
+//                } catch (DaoException e) {
+//                    throw new RuntimeException(e);
+//                }
+//            }
         }
 
         return u;
@@ -574,13 +575,13 @@ public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAd
                 }
             }
 
-            if (conn != null) {
-                try {
-                    freeConnection(conn);
-                } catch (DaoException e) {
-                    System.out.println("Dao exception caught: " + e.getMessage());
-                }
-            }
+//            if (conn != null) {
+//                try {
+//                    freeConnection(conn);
+//                } catch (DaoException e) {
+//                    System.out.println("Dao exception caught: " + e.getMessage());
+//                }
+//            }
         }
 
         return rowsUpdated;
