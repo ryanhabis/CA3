@@ -24,6 +24,12 @@ Hello there, yes you would like to borrow a book eh?
         //create bookdao
         BookDaoAdminInterface bookChosenDao = new BookDao("bookrentalsystem");
         Book bookSelected = bookChosenDao.getBookByBookId(bookIdSelected);
+        //Check if the selected book was found
+        if (bookSelected != null) {
+            //Set book to the session
+            session.setAttribute("book", bookSelected);
+            session.setAttribute("action", "borrow");
+        }
 %>
 <form action="servlet/Controller" method="post">
 <table>
@@ -37,13 +43,6 @@ Hello there, yes you would like to borrow a book eh?
     </tr>
 
 </table>
-<%--Set book to the session--%>
-<%session.setAttribute("book", bookSelected);
-
-session.setAttribute("action", "borrow");
-   // session.setAttribute("bookId", bookSelected);
-    session.setAttribute("action", "borrow");
-%>
 
     <input type="hidden" name ="bookId" value="<%=bookIdSelected%>" />
 

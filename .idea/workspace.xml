@@ -11,9 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Cast user type attribute to string in successfulLogin.jsp">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/CommandFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/borrow.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/borrow.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/successfulLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/successfulLogin.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +31,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Heidi &lt;heidimccrudden@gmail.com&gt;" />
         <option value="Ryan Habis &lt;30758550+ryanhabis@users.noreply.github.com&gt;" />
       </list>
     </option>
@@ -201,14 +201,6 @@
       <workItem from="1704531694212" duration="17188000" />
       <workItem from="1704555537379" duration="964000" />
       <workItem from="1704567190856" duration="23840000" />
-    </task>
-    <task id="LOCAL-00054" summary="Implemented login method added in UserDaoForAdmin">
-      <option name="closed" value="true" />
-      <created>1704389592160</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1704389592160</updated>
     </task>
     <task id="LOCAL-00055" summary="Updated who did what text file">
       <option name="closed" value="true" />
@@ -594,7 +586,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704611372166</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="removed closing of connections in userdao methods again">
+      <option name="closed" value="true" />
+      <created>1704627683360</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1704627683360</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -612,8 +612,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created loan daos and interfaces and added createLoan method as well as getActiveLoansByBookIdAndUser method" />
-    <MESSAGE value="Added checkAccountEnabled method to UserDaoAdmin and interface" />
     <MESSAGE value="Added imports that I had accidentally removed before to bookdao" />
     <MESSAGE value="Added method body to userdao for findUserByUsernameAndPassword method" />
     <MESSAGE value="Added end bracket to else in borrowBook.jsp" />
@@ -637,6 +635,8 @@
     <MESSAGE value="attempted to trigger borrow book Command in borrow.jsp by adding form and link but failed" />
     <MESSAGE value="Refactored borrowBook.jsp file to borrow.jsp for simplicity" />
     <MESSAGE value="Cast user type attribute to string in successfulLogin.jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cast user type attribute to string in successfulLogin.jsp" />
+    <MESSAGE value="Updated ErrorCommand.java" />
+    <MESSAGE value="removed closing of connections in userdao methods again" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed closing of connections in userdao methods again" />
   </component>
 </project>
