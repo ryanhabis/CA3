@@ -75,14 +75,14 @@ public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAd
             throw new RuntimeException(e.getMessage());
         }
 
-        if (conn != null) {
-            try {
-                conn.close();
-            } catch (SQLException e) {
-                System.out.println("Exception message: " + e.getMessage());
-                System.out.println("Problem occured when closing connection statement.");
-            }
-        }
+//        if (conn != null) {
+//            try {
+//                conn.close();
+//            } catch (SQLException e) {
+//                System.out.println("Exception message: " + e.getMessage());
+//                System.out.println("Problem occured when closing connection statement.");
+//            }
+//        }
         return false;
     }
 
@@ -121,14 +121,14 @@ public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAd
                 throw new RuntimeException(e);
             }
 
-            if (conn != null) {
-                try {
-                    conn.close();
-                } catch (SQLException e) {
-                    System.out.println("Exception message: " + e.getMessage());
-                    System.out.println("Problem occured when closing connection statement.");
-                }
-            }
+//            if (conn != null) {
+//                try {
+//                    conn.close();
+//                } catch (SQLException e) {
+//                    System.out.println("Exception message: " + e.getMessage());
+//                    System.out.println("Problem occured when closing connection statement.");
+//                }
+//            }
 
             return status;
         }
@@ -176,31 +176,31 @@ public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAd
         }
 
         //Closing Connection
-        finally {
-            if(rs != null) {
-                try {
-                    rs.close();
-                } catch (SQLException e) {
-                    System.out.println("Exception message: " + e.getMessage());
-                    System.out.println("Issue when closing result set: ");
-                }
-            }
-            if(ps != null) {
-                try {
-                    ps.close();
-                } catch (SQLException e) {
-                    System.out.println("Exception message: " + e.getMessage());
-                    System.out.println("Issue when closing prepared statement: ");
-                }
-            }
-            if(conn != null) {
-                try {
-                    freeConnection(conn);
-                } catch (DaoException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        }
+//        finally {
+//            if(rs != null) {
+//                try {
+//                    rs.close();
+//                } catch (SQLException e) {
+//                    System.out.println("Exception message: " + e.getMessage());
+//                    System.out.println("Issue when closing result set: ");
+//                }
+//            }
+//            if(ps != null) {
+//                try {
+//                    ps.close();
+//                } catch (SQLException e) {
+//                    System.out.println("Exception message: " + e.getMessage());
+//                    System.out.println("Issue when closing prepared statement: ");
+//                }
+//            }
+//            if(conn != null) {
+//                try {
+//                    freeConnection(conn);
+//                } catch (DaoException e) {
+//                    throw new RuntimeException(e);
+//                }
+//            }
+//        }
 
         return userFound;
     }
