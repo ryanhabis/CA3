@@ -410,9 +410,48 @@ public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAd
         return userDelete;
     }
 
+
+    /**
+     * Checks if a user with the specified userId exists in the database.
+     *
+     * @param userId Is the unique identifier for the user.
+     * @return true if the user exists,or false otherwise.
+     * @throws RuntimeException If there is an error checking the account status or closing resources.
+     */
     @Override
-    public boolean checkAccountEnabled(int userId)
-    {
-        return true;
+    public boolean checkAccountEnabled(int userId) {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        try {
+            conn = getConnection();
+            String query = "select userId from users where userId = ?";
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, userId);
+            rs = ps.executeQuery();
+
+            return rs.next();  // Returns true if the user with userId is found, false otherwise
+
+        } catch (SQLException | DaoException e) {
+            throw new RuntimeException("Error checking account status: " + e.getMessage());
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (ps != null) {
+                    ps.close();
+                }
+                if (conn != null) {
+                    freeConnection(conn);
+                }
+            } catch (SQLException | DaoException e) {
+                throw new RuntimeException("Error closing resources: " + e.getMessage());
+            }
+        }
     }
+
+
+
 }
