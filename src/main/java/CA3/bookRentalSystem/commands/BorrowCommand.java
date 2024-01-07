@@ -29,8 +29,11 @@ public class BorrowCommand implements Command{
         HttpSession session = request.getSession(true);
 
         //get book from session
-        Book bookToBorrow = (Book) request.getAttribute("book");
-        int quantityInStock = bookToBorrow.getQuantityInStock();
+       // Book bookToBorrow = (Book) request.getAttribute("book");
+        int bookId = Integer.parseInt(request.getParameter("bookId"));
+        BookDaoInterface bookdao = new BookDao("bookrentalsystem");
+        Book bookToBorrow = bookdao.getBookByBookId(bookId);
+     //   int quantityInStock = bookToBorrow.getQuantityInStock();
         //int quantityInStock = Integer.parseInt(request.getParameter("quantityInStock"));
         //if book has sufficient stock
         if (bookToBorrow != null) {
@@ -40,10 +43,10 @@ public class BorrowCommand implements Command{
             LoanDaoAdminInterface loanDao = new LoanDao("bookrentalsystem");
 
        //     int bookId = Integer.parseInt(request.getParameter("bookId"));
-            int bookId = bookToBorrow.getBookId();
-            User currentUser = (User)request.getAttribute("user");
-        //    int userId = Integer.parseInt(request.getParameter("userId"));
-            int userId = currentUser.getUserId();
+       //     int bookId = bookToBorrow.getBookId();
+       //     User currentUser = (User)request.getAttribute("user");
+            int userId = Integer.parseInt(request.getParameter("userI   d"));
+      //      int userId = currentUser.getUserId();
             if (bookId == -1) { //if no matching user is found
                 continueTo = "../error.jsp"; //go to error page
                 String error = "Incorrect credentials supplied. Please <a href=\"login.jsp\">try again.</a>";
