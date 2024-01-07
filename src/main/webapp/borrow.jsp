@@ -39,6 +39,7 @@
         if (bookSelected != null) {
             //Set book to the session
             session.setAttribute("book", bookSelected);
+            session.setAttribute("bookId", bookIdSelected);
             session.setAttribute("action", "borrow");
         }
 %>
@@ -74,9 +75,6 @@
         <!-- Include a hidden field to identify what the user wants to do -->
         <input type="hidden" name="action" value="borrow"/>
     </form>
-
-    <a href="servlet/Controller?action=borrow">Borrow</a>
-    <button name="b">borrow</button>
     <%
     } else {
     %>
@@ -98,7 +96,7 @@
     {
 %>
 <div>
-    //redirect to login successful page
+
 </div>
 <%
     }
