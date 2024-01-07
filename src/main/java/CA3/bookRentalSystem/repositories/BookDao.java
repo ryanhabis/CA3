@@ -568,11 +568,10 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
     /**
      * Returns a book and updates the stock
      * @param bookId The ID of the book
-     * @param userId The ID of the user
      * @return true if successful, false if not
      */
     @Override
-    public boolean returnBook(int bookId, int userId) {
+    public boolean returnBook(int bookId) {
 
         Connection conn = null;
         PreparedStatement ps = null;
@@ -587,7 +586,6 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
             ps = conn.prepareStatement(query);
             ps.setInt(1, bookId);
             rs = ps.executeQuery();
-
 
 
         } catch (SQLException e) {

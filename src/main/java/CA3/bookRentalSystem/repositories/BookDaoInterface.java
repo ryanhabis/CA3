@@ -52,8 +52,7 @@ public interface BookDaoInterface {
     /**
      * Returns a book and updates the stock
      * @param bookId The ID of the book
-     * @param userId The ID of the user
      * @return true if successful, false if not
      */
-    public boolean returnBook (int bookId, int userId);
+    public boolean returnBook (int bookId);
 }
