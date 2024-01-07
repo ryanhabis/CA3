@@ -213,7 +213,8 @@ public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAd
      * @throws SQLException if the user was not added
      */
     @Override
-    public int signup(String username, String password, String fName, String lName, LocalDate dob, String phoneNumber, String email, String addressLine1, String addressLine2, String city, String county, String eircode) {
+    public int signup(String username, String password, String fName, String lName, LocalDate dob, String phoneNumber, String email, String addressLine1, String addressLine2, String city, String county, String eircode)
+    {
         Connection conn = null;
         PreparedStatement ps = null;
         int rowsAdded = -1;
@@ -452,6 +453,78 @@ public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAd
         }
     }
 
+    /**
+     * View the user profile based on the provided username.
+     *
+     * @param username The username of the user whose profile is to be viewed.
+     * @return A User object containing the user information if found, otherwise an empty User object.
+     * @throws RuntimeException If there is an issue closing the database resources.
+     * @throws DaoException     If a SQL or DaoException occurs during the database operations.
+     */
+    public User viewUserProfile(String username) {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        User u = new User();
+
+        try {
+            conn = getConnection();
+            String query = "select * from users where username = ?";
+            ps = conn.prepareStatement(query);
+            ps.setString(1, username);
+            rs = ps.executeQuery();
+
+            if (rs.next()) {
+                u.setUserId(rs.getInt("userId"));
+                u.setFirstName(rs.getString("firstName"));
+                u.setLastName(rs.getString("lastName"));
+                u.setUsername(rs.getString("username"));
+                u.setPassword(rs.getString("password"));
+                u.setDob(rs.getDate("dob").toLocalDate());
+                u.setPhoneNumber(rs.getString("phoneNumber"));
+                u.setEmail(rs.getString("email"));
+                u.setAddressLine1(rs.getString("addressLine1"));
+                u.setAddressLine2(rs.getString("addressLine2"));
+                u.setCity(rs.getString("city"));
+                u.setCounty(rs.getString("county"));
+                u.setEircode(rs.getString("eircode"));
+
+            }
+
+        } catch (SQLException | DaoException e) {
+            System.out.println("SQL exception: " + e.getMessage());
+        } finally {
+            // Closing Connection
+            if (rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException e) {
+                    System.out.println("Exception message: " + e.getMessage());
+                    System.out.println("Issue when closing result set.");
+                }
+            }
+            if (ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException e) {
+                    System.out.println("Exception message: " + e.getMessage());
+                    System.out.println("Issue when closing prepared statement.");
+                }
+            }
+            if (conn != null) {
+                try {
+                    freeConnection(conn);
+                } catch (DaoException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }
+
+        return u;
+    }
+
+    // edit user profile
 
 
 }
