@@ -17,7 +17,14 @@ import java.io.IOException;
 @WebServlet(name = "Controller", value = "/servlet/Controller")
 public class Controller extends HttpServlet {
 
-
+    /**
+     * Handles the Get request
+     *
+     * @param request This is the HttpServletRequest object
+     * @param response This is the HttpServletResponse Object
+     * @throws ServletException If an input or output error is detected handling the get request
+     * @throws IOException If the get request couldn't be handled
+     */
     public void doGet(HttpServletRequest request, HttpServletResponse response)  throws ServletException, IOException {
         processRequest(request, response);
     }
