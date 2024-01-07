@@ -9,9 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Added author tags to files made by me">
+    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="edited who did what text file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Who did what.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Who did what.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoAdminInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoAdminInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/LoanDaoInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,14 +231,6 @@
       <workItem from="1704531694212" duration="17188000" />
       <workItem from="1704555537379" duration="964000" />
       <workItem from="1704567190856" duration="23840000" />
-    </task>
-    <task id="LOCAL-00070" summary="Made method body for findUserByUsernameAndPassword method in UserDaoAdmin">
-      <option name="closed" value="true" />
-      <created>1704505388818</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1704505388818</updated>
     </task>
     <task id="LOCAL-00071" summary="Updated user and passwords text file to correct password for Oscar">
       <option name="closed" value="true" />
@@ -623,7 +616,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704669173977</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="edited who did what text file">
+      <option name="closed" value="true" />
+      <created>1704670155087</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1704670155088</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -641,7 +642,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="played with setting usertype to session in LoginCommand" />
     <MESSAGE value="played with setting usertype to session in RegisterCommand" />
     <MESSAGE value="played with setting usertype to session in successfulLogin.jsp" />
     <MESSAGE value="played with enum in user class" />
@@ -666,6 +666,7 @@
     <MESSAGE value="tried to get bookid as session parameter in BorrowCommand" />
     <MESSAGE value="tried to get usertype parameter from session in successfulLogin.jsp" />
     <MESSAGE value="Added author tags to files made by me" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added author tags to files made by me" />
+    <MESSAGE value="edited who did what text file" />
+    <option name="LAST_COMMIT_MESSAGE" value="edited who did what text file" />
   </component>
 </project>
