@@ -21,7 +21,10 @@ Ryan:
 - Created User class
 - Fixed UserDao and removed adminDao so the admin interface will use userDao
 - Created the readme file
--
+- Made the edit.jsp
+- Added to the commandFactory
+- Made viewUserProfile.jsp
+- Made ViewUserProfile command
 
 Evan:
 - Updated database to have not null consideration
