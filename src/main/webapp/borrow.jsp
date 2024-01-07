@@ -37,8 +37,11 @@
         Book bookSelected = bookChosenDao.getBookByBookId(bookIdSelected);
         //Check if the selected book was found
         if (bookSelected != null) {
+            int userId = userLoggedIn.getUserId();
             //Set book to the session
             session.setAttribute("book", bookSelected);
+            session.setAttribute("user", userLoggedIn);
+            session.setAttribute("userId", userId);
             session.setAttribute("bookId", bookIdSelected);
             session.setAttribute("action", "borrow");
         }
