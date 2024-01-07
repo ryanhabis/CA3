@@ -1,5 +1,10 @@
 https://stackoverflow.com/questions/7056959/convert-string-to-equivalent-enum-value
 for converting string parameter to enum type
 
+Evan:
 https://stackoverflow.com/questions/44689296/getting-which-radio-button-is-selected-by-post-with-jsp
-Used in search.jsp to help with doing checkboxes and getting the output
+Used in search.jsp to help with doing checkboxes and getting the output(need to scroll down a bit to find it)
+
+Evan:
+https://stackoverflow.com/questions/20358883/how-to-quickly-and-conveniently-create-a-one-element-arraylist
+Used in SearchCommand.java to convert a single book to a List(need to scroll down a bit to find it)

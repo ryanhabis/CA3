@@ -33,7 +33,7 @@ public class ViewBooksCommand implements Command {
             session.setAttribute("books",books);
         } else {
             continueTo = "../error.jsp"; //go to error page
-            String error = "No books available at this time. ";
+            String error = "No Book or Books found. ";
             session.setAttribute("errorMessage", error);
         }
 
