@@ -2,7 +2,7 @@
 <%@ page import="CA3.bookRentalSystem.repositories.BookDaoInterface" %>
 <%@ page import="CA3.bookRentalSystem.repositories.BookDao" %>
 <%@ page import="CA3.bookRentalSystem.repositories.BookDaoAdminInterface" %>
-<%@ page import="CA3.bookRentalSystem.repositories.BookDaoAdmin" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: Heidi
   Date: 27/12/2023
@@ -22,9 +22,10 @@ Hello there, yes you would like to borrow a book eh?
     if(bookIdSelected != -1){
         //then get the whole book object
         //create bookdao
-        BookDaoAdminInterface bookChosenDao = new BookDaoAdmin("bookrentalsystem");
+        BookDaoAdminInterface bookChosenDao = new BookDao("bookrentalsystem");
         Book bookSelected = bookChosenDao.getBookByBookId(bookIdSelected);
 %>
+<form action="servlet/Controller" method="post">
 <table>
     <tr><th>Book</th><th>Blurb</th><th>Author</th><th>Price €</th></tr>
 
@@ -37,12 +38,20 @@ Hello there, yes you would like to borrow a book eh?
 
 </table>
 <%--Set book to the session--%>
-<%session.setAttribute("book", bookSelected);%>
+<%session.setAttribute("book", bookSelected);
+   // session.setAttribute("bookId", bookSelected);
+    session.setAttribute("action", "borrow");
+%>
 
-<input type="button" value="Borrow Book" />
-<!-- Include a hidden field to identify what the user wants to do -->
-<input type="hidden" name ="action" value="borrow" />
-<button>Borrow Book</button>
+    <input type="hidden" name ="bookId" value="<%=bookIdSelected%>" />
+
+    <input type="submit" value="borrow" />
+
+    <!-- Include a hidden field to identify what the user wants to do -->
+    <input type="hidden" name ="action" value="borrow" />
+</form>
+
+<a href="servlet/Controller?action=borrow">Borrow</a>
 
 <%
 }else{
