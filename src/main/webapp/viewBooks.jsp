@@ -12,7 +12,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Browse Books</title>
+    <title>View Books</title>
 </head>
 <body>
 <!-- Make facility for searching and viewing all books

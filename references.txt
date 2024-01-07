@@ -1,2 +1,5 @@
 https://stackoverflow.com/questions/7056959/convert-string-to-equivalent-enum-value
 for converting string parameter to enum type
+
+https://stackoverflow.com/questions/44689296/getting-which-radio-button-is-selected-by-post-with-jsp
+Used in search.jsp to help with doing checkboxes and getting the output
