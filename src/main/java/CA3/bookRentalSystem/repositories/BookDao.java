@@ -565,4 +565,66 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
         return b.getBookId() != -1;
     }
 
+    /**
+     * Returns a book and updates the stock
+     * @param bookId The ID of the book
+     * @param userId The ID of the user
+     * @return true if successful, false if not
+     */
+    @Override
+    public boolean returnBook(int bookId, int userId) {
+
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        try {
+            //Getting connection
+            conn = getConnection();
+            //Creating query
+            String query = "update books set quantityInStock = quantityInStock + 1 where bookId = ? ";
+            //Prepare & execute query
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, bookId);
+            rs = ps.executeQuery();
+
+
+
+        } catch (SQLException e) {
+            System.out.println("SQL exception: " +e.getMessage());
+            return false;
+        } catch (DaoException e) {
+            System.out.println("Dao exception: " +e.getMessage());
+            return false;
+        }
+
+        //Closing Connection
+        finally {
+            if(rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException e) {
+                    System.out.println("Exception message: " + e.getMessage());
+                    System.out.println("Issue when closing result set: ");
+                }
+            }
+            if(ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException e) {
+                    System.out.println("Exception message: " + e.getMessage());
+                    System.out.println("Issue when closing prepared statement: ");
+                }
+            }
+            if(conn != null) {
+                try {
+                    freeConnection(conn);
+                } catch (DaoException e) {
+                    System.out.println("Dao exception caught: " + e.getMessage());
+                }
+            }
+        }
+        return true;
+    }
+
 }
