@@ -9,9 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Made LoanDaoTest">
+    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="set more attributes to the session in borrow.jsp">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/borrow.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/borrow.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/BorrowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/BorrowCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/successfulLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/successfulLogin.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -231,30 +231,6 @@
       <workItem from="1704531694212" duration="17188000" />
       <workItem from="1704555537379" duration="964000" />
       <workItem from="1704567190856" duration="23840000" />
-    </task>
-    <task id="LOCAL-00064" summary="Added display to error.jsp (sample code taken from Michelle's solution to be changed).">
-      <option name="closed" value="true" />
-      <created>1704485716088</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1704485716088</updated>
-    </task>
-    <task id="LOCAL-00065" summary="set continueTo string in ErrorCommand to redirect to error.jsp">
-      <option name="closed" value="true" />
-      <created>1704488511223</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1704488511223</updated>
-    </task>
-    <task id="LOCAL-00066" summary="Uncommented redirects to error.jsp in LoginCommand and RegisterCommand.">
-      <option name="closed" value="true" />
-      <created>1704493365207</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1704493365207</updated>
     </task>
     <task id="LOCAL-00067" summary="Rerouted to correct pages for success and error in LoginCommand">
       <option name="closed" value="true" />
@@ -624,7 +600,31 @@
       <option name="project" value="LOCAL" />
       <updated>1704665583297</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="Set bookId to session in borrow.jsp">
+      <option name="closed" value="true" />
+      <created>1704666933634</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1704666933635</updated>
+    </task>
+    <task id="LOCAL-00114" summary="Removed excess code and comments from successfulLogin.jsp">
+      <option name="closed" value="true" />
+      <created>1704666960122</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1704666960123</updated>
+    </task>
+    <task id="LOCAL-00115" summary="set more attributes to the session in borrow.jsp">
+      <option name="closed" value="true" />
+      <created>1704668485517</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1704668485520</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -642,9 +642,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Set usertype to session in LoginCommand" />
-    <MESSAGE value="Set usertype and accountStatus fields in user creation in RegisterCommand" />
-    <MESSAGE value="Attempted to retrieve usertype from session and do checks on it in successfulLogin.jsp but currently not working" />
     <MESSAGE value="Added references.txt" />
     <MESSAGE value="Made changes to User class for usertype enum constructor inner name field and tostring method" />
     <MESSAGE value="Commented out closing of connection in UserDaoAdmin methods to debug" />
@@ -667,6 +664,9 @@
     <MESSAGE value="Added method header to LoanDaoAdminInterface for getAllOverdueLoans method" />
     <MESSAGE value="Made ReturnCommand implement command" />
     <MESSAGE value="Made LoanDaoTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made LoanDaoTest" />
+    <MESSAGE value="Set bookId to session in borrow.jsp" />
+    <MESSAGE value="Removed excess code and comments from successfulLogin.jsp" />
+    <MESSAGE value="set more attributes to the session in borrow.jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="set more attributes to the session in borrow.jsp" />
   </component>
 </project>
