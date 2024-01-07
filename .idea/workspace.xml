@@ -9,13 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="altered getUserType slightly in userdao and UserDaoAdmin">
+    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Cast user type attribute to string in successfulLogin.jsp">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/BorrowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/BorrowCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/borrowBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/borrow.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/browseBooks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/browseBooks.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/successfulLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/successfulLogin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/SignupCommand.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,31 +199,7 @@
       <workItem from="1704453811037" duration="23660000" />
       <workItem from="1704531694212" duration="17188000" />
       <workItem from="1704555537379" duration="964000" />
-      <workItem from="1704567190856" duration="21822000" />
-    </task>
-    <task id="LOCAL-00051" summary="Renamed UserDaoForCustomer.java to UserDao and extended and implemented Interfaces to match structure of BookDao classes and interfaces">
-      <option name="closed" value="true" />
-      <created>1704388315047</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1704388315047</updated>
-    </task>
-    <task id="LOCAL-00052" summary="Added imports for User class and UserDao to LoginCommand">
-      <option name="closed" value="true" />
-      <created>1704389043029</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1704389043029</updated>
-    </task>
-    <task id="LOCAL-00053" summary="Added imports for User class to UserDao and renamed logIn method to login. Added findUserByUsernameAndPassword method to UserDaoInterface and UserDao.">
-      <option name="closed" value="true" />
-      <created>1704389470218</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1704389470218</updated>
+      <workItem from="1704567190856" duration="23840000" />
     </task>
     <task id="LOCAL-00054" summary="Implemented login method added in UserDaoForAdmin">
       <option name="closed" value="true" />
@@ -596,7 +569,31 @@
       <option name="project" value="LOCAL" />
       <updated>1704584547315</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="attempted to trigger borrow book Command in borrow.jsp by adding form and link but failed">
+      <option name="closed" value="true" />
+      <created>1704611222028</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1704611222028</updated>
+    </task>
+    <task id="LOCAL-00101" summary="Refactored borrowBook.jsp file to borrow.jsp for simplicity">
+      <option name="closed" value="true" />
+      <created>1704611320177</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1704611320178</updated>
+    </task>
+    <task id="LOCAL-00102" summary="Cast user type attribute to string in successfulLogin.jsp">
+      <option name="closed" value="true" />
+      <created>1704611372166</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1704611372166</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -614,9 +611,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Made temporary alternative nav display for admin users in successfulLogin.jsp. Will be fixed later." />
-    <MESSAGE value="Moved position of return value in reserveCopy method in BookDaoAdmin" />
-    <MESSAGE value="removed unused imports in bookdao" />
     <MESSAGE value="Created loan daos and interfaces and added createLoan method as well as getActiveLoansByBookIdAndUser method" />
     <MESSAGE value="Added checkAccountEnabled method to UserDaoAdmin and interface" />
     <MESSAGE value="Added imports that I had accidentally removed before to bookdao" />
@@ -639,6 +633,9 @@
     <MESSAGE value="played with setting usertype to session in successfulLogin.jsp" />
     <MESSAGE value="played with enum in user class" />
     <MESSAGE value="altered getUserType slightly in userdao and UserDaoAdmin" />
-    <option name="LAST_COMMIT_MESSAGE" value="altered getUserType slightly in userdao and UserDaoAdmin" />
+    <MESSAGE value="attempted to trigger borrow book Command in borrow.jsp by adding form and link but failed" />
+    <MESSAGE value="Refactored borrowBook.jsp file to borrow.jsp for simplicity" />
+    <MESSAGE value="Cast user type attribute to string in successfulLogin.jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cast user type attribute to string in successfulLogin.jsp" />
   </component>
 </project>
