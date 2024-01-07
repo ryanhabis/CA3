@@ -2,7 +2,6 @@ package CA3.bookRentalSystem.commands;
 
 import CA3.bookRentalSystem.rental.User;
 import CA3.bookRentalSystem.repositories.UserDao;
-import CA3.bookRentalSystem.repositories.UserDaoAdmin;
 import CA3.bookRentalSystem.repositories.UserDaoInterfaceAdmin;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -52,7 +51,7 @@ public class RegisterCommand implements Command{
 String userType = "Customer";
 
         if (currentUsername != null && currentPassword != null && !currentUsername.isEmpty() && !currentPassword.isEmpty() && userFirstName != null && !userFirstName.isEmpty() && userLastName != null && !userLastName.isEmpty()) {
-            UserDaoInterfaceAdmin userDao = new UserDaoAdmin("bookrentalsystem");
+            UserDaoInterfaceAdmin userDao = new UserDao("bookrentalsystem");
 
             int id = userDao.signup(currentUsername, currentPassword, userFirstName, userLastName,  dob, phoneNum, email, addressLine1, addressLine2, city, county, eircode);
             if (id == -1) {
