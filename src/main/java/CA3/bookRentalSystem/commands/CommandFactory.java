@@ -13,20 +13,28 @@ public class CommandFactory {
 
             switch (commandAsString) {
 
+                case "view":
+                    command = new ViewBooksCommand(request, response);
+                    break;
+
+                case "search":
+                    command = new SearchCommand(request, response);
+                    break;
+
+                case "borrow":
+                    command = new BorrowCommand(request, response);
+                    break;
+
+                case "return":
+                    //command = new ReturnCommand(request, response);
+                    break;
+
                 case "login":
                     command = new LoginCommand(request, response);
                     break;
 
                 case "register" :
                     command = new RegisterCommand(request, response);
-                    break;
-
-                case "view":
-                    command = new ViewBooksCommand(request, response);
-                    break;
-
-                case "borrow":
-                    command = new BorrowCommand(request, response);
                     break;
 
                 default:
