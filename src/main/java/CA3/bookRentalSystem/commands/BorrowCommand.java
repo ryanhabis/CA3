@@ -30,8 +30,8 @@ public class BorrowCommand implements Command{
         //if book has sufficient stock
         if (bookToBorrow != null) {
             //make all relevant daos to borrow book
-            UserDaoInterfaceAdmin userDao = new UserDaoAdmin("bookrentalsystem");
-            BookDaoAdminInterface bookDao = new BookDaoAdmin("bookrentalsystem");
+            UserDaoInterfaceAdmin userDao = new UserDao("bookrentalsystem");
+            BookDaoAdminInterface bookDao = new BookDao("bookrentalsystem");
             LoanDaoAdminInterface loanDao = new LoanDaoAdmin("bookrentalsystem");
 
        //     int bookId = Integer.parseInt(request.getParameter("bookId"));

@@ -2,7 +2,6 @@ package CA3.bookRentalSystem.commands;
 
 import CA3.bookRentalSystem.rental.User;
 import CA3.bookRentalSystem.repositories.UserDao;
-import CA3.bookRentalSystem.repositories.UserDaoAdmin;
 import CA3.bookRentalSystem.repositories.UserDaoInterfaceAdmin;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -32,7 +31,7 @@ public class LoginCommand implements Command {
         //if fields entered are not empty and are not null
         if (username != null && password != null && !username.isEmpty() && !password.isEmpty()) {
             //make a new userdao using the regular database
-            UserDaoInterfaceAdmin userDao = new UserDaoAdmin("bookrentalsystem");
+            UserDaoInterfaceAdmin userDao = new UserDao("bookrentalsystem");
             //retrieve User matching details entered
             User userFound = userDao.findUserByUsernameAndPassword(username, password);
            // User.UserType userType = User.UserType.valueOf(userDao.getUserType(username));

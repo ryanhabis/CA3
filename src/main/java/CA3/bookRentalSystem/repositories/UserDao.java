@@ -10,8 +10,9 @@ import CA3.bookRentalSystem.rental.User;
 
 import java.sql.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
-public class UserDao extends Dao implements UserDaoInterface {
+public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAdmin{
 
 
     public UserDao(Connection conn) {
@@ -132,6 +133,15 @@ public class UserDao extends Dao implements UserDaoInterface {
             return status;
         }
 
+    /**
+     * Retrieves a user from the database based on the provided username and password.
+     *
+     * @param username The username of the user to be retrieved.
+     * @param password The password associated with the specified username.
+     * @return A User object containing the user information if found, otherwise an empty User object.
+     * @throws RuntimeException If there is an issue closing the database resources.
+     * @throws DaoException If a SQL or DaoException occurs during the database operations.
+     */
     @Override
     public User findUserByUsernameAndPassword(String username, String password) {
         Connection conn = null;
@@ -198,13 +208,13 @@ public class UserDao extends Dao implements UserDaoInterface {
     /**
      * Adds a new user to the database
      *
-
      * @return the new user if there account was made successfully or not
      * @throws DaoException wil throw a run time exception
      * @throws SQLException if the user was not added
      */
     @Override
-    public int signup(String username, String password, String fName, String lName, LocalDate dob, String phoneNumber, String email, String addressLine1, String addressLine2, String city, String county, String eircode) {
+    public int signup(String username, String password, String fName, String lName, LocalDate dob, String phoneNumber, String email, String addressLine1, String addressLine2, String city, String county, String eircode)
+    {
         Connection conn = null;
         PreparedStatement ps = null;
         int rowsAdded = -1;
@@ -234,10 +244,10 @@ public class UserDao extends Dao implements UserDaoInterface {
             rowsAdded = ps.executeUpdate();
 
 
-        } catch (DaoException e) {
-            System.out.println("Dao exception: " + e.getMessage());
         } catch (SQLException e) {
             System.out.println("SQL Exception: "  + e.getMessage());
+        }catch (DaoException e) {
+            System.out.println("Dao exception: " + e.getMessage());
         }
 
         //close connections
@@ -263,5 +273,313 @@ public class UserDao extends Dao implements UserDaoInterface {
         return rowsAdded;
     }
 
+    /**
+     * This method goes through all the users that are in the database and displays them
+     * @throws DaoException wil throw a run time exception
+     * @throws SQLException
+     * @return all the users on the database
+     */
+    @Override
+    public ArrayList<User> getALLUsers()
+    {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
 
+        //make arraylist
+        ArrayList<User> users = new ArrayList<>();
+
+        try {
+            conn = getConnection();
+            String query = "select * from users";
+
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                User u = new User();
+
+                u.setUserId(rs.getInt("userId"));
+                u.setFirstName(rs.getString("firstName"));
+                u.setLastName(rs.getString("lastName"));
+                u.setUsername(rs.getString("username"));
+                u.setPassword(rs.getString("password"));
+                /* Help form Heidi for the date */
+                u.setDob(rs.getDate("dob").toLocalDate());
+
+                u.setPhoneNumber(rs.getString("phoneNumber"));
+                u.setEmail(rs.getString("email"));
+                u.setAddressLine1(rs.getString("addressLine1"));
+                u.setAddressLine2(rs.getString("addressLine2"));
+                u.setCity(rs.getString("city"));
+                u.setCounty(rs.getString("county"));
+                u.setEircode(rs.getString("eircode"));
+                // problem
+//                u.setUserType(rs.getString("userType"));
+
+                users.add(u);
+            }
+
+        }  catch (SQLException e) {
+            throw new RuntimeException("SQL runtime exception:- " + e.getMessage());
+        }
+        catch (DaoException e) {
+            throw new RuntimeException("DAO runtime exception:- " + e.getMessage());
+        }finally {
+            if (rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException e) {
+                    System.out.println("Exception message: " + e.getMessage());
+                    System.out.println("Problem occured when closing result set.");
+                }
+            }
+            if (ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException e) {
+                    System.out.println("Exception message: " + e.getMessage());
+                    System.out.println("Problem occured when closing prepared statement.");
+                }
+            }
+
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                    System.out.println("Exception message: " + e.getMessage());
+                    System.out.println("Problem occured when closing connection statement.");
+                }
+            }
+        }
+        return users;
+    }
+
+    /**
+     * This method removes a user from the databasse when the username is provided.
+     *
+     * @param username checks to see if the user is located on the database
+     * @return the user that was deleted or not
+     */
+    @Override
+    public int removeUser(String username) {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        int userDelete = 0;
+
+        try {
+            conn = getConnection();
+            String query = "delete from users where username = ?";
+
+            ps = conn.prepareStatement(query);
+            ps.setString(1, username);
+
+            userDelete = ps.executeUpdate();
+
+            if (userDelete == 0)
+            {
+                throw new DaoException("user " + username + " not found");
+            }
+
+        }
+        catch (SQLException e)
+        {
+            throw new RuntimeException("Error removing user = " + e.getMessage());
+        } catch (DaoException e) {
+            throw new RuntimeException(e);
+        } finally
+        {
+            try
+            {
+                if (ps != null)
+                {
+                    ps.close();
+                }
+                if (conn != null)
+                {
+                    freeConnection(conn);
+                }
+            }
+            catch (SQLException e)
+            {
+                throw new RuntimeException("Error removing user = " + e.getMessage());
+            } catch (DaoException e) {
+                throw new RuntimeException(e);
+            }
+
+        }
+
+        return userDelete;
+    }
+
+
+    /**
+     * Checks if a user with the specified userId exists in the database.
+     *
+     * @param userId Is the unique identifier for the user.
+     * @return true if the user exists,or false otherwise.
+     * @throws RuntimeException If there is an error checking the account status or closing resources.
+     */
+    @Override
+    public boolean checkAccountEnabled(int userId) {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        try {
+            conn = getConnection();
+            String query = "select userId from users where userId = ?";
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, userId);
+            rs = ps.executeQuery();
+
+            return rs.next();  // Returns true if the user with userId is found, false otherwise
+
+        } catch (SQLException | DaoException e) {
+            throw new RuntimeException("Error checking account status: " + e.getMessage());
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (ps != null) {
+                    ps.close();
+                }
+                if (conn != null) {
+                    freeConnection(conn);
+                }
+            } catch (SQLException | DaoException e) {
+                throw new RuntimeException("Error closing resources: " + e.getMessage());
+            }
+        }
+    }
+
+    /**
+     * View the user profile based on the provided username.
+     *
+     * @param username The username of the user whose profile is to be viewed.
+     * @return A User object containing the user information if found, otherwise an empty User object.
+     * @throws RuntimeException If there is an issue closing the database resources.
+     * @throws DaoException If a SQL or DaoException occurs during the database operations.
+     */
+    public User viewUserProfile(String username) {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        User u = new User();
+
+        try {
+            conn = getConnection();
+            String query = "select * from users where username = ?";
+            ps = conn.prepareStatement(query);
+            ps.setString(1, username);
+            rs = ps.executeQuery();
+
+            if (rs.next()) {
+                u.setUserId(rs.getInt("userId"));
+                u.setFirstName(rs.getString("firstName"));
+                u.setLastName(rs.getString("lastName"));
+                u.setUsername(rs.getString("username"));
+                u.setPassword(rs.getString("password"));
+                u.setDob(rs.getDate("dob").toLocalDate());
+                u.setPhoneNumber(rs.getString("phoneNumber"));
+                u.setEmail(rs.getString("email"));
+                u.setAddressLine1(rs.getString("addressLine1"));
+                u.setAddressLine2(rs.getString("addressLine2"));
+                u.setCity(rs.getString("city"));
+                u.setCounty(rs.getString("county"));
+                u.setEircode(rs.getString("eircode"));
+
+            }
+
+        } catch (SQLException | DaoException e) {
+            System.out.println("SQL exception: " + e.getMessage());
+        } finally {
+            // Closing Connection
+            if (rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException e) {
+                    System.out.println("Exception message: " + e.getMessage());
+                    System.out.println("Issue when closing result set.");
+                }
+            }
+            if (ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException e) {
+                    System.out.println("Exception message: " + e.getMessage());
+                    System.out.println("Issue when closing prepared statement.");
+                }
+            }
+            if (conn != null) {
+                try {
+                    freeConnection(conn);
+                } catch (DaoException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }
+
+        return u;
+    }
+
+    /**
+     * Edit the user profile based on the provided User object.
+     *
+     * @param updatedUser The User object containing the updated user information.
+     * @return The number of rows affected in the database.
+     * @throws RuntimeException If there is an error updating the user profile or closing resources.
+     * @throws DaoException If a SQL or DaoException occurs during the database operations.
+     */
+    public int editUserProfile(User updatedUser) {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        int rowsUpdated = -1;
+
+        try {
+            conn = getConnection();
+            String query = "update users set firstName=?, lastName=?, dob=?, phoneNumber=?, email=?, addressLine1=?, addressLine2=?, city=?, county=?, eircode=? where userId=?";
+            ps = conn.prepareStatement(query);
+            ps.setString(1, updatedUser.getFirstName());
+            ps.setString(2, updatedUser.getLastName());
+            ps.setDate(3, Date.valueOf(updatedUser.getDob()));
+            ps.setString(4, updatedUser.getPhoneNumber());
+            ps.setString(5, updatedUser.getEmail());
+            ps.setString(6, updatedUser.getAddressLine1());
+            ps.setString(7, updatedUser.getAddressLine2());
+            ps.setString(8, updatedUser.getCity());
+            ps.setString(9, updatedUser.getCounty());
+            ps.setString(10, updatedUser.getEircode());
+            ps.setInt(11, updatedUser.getUserId());
+
+            rowsUpdated = ps.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println("SQL Exception: " + e.getMessage());
+        } catch (DaoException e) {
+            System.out.println("Dao exception: " + e.getMessage());
+        } finally {
+            // Closing connections
+            if (ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException e) {
+                    System.out.println("Exception message: " + e.getMessage());
+                    System.out.println("Problem occurred when closing prepared statement.");
+                }
+            }
+
+            if (conn != null) {
+                try {
+                    freeConnection(conn);
+                } catch (DaoException e) {
+                    System.out.println("Dao exception caught: " + e.getMessage());
+                }
+            }
+        }
+
+        return rowsUpdated;
+    }
 }

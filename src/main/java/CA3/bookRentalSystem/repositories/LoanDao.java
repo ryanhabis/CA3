@@ -43,10 +43,10 @@ public class LoanDao extends Dao implements LoanDaoInterface{
             rowsAdded = ps.executeUpdate();
 
 
-        } catch (DaoException e) {
-            System.out.println("Dao exception: " + e.getMessage());
         } catch (SQLException e) {
-            System.out.println("SQL Exception: "  + e.getMessage());
+            System.out.println("SQL exception: " +e.getMessage());
+        } catch (DaoException e) {
+            System.out.println("Dao exception: " +e.getMessage());
         }
 
         //close connections

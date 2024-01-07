@@ -16,6 +16,21 @@ Heidi:
 Ryan:
 - Created the GitHub source control and added everyone to it.
 - Created css for the webpages
-- Created the UserDao, UserDaoAdmin (Heidi helped)
+- Created the UserDao, removed UserDaoAdmin
 - Created UserDaoInterface and UserDaoInterfaceAdmin
 - Created User class
+- Fixed UserDao and removed adminDao so the admin interface will use userDao
+- Created the readme file
+-
+
+Evan:
+- Updated database to have not null consideration
+- Fixed the getConnection method so that it checks for the existence of a connection and creates one if none exists
+- Combined BookDao and BookDaoAdmin into 1 BookDao still connecting to both interfaces
+- Changed order of exceptions in BookDao, LoanDao and LoanDaoAdmin
+- Fixed logic in BookDao, getBookIdsByTitle method and getBookByBookId method
+- Changed admin actions so user can get by IDS and check stock
+- Added validation into stock change method
+- Updated javadocs in BookDao to fit requirements
+- Added javadocs for BookDaoAdminInterface and BookDaoInterface
+- Added method to return a book

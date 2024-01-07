@@ -9,14 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Commented out closing of connection in UserDaoAdmin methods to debug">
+    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Updated BookDaoInterface.java and BookDaoAdminInterface.java with the correct methods they should have access to, changed BorrowCommand.java to have the correct BookDao name.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/LoginCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/RegisterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/RegisterCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/rental/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/rental/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/UserDaoAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/successfulLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/successfulLogin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDaoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDaoInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,30 +200,6 @@
       <workItem from="1704531694212" duration="17188000" />
       <workItem from="1704555537379" duration="964000" />
       <workItem from="1704567190856" duration="14004000" />
-    </task>
-    <task id="LOCAL-00046" summary="Added ot who did what text file">
-      <option name="closed" value="true" />
-      <created>1704240924389</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1704240924389</updated>
-    </task>
-    <task id="LOCAL-00047" summary="Added a line in a paragraph to indicate the right page was reached in successfulLogin.jsp">
-      <option name="closed" value="true" />
-      <created>1704294206730</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1704294206730</updated>
-    </task>
-    <task id="LOCAL-00048" summary="Added sample login code to LoginCommand from Michelle's solution for login functionality - will be changed slightly later.">
-      <option name="closed" value="true" />
-      <created>1704294256598</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1704294256599</updated>
     </task>
     <task id="LOCAL-00049" summary="Implemented BookDaoAdminInterface in BookDaoAdmin class as I somehow forgot to previously.">
       <option name="closed" value="true" />
@@ -597,7 +569,31 @@
       <option name="project" value="LOCAL" />
       <updated>1704556503226</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="Changed the order of the exceptions in BookDao.java LoanDao.java and LoanDaoAdmin.java to fix the issue with the order.">
+      <option name="closed" value="true" />
+      <created>1704584890793</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1704584890793</updated>
+    </task>
+    <task id="LOCAL-00096" summary="Fixed BookDao.java getBookIdsByTitle and GetBooksByTitle, updated so both methods can have multiple books with the same title">
+      <option name="closed" value="true" />
+      <created>1704586109862</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1704586109862</updated>
+    </task>
+    <task id="LOCAL-00097" summary="Updated BookDaoInterface.java and BookDaoAdminInterface.java with the correct methods they should have access to, changed BorrowCommand.java to have the correct BookDao name.">
+      <option name="closed" value="true" />
+      <created>1704586842457</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1704586842457</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -615,9 +611,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Made method body for findUserByUsernameAndPassword method in UserDaoAdmin" />
-    <MESSAGE value="Updated user and passwords text file to correct password for Oscar" />
-    <MESSAGE value="Displayed book details of book selected in borrowBook.jsp" />
     <MESSAGE value="Made BorrowCommand and added some temporary body for execute method - to be fixed later" />
     <MESSAGE value="Made successfulBorrow.jsp to redirect to and indicate book was borrowed successfully" />
     <MESSAGE value="Made temporary alternative nav display for admin users in successfulLogin.jsp. Will be fixed later." />
@@ -640,6 +633,9 @@
     <MESSAGE value="Added references.txt" />
     <MESSAGE value="Made changes to User class for usertype enum constructor inner name field and tostring method" />
     <MESSAGE value="Commented out closing of connection in UserDaoAdmin methods to debug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commented out closing of connection in UserDaoAdmin methods to debug" />
+    <MESSAGE value="Changed the order of the exceptions in BookDao.java LoanDao.java and LoanDaoAdmin.java to fix the issue with the order." />
+    <MESSAGE value="Fixed BookDao.java getBookIdsByTitle and GetBooksByTitle, updated so both methods can have multiple books with the same title" />
+    <MESSAGE value="Updated BookDaoInterface.java and BookDaoAdminInterface.java with the correct methods they should have access to, changed BorrowCommand.java to have the correct BookDao name." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated BookDaoInterface.java and BookDaoAdminInterface.java with the correct methods they should have access to, changed BorrowCommand.java to have the correct BookDao name." />
   </component>
 </project>
