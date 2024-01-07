@@ -357,6 +357,7 @@ public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAd
 
     /**
      * This method removes a user from the databasse when the username is provided.
+     *
      * @param username checks to see if the user is located on the database
      * @return the user that was deleted or not
      */
@@ -539,9 +540,7 @@ public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAd
 
         try {
             conn = getConnection();
-            String query = "update users set firstName=?, lastName=?, dob=?, phoneNumber=?, " +
-                    "email=?, addressLine1=?, addressLine2=?, city=?, county=?, eircode=? " +
-                    "where userId=?";
+            String query = "update users set firstName=?, lastName=?, dob=?, phoneNumber=?, email=?, addressLine1=?, addressLine2=?, city=?, county=?, eircode=? where userId=?";
             ps = conn.prepareStatement(query);
             ps.setString(1, updatedUser.getFirstName());
             ps.setString(2, updatedUser.getLastName());
@@ -583,6 +582,4 @@ public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAd
 
         return rowsUpdated;
     }
-
-
 }
