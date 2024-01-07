@@ -9,10 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="Updated BookDaoInterface.java and BookDaoAdminInterface.java with the correct methods they should have access to, changed BorrowCommand.java to have the correct BookDao name.">
+    <list default="true" id="508a28b7-6044-4940-80f0-17e94001e762" name="Changes" comment="altered getUserType slightly in userdao and UserDaoAdmin">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDaoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/repositories/BookDaoInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/BorrowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CA3/bookRentalSystem/commands/BorrowCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/borrowBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/borrow.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/browseBooks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/browseBooks.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/successfulLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/successfulLogin.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,23 +202,7 @@
       <workItem from="1704453811037" duration="23660000" />
       <workItem from="1704531694212" duration="17188000" />
       <workItem from="1704555537379" duration="964000" />
-      <workItem from="1704567190856" duration="14004000" />
-    </task>
-    <task id="LOCAL-00049" summary="Implemented BookDaoAdminInterface in BookDaoAdmin class as I somehow forgot to previously.">
-      <option name="closed" value="true" />
-      <created>1704387435647</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1704387435647</updated>
-    </task>
-    <task id="LOCAL-00050" summary="Removed actually unnecessary implementation from BookDaoAdmin of BookDaoInterface">
-      <option name="closed" value="true" />
-      <created>1704388159183</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1704388159183</updated>
+      <workItem from="1704567190856" duration="21822000" />
     </task>
     <task id="LOCAL-00051" summary="Renamed UserDaoForCustomer.java to UserDao and extended and implemented Interfaces to match structure of BookDao classes and interfaces">
       <option name="closed" value="true" />
@@ -569,31 +556,47 @@
       <option name="project" value="LOCAL" />
       <updated>1704556503226</updated>
     </task>
-    <task id="LOCAL-00095" summary="Changed the order of the exceptions in BookDao.java LoanDao.java and LoanDaoAdmin.java to fix the issue with the order.">
+    <task id="LOCAL-00095" summary="played with setting usertype to session in LoginCommand">
       <option name="closed" value="true" />
-      <created>1704584890793</created>
+      <created>1704583630666</created>
       <option name="number" value="00095" />
       <option name="presentableId" value="LOCAL-00095" />
       <option name="project" value="LOCAL" />
-      <updated>1704584890793</updated>
+      <updated>1704583630667</updated>
     </task>
-    <task id="LOCAL-00096" summary="Fixed BookDao.java getBookIdsByTitle and GetBooksByTitle, updated so both methods can have multiple books with the same title">
+    <task id="LOCAL-00096" summary="played with setting usertype to session in RegisterCommand">
       <option name="closed" value="true" />
-      <created>1704586109862</created>
+      <created>1704583990493</created>
       <option name="number" value="00096" />
       <option name="presentableId" value="LOCAL-00096" />
       <option name="project" value="LOCAL" />
-      <updated>1704586109862</updated>
+      <updated>1704583990494</updated>
     </task>
-    <task id="LOCAL-00097" summary="Updated BookDaoInterface.java and BookDaoAdminInterface.java with the correct methods they should have access to, changed BorrowCommand.java to have the correct BookDao name.">
+    <task id="LOCAL-00097" summary="played with setting usertype to session in successfulLogin.jsp">
       <option name="closed" value="true" />
-      <created>1704586842457</created>
+      <created>1704584188829</created>
       <option name="number" value="00097" />
       <option name="presentableId" value="LOCAL-00097" />
       <option name="project" value="LOCAL" />
-      <updated>1704586842457</updated>
+      <updated>1704584188829</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="played with enum in user class">
+      <option name="closed" value="true" />
+      <created>1704584321138</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1704584321138</updated>
+    </task>
+    <task id="LOCAL-00099" summary="altered getUserType slightly in userdao and UserDaoAdmin">
+      <option name="closed" value="true" />
+      <created>1704584547315</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1704584547315</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -611,8 +614,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Made BorrowCommand and added some temporary body for execute method - to be fixed later" />
-    <MESSAGE value="Made successfulBorrow.jsp to redirect to and indicate book was borrowed successfully" />
     <MESSAGE value="Made temporary alternative nav display for admin users in successfulLogin.jsp. Will be fixed later." />
     <MESSAGE value="Moved position of return value in reserveCopy method in BookDaoAdmin" />
     <MESSAGE value="removed unused imports in bookdao" />
@@ -633,9 +634,11 @@
     <MESSAGE value="Added references.txt" />
     <MESSAGE value="Made changes to User class for usertype enum constructor inner name field and tostring method" />
     <MESSAGE value="Commented out closing of connection in UserDaoAdmin methods to debug" />
-    <MESSAGE value="Changed the order of the exceptions in BookDao.java LoanDao.java and LoanDaoAdmin.java to fix the issue with the order." />
-    <MESSAGE value="Fixed BookDao.java getBookIdsByTitle and GetBooksByTitle, updated so both methods can have multiple books with the same title" />
-    <MESSAGE value="Updated BookDaoInterface.java and BookDaoAdminInterface.java with the correct methods they should have access to, changed BorrowCommand.java to have the correct BookDao name." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated BookDaoInterface.java and BookDaoAdminInterface.java with the correct methods they should have access to, changed BorrowCommand.java to have the correct BookDao name." />
+    <MESSAGE value="played with setting usertype to session in LoginCommand" />
+    <MESSAGE value="played with setting usertype to session in RegisterCommand" />
+    <MESSAGE value="played with setting usertype to session in successfulLogin.jsp" />
+    <MESSAGE value="played with enum in user class" />
+    <MESSAGE value="altered getUserType slightly in userdao and UserDaoAdmin" />
+    <option name="LAST_COMMIT_MESSAGE" value="altered getUserType slightly in userdao and UserDaoAdmin" />
   </component>
 </project>

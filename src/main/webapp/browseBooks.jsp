@@ -39,7 +39,7 @@ List<Book> allBooks = bookDao.getAllBooks();
             for(Book b: allBooks){
         %>
         <tr>
-            <td><a href="borrowBook.jsp?bookId=<%=b.getBookId()%>"><%=b.getTitle()%></a></td> <!-- Set the book Id as a parameter -->
+            <td><a href="borrow.jsp?bookId=<%=b.getBookId()%>"><%=b.getTitle()%></a></td> <!-- Set the book Id as a parameter -->
             <td><%=b.getDescription()%></td>
             <td><%=b.getBookPrice()%></td>
         </tr>
