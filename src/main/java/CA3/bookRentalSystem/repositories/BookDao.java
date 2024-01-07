@@ -102,10 +102,9 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
          * @return the bookId from the database
          */
         @Override
-        public int getBookIdByTitle(String title) {
+        public ArrayList<Integer> getBookIdsByTitle(String title) {
 
-            //Will return -1 if a book is not found
-            int bookId = -1;
+            ArrayList<Integer> bookIds = new ArrayList<>();
             Connection conn = null;
             PreparedStatement ps = null;
             ResultSet rs = null;
@@ -120,8 +119,8 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
                 ps.setString(1, title);
                 rs = ps.executeQuery();
 
-                if (rs.next()) {
-                    bookId = rs.getInt("bookId");
+                while (rs.next()) {
+                    bookIds.add(rs.getInt("bookId"));
                 }
 
             } catch (SQLException e) {
@@ -157,7 +156,7 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
                 }
             }
 
-            return bookId;
+            return bookIds;
         }
 
     /**
@@ -412,14 +411,12 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
      * @return the corresponding book
      */
     @Override
-    public Book getBookByBookTitle(String title) {
+    public ArrayList<Book> getBooksByTitle(String title) {
 
+        ArrayList<Book> books = new ArrayList<>();
         Connection conn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
-
-        //Creating book
-        Book b = new Book();
 
         try {
             //Getting connection
@@ -433,6 +430,8 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
 
             while (rs.next()) {
 
+                //Creating book
+                Book b = new Book();
                 //Setting values to correct columns
                 b.setBookId(rs.getInt("bookId"));
                 b.setGenreId(rs.getInt("genreId"));
@@ -476,7 +475,7 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
                 }
             }
         }
-        return b;
+        return books;
     }
 
     // BookDao to reserve a copy (if there are no copies available, return a fail code indicating a loan could not be made)

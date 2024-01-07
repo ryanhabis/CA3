@@ -3,6 +3,8 @@ package CA3.bookRentalSystem.repositories;
 
 import CA3.bookRentalSystem.rental.Book;
 
+import java.util.ArrayList;
+
 public interface BookDaoAdminInterface extends BookDaoInterface {
 
     public int addBook(int bookId, int genreId, String title, String description, String author, int quantityInstock, double bookPrice);
@@ -13,7 +15,7 @@ public interface BookDaoAdminInterface extends BookDaoInterface {
     //Return book using bookId
     public Book getBookByBookId(int bookId);
     //Return book using title
-    public Book getBookByBookTitle(String title);
+    public ArrayList<Book> getBooksByTitle(String title);
 
     public boolean reserveCopy (Book b);
 }
