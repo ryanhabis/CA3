@@ -12,4 +12,11 @@ public interface BookDaoInterface {
     public ArrayList<Book> getAllBooks();
     //Return bookId using Title
     public ArrayList<Integer> getBookIdsByTitle(String title);
+    //Return current stock number using bookId
+    public int checkStock(int bookId);
+    //Return book using bookId
+    public Book getBookByBookId(int bookId);
+    //Return book using title
+    public ArrayList<Book> getBooksByTitle(String title);
+    public boolean reserveCopy (Book b);
 }
