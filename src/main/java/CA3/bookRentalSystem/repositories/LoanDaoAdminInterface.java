@@ -16,4 +16,7 @@ public interface LoanDaoAdminInterface extends LoanDaoInterface {
     public ArrayList<Loan> getActiveLoansByUser(int userId); // and returnDate == null
 
 
+    //Individual function
+    public ArrayList<Loan> getAllOverdueLoans ();
+
 }

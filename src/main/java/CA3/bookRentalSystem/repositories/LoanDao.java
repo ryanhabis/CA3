@@ -17,6 +17,13 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
         super(databaseName);
     }
 
+
+    /**
+     * Method to create a loan using bookId and userId.
+     * @param bookId - the bookId of the book for which the loan will be created.
+     * @param userId - the userId of the user for which the loan will be created.
+     * @return an integer indicating whether or not the loan was made 0 for failure to create and 1 for 1 loan created.
+     */
     @Override
     public int createLoan(int bookId, int userId) {
         Connection conn = null;
@@ -57,7 +64,7 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
                     ps.close();
                 } catch (SQLException e) {
                     System.out.println("Exception message: " + e.getMessage());
-                    System.out.println("Problem occured when closing prepared statement.");
+                    System.out.println("Problem occurred when closing prepared statement.");
                 }
             }
 
@@ -72,6 +79,11 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
         return rowsAdded;
     }
 
+    /**
+     * Method to get all loans for the user in question.
+     * @param userId - this userId is the user whose loans we are retrieving.
+     * @return an arraylist of loans for that user.
+     */
     @Override
     public ArrayList<Loan> getMyLoans(int userId) {
         Connection conn = null;
@@ -120,7 +132,7 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
                     rs.close();
                 } catch (SQLException e) {
                     System.out.println("Exception message: " + e.getMessage());
-                    System.out.println("Problem occured when closing result set.");
+                    System.out.println("Problem occurred when closing result set.");
                 }
             }
             if (ps != null) {
@@ -128,7 +140,7 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
                     ps.close();
                 } catch (SQLException e) {
                     System.out.println("Exception message: " + e.getMessage());
-                    System.out.println("Problem occured when closing prepared statement.");
+                    System.out.println("Problem occurred when closing prepared statement.");
                 }
             }
 
@@ -143,6 +155,12 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
         return loansForUser;
     }
 
+    /**
+     * Method for finding the loan record for a particular book the user in question borrowed.
+     * @param bookId - the id of the book in question.
+     * @param userId - the id of the user who took out the loan.
+     * @return the Loan object if found, otherwise return null.
+     */
     @Override
     public Loan getActiveLoanByBookId(int bookId, int userId) {
         Connection conn = null;
@@ -188,7 +206,7 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
                     rs.close();
                 } catch (SQLException e) {
                     System.out.println("Exception message: " + e.getMessage());
-                    System.out.println("Problem occured when closing result set.");
+                    System.out.println("Problem occurred when closing result set.");
                 }
             }
             if (ps != null) {
@@ -196,7 +214,7 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
                     ps.close();
                 } catch (SQLException e) {
                     System.out.println("Exception message: " + e.getMessage());
-                    System.out.println("Problem occured when closing prepared statement.");
+                    System.out.println("Problem occurred when closing prepared statement.");
                 }
             }
 
@@ -211,6 +229,12 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
         return l;
     }
 
+    /**
+     * Method for checking if fees for the loan in question are paid
+     * @param loanId - the id of the loan.
+     * @param userId - the id of the user who took out the loan.
+     * @return true or false depending if the overdue fee field is set to a value of 0.
+     */
     @Override
     public Boolean checkOverdueFeePaid(int loanId, int userId) {
         Connection conn = null;
@@ -256,7 +280,7 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
                     rs.close();
                 } catch (SQLException e) {
                     System.out.println("Exception message: " + e.getMessage());
-                    System.out.println("Problem occured when closing result set.");
+                    System.out.println("Problem occurred when closing result set.");
                 }
             }
             if (ps != null) {
@@ -264,7 +288,7 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
                     ps.close();
                 } catch (SQLException e) {
                     System.out.println("Exception message: " + e.getMessage());
-                    System.out.println("Problem occured when closing prepared statement.");
+                    System.out.println("Problem occurred when closing prepared statement.");
                 }
             }
 
@@ -280,6 +304,12 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
         return loan.getLoanId() != 0;
     }
 
+    /**
+     * Method to return a book using loan id and user id.
+     * @param loanId - the loan id which should be terminated.
+     * @param userId - the user id who created the loan.
+     * @return an integer indicating if the book was successfully returned - 1 if returned, 0 if not.
+     */
     @Override
     public int returnBook(int loanId, int userId) {
         int rowsUpdated = 0;
@@ -340,7 +370,7 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
                     rs.close();
                 } catch (SQLException e) {
                     System.out.println("Exception message: " + e.getMessage());
-                    System.out.println("Problem occured when closing result set.");
+                    System.out.println("Problem occurred when closing result set.");
                 }
             }
             if (ps != null) {
@@ -348,7 +378,7 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
                     ps.close();
                 } catch (SQLException e) {
                     System.out.println("Exception message: " + e.getMessage());
-                    System.out.println("Problem occured when closing prepared statement.");
+                    System.out.println("Problem occurred when closing prepared statement.");
                 }
             }
 
@@ -363,6 +393,12 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
         return rowsUpdated;
     }
 
+    /**
+     * Method to search for a loan by userId and bookId that is also currently active.
+     * @param userId - the id of the user who took out the loan.
+     * @param bookId - the id of the book that was borrowed (if loan exists that is).
+     * @return the Loan itself if found, otherwise return null.
+     */
     @Override
     public Loan getActiveLoanByBookIdAndUserId(int userId, int bookId) {
         //find the currently active loan for that user and book
@@ -431,6 +467,10 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
         return loanForBook;
     }
 
+    /**
+     * Method to get all loans in the loans table.
+     * @return an arraylist of all loans.
+     */
     @Override
     public ArrayList<Loan> getAllLoans() {
         Connection conn = null;
@@ -478,7 +518,7 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
                     rs.close();
                 } catch (SQLException e) {
                     System.out.println("Exception message: " + e.getMessage());
-                    System.out.println("Problem occured when closing result set.");
+                    System.out.println("Problem occurred when closing result set.");
                 }
             }
             if (ps != null) {
@@ -486,7 +526,7 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
                     ps.close();
                 } catch (SQLException e) {
                     System.out.println("Exception message: " + e.getMessage());
-                    System.out.println("Problem occured when closing prepared statement.");
+                    System.out.println("Problem occurred when closing prepared statement.");
                 }
             }
 
@@ -501,6 +541,10 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
         return loans;
     }
 
+    /**
+     * Method to return all active loans.
+     * @return an arraylist of loans that are currently active (dateReturned is null).
+     */
     @Override
     public ArrayList<Loan> getAllActiveLoans() {
         Connection conn = null;
@@ -548,7 +592,7 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
                     rs.close();
                 } catch (SQLException e) {
                     System.out.println("Exception message: " + e.getMessage());
-                    System.out.println("Problem occured when closing result set.");
+                    System.out.println("Problem occurred when closing result set.");
                 }
             }
             if (ps != null) {
@@ -556,7 +600,7 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
                     ps.close();
                 } catch (SQLException e) {
                     System.out.println("Exception message: " + e.getMessage());
-                    System.out.println("Problem occured when closing prepared statement.");
+                    System.out.println("Problem occurred when closing prepared statement.");
                 }
             }
 
@@ -571,6 +615,10 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
         return activeLoans;
     }
 
+    /**
+     * Method to get all terminated loans.
+     * @return an arraylist of loans that have a dateReturned value.
+     */
     @Override
     public ArrayList<Loan> getAllTerminatedLoans() {
         Connection conn = null;
@@ -618,7 +666,7 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
                     rs.close();
                 } catch (SQLException e) {
                     System.out.println("Exception message: " + e.getMessage());
-                    System.out.println("Problem occured when closing result set.");
+                    System.out.println("Problem occurred when closing result set.");
                 }
             }
             if (ps != null) {
@@ -626,7 +674,7 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
                     ps.close();
                 } catch (SQLException e) {
                     System.out.println("Exception message: " + e.getMessage());
-                    System.out.println("Problem occured when closing prepared statement.");
+                    System.out.println("Problem occurred when closing prepared statement.");
                 }
             }
 
@@ -641,6 +689,11 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
         return terminatedLoans;
     }
 
+    /**
+     * Method to get all loans for a particular user using userId as a filter.
+     * @param userId - the id of the user for whom we are retrieving loans for.
+     * @return an arraylist of loans for the user in question.
+     */
     @Override
     public ArrayList<Loan> getLoansByUser(int userId) {
         Connection conn = null;
@@ -689,7 +742,7 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
                     rs.close();
                 } catch (SQLException e) {
                     System.out.println("Exception message: " + e.getMessage());
-                    System.out.println("Problem occured when closing result set.");
+                    System.out.println("Problem occurred when closing result set.");
                 }
             }
             if (ps != null) {
@@ -697,7 +750,7 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
                     ps.close();
                 } catch (SQLException e) {
                     System.out.println("Exception message: " + e.getMessage());
-                    System.out.println("Problem occured when closing prepared statement.");
+                    System.out.println("Problem occurred when closing prepared statement.");
                 }
             }
 
@@ -712,6 +765,11 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
         return loansForUser;
     }
 
+    /**
+     * Method for getting all active loans for a particular user using userId as a filter and where dateReturned is null.
+     * @param userId - the id of the user who we are retrieving active loans for.
+     * @return an arraylist of active loans for that user.
+     */
     @Override
     public ArrayList<Loan> getActiveLoansByUser(int userId) {
         Connection conn = null;
@@ -761,7 +819,7 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
                     rs.close();
                 } catch (SQLException e) {
                     System.out.println("Exception message: " + e.getMessage());
-                    System.out.println("Problem occured when closing result set.");
+                    System.out.println("Problem occurred when closing result set.");
                 }
             }
             if (ps != null) {
@@ -769,7 +827,7 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
                     ps.close();
                 } catch (SQLException e) {
                     System.out.println("Exception message: " + e.getMessage());
-                    System.out.println("Problem occured when closing prepared statement.");
+                    System.out.println("Problem occurred when closing prepared statement.");
                 }
             }
 
@@ -784,7 +842,80 @@ public class LoanDao extends Dao implements LoanDaoInterface, LoanDaoAdminInterf
         return activeLoansByUser;
     }
 
+    /**
+     * Method to get all overdue loans
+     * @return an arraylist of all overdue loans (loans with fees applied to them for being overdue).
+     */
+    @Override
+    public ArrayList<Loan> getAllOverdueLoans() {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        Loan loan = new Loan();
 
+        //make arraylist
+        ArrayList <Loan> overdueLoans = new ArrayList<>();
+
+        try {
+            //get connection
+            conn = getConnection();
+            //make query
+            String query = "select * from loans overdueFee = ? ";
+            //prepare statement
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, 0);
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                //allocate the values returned from db to the right column names
+
+                loan.setLoanId(rs.getInt("loanId"));
+                loan.setBookId(rs.getInt("bookId"));
+                loan.setUserId(rs.getInt("userId"));
+                loan.setLoanStartDate(rs.getDate("loanStartDate"));
+                loan.setLoanDueDate(rs.getDate("loanDueDate"));
+                loan.setOverdueFee(rs.getDouble("overdueFee"));
+                loan.setDateReturned(rs.getDate("dateReturned"));
+
+                overdueLoans.add(loan);
+            }
+
+        } catch (DaoException e) {
+            System.out.println("Dao exception: " + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("SQL Exception: "  + e.getMessage());
+        }
+
+        //close connections
+        finally {
+            if (rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException e) {
+                    System.out.println("Exception message: " + e.getMessage());
+                    System.out.println("Problem occurred when closing result set.");
+                }
+            }
+            if (ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException e) {
+                    System.out.println("Exception message: " + e.getMessage());
+                    System.out.println("Problem occurred when closing prepared statement.");
+                }
+            }
+
+            if (conn != null) {
+                try {
+                    freeConnection(conn);
+                } catch (DaoException e) {
+                    System.out.println("Dao exception caught: " + e.getMessage());
+                }
+            }
+        }
+
+        return overdueLoans;
+    }
 
 
 }
