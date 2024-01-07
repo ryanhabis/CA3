@@ -39,6 +39,8 @@ Hello there, yes you would like to borrow a book eh?
 </table>
 <%--Set book to the session--%>
 <%session.setAttribute("book", bookSelected);
+
+session.setAttribute("action", "borrow");
    // session.setAttribute("bookId", bookSelected);
     session.setAttribute("action", "borrow");
 %>
@@ -52,8 +54,7 @@ Hello there, yes you would like to borrow a book eh?
 </form>
 
 <a href="servlet/Controller?action=borrow">Borrow</a>
-
-<%
+<button name="b">borrow</button><%
 }else{
 %>
 <div>
