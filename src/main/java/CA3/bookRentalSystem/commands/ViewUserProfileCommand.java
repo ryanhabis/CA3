@@ -13,6 +13,11 @@ public class ViewUserProfileCommand implements Command
 {
     private HttpServletRequest request;
     private HttpServletResponse response;
+    /**
+     * Constructor for ViewUserProfileCommand
+     * @param request ServLet Request
+     * @param response ServerLet Response
+     */
     public ViewUserProfileCommand(HttpServletRequest request, HttpServletResponse response) {
 
         this.request = request;
