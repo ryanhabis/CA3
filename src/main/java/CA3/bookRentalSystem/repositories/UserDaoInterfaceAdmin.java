@@ -39,4 +39,24 @@ public interface UserDaoInterfaceAdmin extends UserDaoInterface
      */
     public int removeUser(String username) throws DaoException;
 
+
+    /**
+     * View the user profile based on the provided username.
+     *
+     * @param username The username of the user whose profile is to be viewed.
+     * @return A User object containing the user information if found, otherwise an empty User object.
+     * @throws RuntimeException If there is an issue closing the database resources.
+     * @throws DaoException If a SQL or DaoException occurs during the database operations.
+     */
+    public User viewUserProfile(String username);
+
+    /**
+     * Edit the user profile based on the provided User object.
+     *
+     * @param updatedUser The User object containing the updated user information.
+     * @return The number of rows affected in the database.
+     * @throws RuntimeException If there is an error updating the user profile or closing resources.
+     * @throws DaoException If a SQL or DaoException occurs during the database operations.
+     */
+    public int editUserProfile(User updatedUser);
 }
