@@ -16,6 +16,7 @@ Heidi:
 Ryan:
 - Created the GitHub source control and added everyone to it.
 - Created css for the webpages
-- Created the UserDao, UserDaoAdmin (Heidi helped)
+- Created the UserDao, removed UserDaoAdmin
 - Created UserDaoInterface and UserDaoInterfaceAdmin
 - Created User class
+- Fixed UserDao and removed adminDao so the admin interface will use userDao

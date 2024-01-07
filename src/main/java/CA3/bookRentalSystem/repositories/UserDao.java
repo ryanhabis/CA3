@@ -208,7 +208,6 @@ public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAd
     /**
      * Adds a new user to the database
      *
-
      * @return the new user if there account was made successfully or not
      * @throws DaoException wil throw a run time exception
      * @throws SQLException if the user was not added
@@ -275,6 +274,8 @@ public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAd
 
     /**
      * This method goes through all the users that are in the database and displays them
+     * @throws DaoException wil throw a run time exception
+     * @throws SQLException
      * @return all the users on the database
      */
     @Override
@@ -318,7 +319,6 @@ public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAd
                 users.add(u);
             }
 
-            /* Taken from Heidi's code */
         }  catch (SQLException e) {
             throw new RuntimeException("SQL runtime exception:- " + e.getMessage());
         }
@@ -409,8 +409,6 @@ public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAd
 
         return userDelete;
     }
-
-
 
     @Override
     public boolean checkAccountEnabled(int userId)
