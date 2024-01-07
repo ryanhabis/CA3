@@ -244,10 +244,10 @@ public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAd
             rowsAdded = ps.executeUpdate();
 
 
-        } catch (DaoException e) {
-            System.out.println("Dao exception: " + e.getMessage());
         } catch (SQLException e) {
             System.out.println("SQL Exception: "  + e.getMessage());
+        }catch (DaoException e) {
+            System.out.println("Dao exception: " + e.getMessage());
         }
 
         //close connections
@@ -319,11 +319,12 @@ public class UserDao extends Dao implements UserDaoInterface ,UserDaoInterfaceAd
             }
 
             /* Taken from Heidi's code */
-        } catch (DaoException e) {
-            throw new RuntimeException("DAO runtime exception:- " + e.getMessage());
-        } catch (SQLException e) {
+        }  catch (SQLException e) {
             throw new RuntimeException("SQL runtime exception:- " + e.getMessage());
-        } finally {
+        }
+        catch (DaoException e) {
+            throw new RuntimeException("DAO runtime exception:- " + e.getMessage());
+        }finally {
             if (rs != null) {
                 try {
                     rs.close();
