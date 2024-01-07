@@ -22,8 +22,8 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
         }
 
         /**
-         *  The method to get all books from the database
-         * @return an arraylist of all books
+         * Gets all books from the database
+         * @return ArrayList of Books from the database
          */
         @Override
         public ArrayList<Book> getAllBooks() {
@@ -98,8 +98,9 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
         }
 
         /**
-         *  The method to get a book by the title from the database
-         * @return the bookId from the database
+         * Gets Book IDs by the Title
+         * @param title Title of the book being searched
+         * @return Arraylist with the IDs of the books matching the title
          */
         @Override
         public ArrayList<Integer> getBookIdsByTitle(String title) {
@@ -160,11 +161,18 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
         }
 
     /**
-     *  The method to add a book with properties for a book
-     * @return the number of rows added
+     * Adds a new book to the database
+     * @param bookId ID of the new book
+     * @param genreId ID of the genre of the book
+     * @param title Title of the book
+     * @param description Description of the book
+     * @param author Author of the book
+     * @param quantityInStock The quantity of the book in stock
+     * @param bookPrice The price of the book
+     * @return the number of rows added in the database, should be 1 if it runs successfully
      */
     @Override
-    public int addBook(int bookId, int genreId, String title, String description, String author, int quantityInstock, double bookPrice) {
+    public int addBook(int bookId, int genreId, String title, String description, String author, int quantityInStock, double bookPrice) {
 
         int rowsadded = 0;
         Connection conn = null;
@@ -182,7 +190,7 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
             ps.setString(3, title);
             ps.setString(4, description);
             ps.setString(5, author);
-            ps.setInt(6, quantityInstock);
+            ps.setInt(6, quantityInStock);
             ps.setDouble(7, bookPrice);
             rowsadded = ps.executeUpdate();
 
@@ -214,13 +222,15 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
     }
 
     /**
-     *  The method to update the stock of a book using bookId
-     * @return the number of rows added
+     * Updates the stock of the book
+     * @param bookId The ID of the book
+     * @param quantityInStock The new stock
+     * @return the number of rows changed in the database, should be 1 if it runs successfully
      */
     @Override
     public int updateStock(int bookId, int quantityInStock) {
 
-        int rowsadded = 0;
+        int rowschanged = 0;
         Connection conn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -229,13 +239,14 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
             //Getting connection
             conn = getConnection();
             //Creating query
-            String query = "update books set quantityInStock = ? where bookId = ?";
+            String query = "update books set quantityInStock = ? where bookId = ? and quantityInStock + ? >= 0";
             //Prepare & execute query
             ps = conn.prepareStatement(query);
             ps.setInt(1, quantityInStock);
             ps.setInt(2, bookId);
+            ps.setInt(3, quantityInStock);
 
-            rowsadded = ps.executeUpdate();
+            rowschanged = ps.executeUpdate();
 
         } catch (SQLException e) {
             System.out.println("SQL exception: " +e.getMessage());
@@ -269,12 +280,13 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
                 }
             }
         }
-        return rowsadded;
+        return rowschanged;
     }
 
     /**
-     *  The method to check the stock by the bookId
-     * @return the quantityInStock from the database
+     * Checks the stock of the book
+     * @param bookId The ID to be checked
+     * @return the quantityInStock from the database for the book, -1 if book is not found
      */
     @Override
     public int checkStock(int bookId) {
@@ -335,8 +347,9 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
     }
 
     /**
-     *  The method to get a book by the book id from the database
-     * @return the corresponding book
+     * Gets a book from the database using the ID
+     * @param bookId The ID of the book
+     * @return the corresponding book to the ID, null if the book isn't found
      */
     @Override
     public Book getBookByBookId(int bookId) {
@@ -407,8 +420,9 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
     }
 
     /**
-     *  The method to get a book by the book title from the database
-     * @return the corresponding book
+     * Gets books from the database using the title
+     * @param title The title of the books
+     * @return Arraylist of Books to return from the database
      */
     @Override
     public ArrayList<Book> getBooksByTitle(String title) {
@@ -478,7 +492,11 @@ public class BookDao extends Dao implements BookDaoInterface, BookDaoAdminInterf
         return books;
     }
 
-    // BookDao to reserve a copy (if there are no copies available, return a fail code indicating a loan could not be made)
+    /**
+     * Reserves the book if it's in stock
+     * @param b The book to reserve
+     * @return true if successful, false if not
+     */
     public boolean reserveCopy (Book b) {
 
         //check book has enough stock
