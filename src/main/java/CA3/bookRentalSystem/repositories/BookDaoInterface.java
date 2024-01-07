@@ -11,5 +11,5 @@ public interface BookDaoInterface {
     //Return all books
     public ArrayList<Book> getAllBooks();
     //Return bookId using Title
-    public int getBookIdByTitle(String title);
+    public ArrayList<Integer> getBookIdsByTitle(String title);
 }
