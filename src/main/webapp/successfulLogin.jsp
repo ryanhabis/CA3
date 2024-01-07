@@ -1,6 +1,8 @@
 <%@ page import="CA3.bookRentalSystem.rental.User" %>
 <%@ page import="CA3.bookRentalSystem.repositories.UserDaoInterfaceAdmin" %>
-<%@ page import="CA3.bookRentalSystem.repositories.UserDaoAdmin" %><%--
+
+<%@ page import="CA3.bookRentalSystem.repositories.UserDaoInterface" %>
+<%@ page import="CA3.bookRentalSystem.repositories.UserDao" %><%--
   Created by IntelliJ IDEA.
   User: Heidi
   Date: 26/12/2023
@@ -18,7 +20,7 @@
 
 
         User userLoggedIn = (User)session.getAttribute("user");
-        UserDaoInterfaceAdmin userDao = new UserDaoAdmin("bookrentalsystem");
+        UserDaoInterface userDao = new UserDao("bookrentalsystem");
         String username = String.valueOf(request.getAttribute("username"));
 
        String daoUserType = userDao.getUserType(username);
