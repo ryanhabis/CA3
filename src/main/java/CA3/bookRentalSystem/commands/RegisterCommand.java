@@ -16,12 +16,24 @@ public class RegisterCommand implements Command{
 
     private HttpServletRequest request;
     private HttpServletResponse response;
+
+    /**
+     * Constructor for RegisterCommand
+     * @param request ServLet Request
+     * @param response ServerLet Response
+     */
     public RegisterCommand (HttpServletRequest request, HttpServletResponse response) {
 
         this.request = request;
         this.response = response;
     }
 
+
+    /**
+     * if the user is successfully logsin then take them to the login page otherwise send them to the error page
+     *
+     * @return The URL redirct to either the ../login.jsp or the ../error.jsp
+     */
     @Override
     public String execute() {
         //set the string value to be returned

@@ -15,11 +15,22 @@ public class LoginCommand implements Command {
     private HttpServletRequest request;
     private HttpServletResponse response;
 
+    /**
+     * Constructor for LoginCommand
+     * @param request ServLet Request
+     * @param response ServerLet Response
+     */
     public LoginCommand (HttpServletRequest request, HttpServletResponse response) {
 
         this.request = request;
         this.response = response;
     }
+
+    /**
+     * validates the username and password, if they are valid redirect them to the ../successfulLogin.jsp other wise send them to the ../error.jsp
+     *
+     * @return The URL redirect to either the ../successfulLogin.jsp or the ../error.jsp
+     */
     @Override
     public String execute() {
 
