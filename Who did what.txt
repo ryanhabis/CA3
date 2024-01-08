@@ -43,3 +43,25 @@ Evan:
 - Updated javadocs in BookDao to fit requirements
 - Added javadocs for BookDaoAdminInterface and BookDaoInterface
 - Added method to return a book
+- Added jsp for SuccessfulReturn
+- Added jsp for return
+- Added jsp for search
+- Added ReturnCommand.java
+- Added ViewBooksCommand.java
+- Added SearchCommand.java
+- Did javadocs for all of the above java classes
+- Updated CommandFactory to include all the book cases
+
+Features:
+- Borrowing book - Evan + Heidi
+- Viewing books - Evan
+- Searching for a book - Evan
+- Returning a book - Evan + Heidi
+- Logging in - Heidi + Ryan
+- Registering - Heidi + Ryan
+- View user profile - Ryan
+- Edit user profile - Ryan
+- View current loans - Heidi
+- View previous loans - Heidi
+- View user overdue fees - Heidi
+- Pay overdue fees - Heidi
